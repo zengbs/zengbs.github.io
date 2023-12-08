@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+    Plain-Academic by Vasilios Mavroudis
+    Released under the Simplified BSD License/FreeBSD (2-clause) License.
+    https://github.com/mavroudisv/plain-academic
+-->
+
+<html lang="en">
+<head>
+  <title>Rocky (Po-Hsun Tseng)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+
+  <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Entries Column -->
+            <div class="col-md-8" style="height: 100vh;">
+
+                <!-- Main Image -->
+                <img class="img-responsive" src="photo.gif" alt=""><br>
+
+                <div style="margin-top:3%; text-align:justify;">
+                           <h2><b>Summary</b></h2>
+		 	   <p>I am a contributor to the <a href="https://github.com/gamer-project/gamer/graphs/contributors">GAMER</a>,
+                           a hybrid GPU/OpenMP/MPI parallelization finite-volume program solving hydrodynamic equations.
+                           Specifically, I designed a new scheme for conversion between primitive and conserved variables
+                           in the special relativistic hydro solver.</p>
+
+                           <p>The code adopting this method can handle critical problems involving a Lorentz factor
+                           as high as 10^6 and optimally avoid catastrophic cancellation, especially in non- and
+                           ultra-relativistic limits. The results have been published in MNRAS 2021 Vol. 504, pp. 3298-3315.</p>
+
+                           <p>If that wasn't enough, I have designed another new numerical scheme that adaptively and locally
+                           reduces the so-called min-mod coefficient in the finite-volume method to promote numerical stability.</p>
+
+                           <p>The new approach was soon adopted by the research teams headed by Prof. Hsi-Yu Schive and
+                           Prof. Kuo-Chun Pan, who served at National Taiwan and Tsing-Hua University, respectively.</p>
+
+                           My advantages and experiences:
+
+                           <ul>
+                             <li> A strong sense of computational physics, including but not limited to hydrodynamics.</li>
+                             <li> Extensive expertise in floating-point calculations crucial for numerical simulations. A significant challenge for engineers/scientists creating numerical algorithms is numerical stability, where instability can unexpectedly arise at extreme physical limits despite mathematical correctness.</li>
+                             <li> Finite-volume method.</li>
+                             <li> Numerically solving partial differential equations.</li>
+                             <li> The application of the Fast-Fourier transform.</li>
+                             <li> The experience of tracing large-scale code parallelized by GPU/OpenMP/MPI.</li>
+                           </ul>
+
+
+                 <h2><b>Notes</b></h2>
+                          <ul>
+                           <li><a href="https://hackmd.io/OD5ZdErXRnmfW-TK4VZqcw">Note on C language</a></li>
+                           <li><a href="https://hackmd.io/gZ4-PqSZQjCpFesLosgt0Q">Note on C++ (ongoing)</a></li>
+                           <li><a href="https://hackmd.io/3L5sYv_LTmCv4j39VqN2Cw">Note on CUDA (ongoing)</a></li>
+                           <li><a href="https://hackmd.io/IxD1MRe4QF6y5eb_zXTz5w">Note on Linear Algebra (ongoing)</a></li>
+                           <!--  <li><a href="">Note on MPI</a></li> -->
+                           <!--  <li><a href="">Note on OpenMP</a></li> -->
+                          </ul>
+                 <h2><b>Projects</b></h2>
+                           <ul>
+                                <li><a href="https://github.com/zengbs/published-papers/blob/main/2021-An_adaptive_mesh_GPU-accelerated_and_error_minimized_special_relativistic_hydrodynamics_code.pdf">Numerical special relativistic hydrodynamics</a></li>
+                                <!-- <li><a href="https://github.com/zengbs/published-papers/blob/main/preprint-Can_the_symmetric_Fermi_and_eROSITA_bubbles_be_produced_by_tilted_jets.pdf">Can the symmetric Fermi and eROSITA bubbles be produced by tilted jets? (preprint)</a></li> -->
+                                <li><a href="https://github.com/zengbs/exact-solution-to-relativistic-riemann-problem">Exact solution to relativistic Riemann problem</a></li>
+                                <li><a href="https://github.com/zengbs/polygons-counter">Polygon counter</a></li>
+                           </ul>
+
+                </div>
+            </div>
+
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-4">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Rocky (Po-Hsun Tseng)</b></div><br>
+                <p><b>Senior algorithm engineer at KLA-Tencor</b><br>
+                <p>Ph.D. in Computational Astrophysics<br>
+                Taiwan University<br>
+                Hsinchu, Taiwan<br>
+                </p>
+            </div>
+
+
+            <!-- Links on the Sidebar -->
+            <div class="col-md-4" style="margin-top:2%">
+              <dd>E-mail: <a href="zengbs@gmail.com">zengbs@gmail.com</a></dd>
+              <dd><a href="https://docs.google.com/document/d/1CBtqKSet_n73k4znQZKSxy6aH3gWFlI13Jf5t6U4kyk/edit">Resume</a></dd>
+              <dd><a href="https://github.com/zengbs">GitHub</a></dd>
+              <dd><a href="https://www.linkedin.com/in/po-hsun-tseng/">LinkedIn</a></dd>
+              <dd><a href="https://scholar.google.com.tw/citations?user=HCUrOIoAAAAJ&hl">Google Scholar</a></dd>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Other people may like it too! -->
+    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Design courtesy of Vasilios Mavroudis: Plain Academic  </a>
+
+</body>
+
+</html>
+
