@@ -8,14 +8,14 @@ render_with_liquid: false
 # [C++17](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md)
 
 ### Frequently
-- [Structured bindings](/0P3eLxnXQNmdk9sq9F-DTQ)
-- [if constexpr](/kuK51-a2R0aKSq88-jEcbA)
-- [Mandatory Copy Elision or Passing Unmaterialized Objects](/8fDVvf1gSZ-O6d7v9CducA)
-- [Inline variables](/kCfy2bIYSS26RjX9qeRqrg)
-- [Nested namespaces](/P0VvS1DvRbmglgfamphIFQ)
+- [Structured bindings]({{ "/notes/Structured_bindings" | relative_url }})
+- [if constexpr]({{ "/notes/if_constexpr" | relative_url }})
+- [Mandatory Copy Elision or Passing Unmaterialized Objects]({{ "/notes/Mandatory_Copy_Elision_or_Passing_Unmaterialized_Objects" | relative_url }})
+- [Inline variables]({{ "/notes/Inline_variables" | relative_url }})
+- [Nested namespaces]({{ "/notes/Nested_namespaces" | relative_url }})
 - [\[\[nodiscard\]\], \[\[maybe_unused\]\], \[\[fallthrough\]\] attributes](/znF7YzJnQ9i4NSCqBsUYKg)
-- [Template argument deduction for class templates](/RxCvL4VHQdG3zL7gqITDag)
-- [Lambda capture `this` by value](/06qQ73nqQdip-irQsy_RQA)
+- [Template argument deduction for class templates]({{ "/notes/Template_argument_deduction_for_class_templates" | relative_url }})
+- [Lambda capture `this` by value]({{ "/notes/Lambda_capture_`this`_by_value" | relative_url }})
 - std::optional
 - std::variant
 - std::string_view
@@ -23,9 +23,9 @@ render_with_liquid: false
 - std::clamp
 
 ### Moderate
-- [constexpr lambda](/zjMNkndzSEWnQfONVADAcw)
-- [Selection statements with initializer (`if` and `switch` with initialization)](/G67j6j-fR-6abvHBQbvgiA)
-- [Aggregate Extensions](/KnM3P8Y6QwmwXAg_165gEQ)
+- [constexpr lambda]({{ "/notes/constexpr_lambda" | relative_url }})
+- [Selection statements with initializer (`if` and `switch` with initialization)]({{ "/notes/Selection_statements_with_initializer_(`if`_and_`switch`_with_initialization)" | relative_url }})
+- [Aggregate Extensions]({{ "/notes/Aggregate_Extensions" | relative_url }})
 - UTF-8 character literals
 - Direct-list-initialization of enums
 - __has_include
