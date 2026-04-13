@@ -1,8 +1,3 @@
----
-
-
----
-
 Note on C language
 ===
 Compiling
