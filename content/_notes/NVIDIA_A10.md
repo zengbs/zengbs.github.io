@@ -1,6 +1,6 @@
 ---
 title: NVIDIA A10
-tags: [CUDA]
+
 
 ---
 

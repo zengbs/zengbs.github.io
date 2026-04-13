@@ -1,6 +1,6 @@
 ---
 title: Linear Memory
-tags: [CUDA]
+
 
 ---
 

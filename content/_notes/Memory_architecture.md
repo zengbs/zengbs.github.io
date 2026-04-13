@@ -1,6 +1,6 @@
 ---
 title: Memory architecture
-tags: [CUDA]
+
 
 ---
 

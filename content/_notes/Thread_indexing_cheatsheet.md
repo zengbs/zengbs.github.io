@@ -1,6 +1,6 @@
 ---
 title: Thread indexing cheatsheet
-tags: [CUDA]
+
 
 ---
 

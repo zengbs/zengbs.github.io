@@ -1,6 +1,6 @@
 ---
 title: ANSI escapse code
-tags: [C]
+
 
 ---
 

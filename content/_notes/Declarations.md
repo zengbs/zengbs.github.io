@@ -1,6 +1,6 @@
 ---
 title: Declarations
-tags: [C]
+
 
 ---
 

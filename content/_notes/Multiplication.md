@@ -1,6 +1,6 @@
 ---
 title: Multiplication
-tags: [linear-algebra]
+
 
 ---
 

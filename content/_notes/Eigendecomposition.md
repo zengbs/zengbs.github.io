@@ -1,6 +1,6 @@
 ---
 title: Eigendecomposition
-tags: [linear-algebra]
+
 
 ---
 

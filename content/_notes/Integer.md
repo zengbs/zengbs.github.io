@@ -1,6 +1,6 @@
 ---
 title: Integer
-tags: [C]
+
 
 ---
 

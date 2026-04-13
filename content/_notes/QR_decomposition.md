@@ -1,6 +1,6 @@
 ---
 title: QR decomposition
-tags: [linear-algebra]
+
 
 ---
 

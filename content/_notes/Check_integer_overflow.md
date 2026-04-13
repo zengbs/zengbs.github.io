@@ -1,6 +1,6 @@
 ---
 title: Check integer overflow
-tags: [C]
+
 
 ---
 

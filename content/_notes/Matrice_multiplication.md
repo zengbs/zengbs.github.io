@@ -1,6 +1,6 @@
 ---
 title: Matrice multiplication
-tags: [linear-algebra]
+
 
 ---
 

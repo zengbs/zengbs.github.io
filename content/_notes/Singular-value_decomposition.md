@@ -1,6 +1,6 @@
 ---
 title: Singular-value decomposition
-tags: [linear-algebra]
+
 
 ---
 

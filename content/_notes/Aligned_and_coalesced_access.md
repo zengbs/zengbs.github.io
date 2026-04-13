@@ -1,6 +1,6 @@
 ---
 title: Aligned and coalesced access
-tags: [CUDA]
+
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Synchronization of Memory
-tags: [CUDA]
+
 
 ---
 

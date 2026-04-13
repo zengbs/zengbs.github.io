@@ -1,6 +1,6 @@
 ---
 title: Jordan decomposition
-tags: [linear-algebra]
+
 
 ---
 

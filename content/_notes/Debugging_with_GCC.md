@@ -1,6 +1,6 @@
 ---
 title: Debugging with GCC
-tags: [C]
+
 
 ---
 

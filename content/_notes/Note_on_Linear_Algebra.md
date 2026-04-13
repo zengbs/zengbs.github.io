@@ -1,6 +1,6 @@
 ---
 title: Note on Linear Algebra
-tags: [linear-algebra]
+
 
 ---
 

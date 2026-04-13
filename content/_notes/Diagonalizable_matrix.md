@@ -1,6 +1,6 @@
 ---
 title: Diagonalizable matrix
-tags: [linear-algebra]
+
 
 ---
 

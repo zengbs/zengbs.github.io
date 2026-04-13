@@ -1,6 +1,6 @@
 ---
 title: Nsight compute
-tags: [CUDA]
+
 
 ---
 

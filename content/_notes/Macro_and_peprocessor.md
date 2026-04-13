@@ -1,6 +1,6 @@
 ---
 title: Macro and peprocessor
-tags: [C]
+
 
 ---
 

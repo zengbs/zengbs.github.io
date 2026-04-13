@@ -1,6 +1,6 @@
 ---
 title: Memory access pattern
-tags: [CUDA]
+
 
 ---
 

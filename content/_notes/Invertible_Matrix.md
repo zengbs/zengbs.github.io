@@ -1,6 +1,6 @@
 ---
 title: Invertible Matrix
-tags: [linear-algebra]
+
 
 ---
 

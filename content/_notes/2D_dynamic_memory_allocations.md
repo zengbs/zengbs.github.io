@@ -1,6 +1,6 @@
 ---
 title: 2D dynamic memory allocations
-tags: [C]
+
 
 ---
 

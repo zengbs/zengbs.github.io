@@ -1,6 +1,6 @@
 ---
 title: Positive-definite matrix
-tags: [linear-algebra]
+
 
 ---
 

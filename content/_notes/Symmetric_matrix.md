@@ -1,6 +1,6 @@
 ---
 title: Symmetric matrix
-tags: [linear-algebra]
+
 
 ---
 

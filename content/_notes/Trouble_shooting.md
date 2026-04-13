@@ -1,6 +1,6 @@
 ---
 title: Trouble shooting
-tags: [CUDA]
+
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Calculation of Warp Occupancy
-tags: [CUDA]
+
 
 ---
 

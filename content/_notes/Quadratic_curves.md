@@ -1,6 +1,6 @@
 ---
 title: Quadratic curves
-tags: [linear-algebra]
+
 
 ---
 

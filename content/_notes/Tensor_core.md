@@ -1,6 +1,6 @@
 ---
 title: Tensor core
-tags: [CUDA]
+
 
 ---
 

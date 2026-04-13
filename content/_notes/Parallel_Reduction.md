@@ -1,6 +1,6 @@
 ---
 title: Parallel Reduction
-tags: [CUDA]
+
 
 ---
 

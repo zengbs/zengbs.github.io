@@ -1,6 +1,6 @@
 ---
 title: Memory management (global memory)
-tags: [CUDA]
+
 
 ---
 

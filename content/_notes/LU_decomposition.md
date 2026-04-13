@@ -1,6 +1,6 @@
 ---
 title: LU decomposition
-tags: [linear-algebra]
+
 
 ---
 

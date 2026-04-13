@@ -1,6 +1,6 @@
 ---
 title: Note on C language
-tags: [C]
+
 
 ---
 

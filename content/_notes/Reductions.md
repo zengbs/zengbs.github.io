@@ -1,6 +1,6 @@
 ---
 title: Reductions
-tags: [CUDA]
+
 
 ---
 

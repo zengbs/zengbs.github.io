@@ -1,6 +1,6 @@
 ---
 title: Pointers
-tags: [C]
+
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Low-rank approximation (Eckart–Young theorem)
-tags: [linear-algebra]
+
 
 ---
 

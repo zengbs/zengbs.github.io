@@ -1,6 +1,6 @@
 ---
 title: Projection
-tags: [linear-algebra]
+
 
 ---
 

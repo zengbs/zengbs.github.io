@@ -1,6 +1,6 @@
 ---
 title: Programming Model
-tags: [CUDA]
+
 
 ---
 

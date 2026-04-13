@@ -1,6 +1,6 @@
 ---
 title: Similar matrix
-tags: [linear-algebra]
+
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Fundamental Theorems of Linear Algebra
-tags: [linear-algebra]
+
 
 ---
 

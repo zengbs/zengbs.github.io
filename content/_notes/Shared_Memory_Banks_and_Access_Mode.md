@@ -1,6 +1,6 @@
 ---
 title: Shared Memory Banks and Access Mode
-tags: [CUDA]
+
 
 ---
 

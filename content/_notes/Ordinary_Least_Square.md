@@ -1,6 +1,6 @@
 ---
 title: Ordinary Least Square
-tags: [linear-algebra]
+
 
 ---
 

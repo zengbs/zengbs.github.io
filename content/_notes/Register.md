@@ -1,6 +1,6 @@
 ---
 title: Register
-tags: [CUDA]
+
 
 ---
 

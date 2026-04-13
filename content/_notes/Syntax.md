@@ -1,6 +1,6 @@
 ---
 title: Syntax
-tags: [CUDA]
+
 
 ---
 

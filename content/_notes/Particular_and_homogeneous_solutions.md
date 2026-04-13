@@ -1,6 +1,6 @@
 ---
 title: Particular and homogeneous solutions
-tags: [linear-algebra]
+
 
 ---
 

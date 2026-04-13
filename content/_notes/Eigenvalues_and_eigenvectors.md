@@ -1,6 +1,6 @@
 ---
 title: Eigenvalues and eigenvectors
-tags: [linear-algebra]
+
 
 ---
 

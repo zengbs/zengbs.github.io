@@ -1,6 +1,6 @@
 ---
 title: Array
-tags: [C]
+
 
 ---
 

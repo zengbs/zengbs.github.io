@@ -1,6 +1,6 @@
 ---
 title: Interview questions
-tags: [CUDA]
+
 
 ---
 

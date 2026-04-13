@@ -1,6 +1,6 @@
 ---
 title: Jordan form
-tags: [linear-algebra]
+
 
 ---
 

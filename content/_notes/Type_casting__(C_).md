@@ -1,6 +1,6 @@
 ---
 title: Type casting \(C\)
-tags: [C]
+
 
 ---
 

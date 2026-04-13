@@ -1,6 +1,6 @@
 ---
 title: Moore–Penrose inverse
-tags: [linear-algebra]
+
 
 ---
 

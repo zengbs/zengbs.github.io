@@ -1,6 +1,6 @@
 ---
 title: Warp Shuffles
-tags: [CUDA]
+
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Norm
-tags: [linear-algebra]
+
 
 ---
 

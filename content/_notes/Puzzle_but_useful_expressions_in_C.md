@@ -1,6 +1,6 @@
 ---
 title: Puzzle but useful expressions in C
-tags: [C]
+
 
 ---
 

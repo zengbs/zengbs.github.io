@@ -1,6 +1,6 @@
 ---
 title: GNU gprof
-tags: [C]
+
 
 ---
 

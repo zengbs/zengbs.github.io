@@ -1,6 +1,6 @@
 ---
 title: Performance tuning
-tags: [CUDA]
+
 
 ---
 

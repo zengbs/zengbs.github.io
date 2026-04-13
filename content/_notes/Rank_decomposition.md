@@ -1,6 +1,6 @@
 ---
 title: Rank decomposition
-tags: [linear-algebra]
+
 
 ---
 

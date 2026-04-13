@@ -1,6 +1,6 @@
 ---
 title: Compilation with NVCC
-tags: [CUDA]
+
 
 ---
 

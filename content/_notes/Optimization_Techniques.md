@@ -1,6 +1,6 @@
 ---
 title: Optimization Techniques
-tags: [CUDA]
+
 
 ---
 

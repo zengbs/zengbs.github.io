@@ -1,6 +1,6 @@
 ---
 title: Note on CUDA programming
-tags: [CUDA]
+
 
 ---
 

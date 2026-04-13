@@ -1,6 +1,6 @@
 ---
 title: Cholesky decomposition
-tags: [linear-algebra]
+
 
 ---
 

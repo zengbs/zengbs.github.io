@@ -1,6 +1,6 @@
 ---
 title: Texture Memory
-tags: [CUDA]
+
 
 ---
 
