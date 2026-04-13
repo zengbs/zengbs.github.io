@@ -1,8 +1,8 @@
 ---
 title: Note on CUDA programming
 ---
-
 # Note on CUDA programming
+
 
 CUDA execution model
 ---
