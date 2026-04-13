@@ -1,10 +1,8 @@
 ---
-
+title: Note on C language
 
 ---
 
-Note on C language
-===
 Compiling
 ---
 - [Dynamic linking and loading](/ZNbmsnHMQTOjD8PLPQAQng)
