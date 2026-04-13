@@ -4,11 +4,6 @@ draft: false
 render_with_liquid: false
 ---
 
-{% raw %}
----
-
----
-
 
 
 # FQA
@@ -90,7 +85,7 @@ Learning roadmap
     * [600 pages] C++ Concurrency in Action
 * 2029: C++29
     * [1000 pages] [Object-Oriented Software Construction 3rd edition](https://bertrandmeyer.com/oosc3/?utm_source=chatgpt.com)
-* 2030: 
+* 2030:
     * [800 pages] C++ Template: The Complete Guide
 - [modern-cpp-features](https://github.com/AnthonyCalandra/modern-cpp-features)
 - [C++ on Friday](https://blog.knatten.org/)
@@ -99,4 +94,3 @@ Learning roadmap
 - [Roadmap](/9NWY8mp1TTi-RUzqvv_TIw)
 - [Book list](/M2Lz0IxzTgeXWFsuKCENPg)
 - [C++ Evolution Viewer](https://cppevo.dev/)
-{% endraw %}

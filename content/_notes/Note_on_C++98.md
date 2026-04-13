@@ -4,34 +4,29 @@ draft: false
 render_with_liquid: false
 ---
 
-{% raw %}
----
-
----
 
 Note on C++98
-===
 
 
 Scope and Lifetime (2)
 ---
-* [Namespace Definitions (anki)](/_crfJagQQaSYmXffkhUWzw)
-* [Using Namespaces Members (anki)](/LjwTpRQISwOZyaFJDQ_i2Q)
+* [Namespace Definitions](/_crfJagQQaSYmXffkhUWzw)
+* [Using Namespaces Members](/LjwTpRQISwOZyaFJDQ_i2Q)
 
 Overloaded funcions (3)
 ---
-- [Overloaded function declarations (anki)](/5LcnJQLeQbKC1m7YuzGioQ)
-- [Argument type conversion (anki)](/AH3NtXk7QemiaRrxITg5rw)
-- [Details of function overload resolution (anki)](/k32LWCZ0RWW8UoUGKF-iYA)
+- [Overloaded function declarations](/5LcnJQLeQbKC1m7YuzGioQ)
+- [Argument type conversion](/AH3NtXk7QemiaRrxITg5rw)
+- [Details of function overload resolution](/k32LWCZ0RWW8UoUGKF-iYA)
 
 Function templates (10)
 ---
-- [Function template definition (anki)](/7W8gFs7BRKu8qjbu6D2mxg)
-- [Function template instantiation (anki)](/BHJRg7sxQoCmNCf7GeQ_ww)
-- [Template argument deduction (anki)](/etwx7hLkSj6e-94lh9NIUw)
-- [Explicit template arguments (anki)](/8B_MG6dwTnm8z--ubrfgzA)
-- [Template compilation model (anki)](/dYJAiNYFQ8OA3oDewe8bUA)
-- [Template Explicit Specialization (anki)](/i5oJ_k-_S9OIfBFoIVOKBA)
+- [Function template definition](/7W8gFs7BRKu8qjbu6D2mxg)
+- [Function template instantiation](/BHJRg7sxQoCmNCf7GeQ_ww)
+- [Template argument deduction](/etwx7hLkSj6e-94lh9NIUw)
+- [Explicit template arguments](/8B_MG6dwTnm8z--ubrfgzA)
+- [Template compilation model](/dYJAiNYFQ8OA3oDewe8bUA)
+- [Template Explicit Specialization](/i5oJ_k-_S9OIfBFoIVOKBA)
 - [Overloading function template](/wZUbj5KmQhmchEMbslCzNg)
 - [Overloaded resolution with instantiations](/mBCSthJsQ4K4PSN7FFJhQg)
 - [Name resolution in template definitions](/-cfPBQQtRiuZ4EvzEx5JiA)
@@ -127,4 +122,3 @@ Use of Inheritance in C++ (3)
 - [Exceptions and Inheritance](/xmnfbT9aQvyO8yW-I33fMA)
 - [Overload Resolution and Inheritance](/LE5Eht3dQq-lXtht1DY7Hg)
 
-{% endraw %}
