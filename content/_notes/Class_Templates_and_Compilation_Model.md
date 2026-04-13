@@ -1,5 +1,4 @@
 ---
-title: "Class Templates and Compilation Model"
 date: 2026-04-13T15:32:36+08:00
 draft: false
 render_with_liquid: false
@@ -7,7 +6,6 @@ render_with_liquid: false
 
 {% raw %}
 ---
-title: Class Templates and Compilation Model
 tags: [CPP]
 
 ---

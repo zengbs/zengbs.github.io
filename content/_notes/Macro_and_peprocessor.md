@@ -1,10 +1,8 @@
 ---
-title: Macro and peprocessor
 
 
 ---
 
-###### tags: `C`
 
 # Macro and peprocessor
 

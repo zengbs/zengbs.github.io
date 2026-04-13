@@ -1,10 +1,8 @@
 ---
-title: Moore–Penrose inverse
 
 
 ---
 
-###### tags: `linear-algebra`
 
 # Moore–Penrose Inverse
 

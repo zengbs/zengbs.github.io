@@ -1,10 +1,8 @@
 ---
-title: Note on Linear Algebra
 
 
 ---
 
-###### tags: `linear-algebra`
 
 
 Note on Linear Algebra

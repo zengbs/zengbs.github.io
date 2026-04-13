@@ -1,10 +1,8 @@
 ---
-title: Matrice multiplication
 
 
 ---
 
-###### tags: `linear-algebra`
 
 # Matrice multiplication
 * Column picture of multiplication:

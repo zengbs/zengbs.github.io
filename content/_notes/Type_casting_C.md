@@ -1,10 +1,8 @@
 ---
-title: Type casting \(C\)
 
 
 ---
 
-###### tags: `C`
 
 # Type casting \(C\)
 

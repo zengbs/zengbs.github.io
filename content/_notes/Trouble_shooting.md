@@ -1,10 +1,8 @@
 ---
-title: Trouble shooting
 
 
 ---
 
-###### tags: `CUDA`
 
 # Trouble shooting
 

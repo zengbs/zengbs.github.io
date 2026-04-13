@@ -1,5 +1,4 @@
 ---
-title: Parallel Reduction
 
 
 ---

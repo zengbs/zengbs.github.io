@@ -1,10 +1,8 @@
 ---
-title: Check integer overflow
 
 
 ---
 
-###### tags: `C`
 
 # Check integer overflow
 

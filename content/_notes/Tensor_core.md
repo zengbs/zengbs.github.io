@@ -1,10 +1,8 @@
 ---
-title: Tensor core
 
 
 ---
 
-###### tags: `CUDA`
 
 # Tensor core
 

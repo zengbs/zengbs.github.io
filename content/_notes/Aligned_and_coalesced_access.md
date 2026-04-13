@@ -1,10 +1,8 @@
 ---
-title: Aligned and coalesced access
 
 
 ---
 
-###### tags: `CUDA`
 
 # Aligned and coalesced access
 

@@ -1,10 +1,8 @@
 ---
-title: Note on CUDA programming
 
 
 ---
 
-###### tags: `CUDA`
 
 Note on CUDA programming
 ===

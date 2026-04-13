@@ -1,5 +1,4 @@
 ---
-title: Orthogonal Matrix
 
 
 ---

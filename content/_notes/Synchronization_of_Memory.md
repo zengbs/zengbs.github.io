@@ -1,5 +1,4 @@
 ---
-title: Synchronization of Memory
 
 
 ---

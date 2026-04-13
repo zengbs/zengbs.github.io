@@ -1,5 +1,4 @@
 ---
-title: Math-Bound VS Memory-Bound Operations
 
 
 ---

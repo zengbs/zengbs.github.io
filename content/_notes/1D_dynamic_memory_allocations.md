@@ -1,5 +1,4 @@
 ---
-title: 1D dynamic memory allocations
 
 
 ---

@@ -1,10 +1,8 @@
 ---
-title: Diagonalizable matrix
 
 
 ---
 
-###### tags: `linear-algebra`
 
 
 # Diagonalizable matrix

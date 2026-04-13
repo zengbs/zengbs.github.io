@@ -1,10 +1,8 @@
 ---
-title: Singular-value decomposition
 
 
 ---
 
-###### tags: `linear-algebra`
 
 
 # Singular-value decomposition

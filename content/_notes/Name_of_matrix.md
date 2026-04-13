@@ -1,10 +1,8 @@
 ---
-title: Name of matrix
 
 
 ---
 
-###### tags: `linear-algebra`
 
 
 # Name of matrix

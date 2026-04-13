@@ -1,10 +1,8 @@
 ---
-title: NVIDIA A10
 
 
 ---
 
-###### tags: `CUDA`
 
 # NVIDIA A10
 

@@ -1,10 +1,8 @@
 ---
-title: Symmetric matrix
 
 
 ---
 
-###### tags: `linear-algebra`
 
 # Symmetric matrix
 ## Spectral theorem

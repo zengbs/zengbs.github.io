@@ -1,10 +1,8 @@
 ---
-title: Memory access pattern
 
 
 ---
 
-###### tags: `CUDA`
 
 # Memory Access Pattern
 An individual CUDA thread can access 1,2,4,8,or 16 bytes in a single instruction or transaction. When considered warp-wide, that translates to 32 bytes all the way up to 512 bytes. The GPU memory controller can typically issue requests to memory in granularities of 32 bytes, up to 128 bytes. Larger requests (say, 512 bytes, considered warp wide) will get issued via multiple "transactions" of typically no more than 128 bytes.

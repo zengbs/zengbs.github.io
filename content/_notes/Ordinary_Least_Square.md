@@ -1,10 +1,8 @@
 ---
-title: Ordinary Least Square
 
 
 ---
 
-###### tags: `linear-algebra`
 
 # Ordinary Least Square
 

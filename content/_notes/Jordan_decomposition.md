@@ -1,5 +1,4 @@
 ---
-title: Jordan decomposition
 
 
 ---

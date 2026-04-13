@@ -1,10 +1,8 @@
 ---
-title: Programming Model
 
 
 ---
 
-###### tags: `CUDA`
 
 
 # CUDA Programming Model

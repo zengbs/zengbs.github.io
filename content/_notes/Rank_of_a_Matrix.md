@@ -1,10 +1,8 @@
 ---
-title: Rank of a Matrix
 
 
 ---
 
-###### tags: `linear-algebra`
 
 
 # Definition

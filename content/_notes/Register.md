@@ -1,10 +1,8 @@
 ---
-title: Register
 
 
 ---
 
-###### tags: `CUDA`
 
 
 # Register

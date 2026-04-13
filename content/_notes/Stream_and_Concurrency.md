@@ -1,5 +1,4 @@
 ---
-title: Stream and Concurrency
 
 
 ---

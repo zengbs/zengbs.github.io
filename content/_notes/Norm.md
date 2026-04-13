@@ -1,10 +1,8 @@
 ---
-title: Norm
 
 
 ---
 
-###### tags: `linear-algebra`
 
 
 # Norm

@@ -1,5 +1,4 @@
 ---
-title: Debugging with GCC
 
 
 ---

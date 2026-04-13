@@ -1,10 +1,8 @@
 ---
-title: Total Least Squares
 
 
 ---
 
-###### tags: `linear-algebra`
 
 # Total least squares
 

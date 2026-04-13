@@ -1,10 +1,8 @@
 ---
-title: Memory management (global memory)
 
 
 ---
 
-###### tags: `CUDA`
 
 # Memory Management (global memory)
 ## Pageable memory

@@ -1,10 +1,8 @@
 ---
-title: Note on C language
 
 
 ---
 
-###### tags: `C`
 Note on C language
 ===
 Compiling

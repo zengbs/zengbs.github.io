@@ -1,5 +1,4 @@
 ---
-title: 3D dynamic allocation memory
 
 
 ---

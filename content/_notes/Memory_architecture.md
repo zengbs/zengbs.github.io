@@ -1,10 +1,8 @@
 ---
-title: Memory architecture
 
 
 ---
 
-###### tags: `CUDA`
 
 # Memory Architecture
 

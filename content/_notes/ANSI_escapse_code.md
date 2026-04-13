@@ -1,10 +1,8 @@
 ---
-title: ANSI escapse code
 
 
 ---
 
-###### tags: `C`
 
 # ANSI escapse code
 ```c=

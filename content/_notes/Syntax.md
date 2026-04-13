@@ -1,10 +1,8 @@
 ---
-title: Syntax
 
 
 ---
 
-###### tags: `CUDA`
 
 # Syntax
 ![](https://i.imgur.com/ZgriOZ0.png)

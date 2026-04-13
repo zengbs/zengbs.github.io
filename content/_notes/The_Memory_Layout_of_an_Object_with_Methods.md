@@ -1,5 +1,4 @@
 ---
-title: "The Memory Layout of an Object with Methods"
 date: 2026-04-13T15:32:38+08:00
 draft: false
 render_with_liquid: false
@@ -7,7 +6,6 @@ render_with_liquid: false
 
 {% raw %}
 ---
-title: The Memory Layout of an Object with Methods
 tags: [CPP]
 
 ---

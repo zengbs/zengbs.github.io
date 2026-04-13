@@ -1,5 +1,4 @@
 ---
-title: Compilation with NVCC
 
 
 ---

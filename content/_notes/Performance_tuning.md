@@ -1,10 +1,8 @@
 ---
-title: Performance tuning
 
 
 ---
 
-###### tags: `CUDA`
 
 # Performance Issues
 

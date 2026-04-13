@@ -1,5 +1,4 @@
 ---
-title: Positive-definite matrix
 
 
 ---

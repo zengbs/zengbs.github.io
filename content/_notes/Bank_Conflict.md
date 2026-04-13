@@ -1,10 +1,8 @@
 ---
-title: Bank Conflict
 
 
 ---
 
-###### tags: `CUDA`
 
 
 

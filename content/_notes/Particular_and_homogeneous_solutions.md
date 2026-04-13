@@ -1,5 +1,4 @@
 ---
-title: Particular and homogeneous solutions
 
 
 ---

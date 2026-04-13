@@ -1,11 +1,9 @@
 ---
-title: Puzzle but useful expressions in C
 
 
 ---
 
 # Puzzle but useful expressions in C
-###### tags: `C`
 
 
 # [Short-ciruit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation)

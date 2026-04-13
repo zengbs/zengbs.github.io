@@ -1,5 +1,4 @@
 ---
-title: Fundamental Theorems of Linear Algebra
 
 
 ---

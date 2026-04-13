@@ -1,5 +1,4 @@
 ---
-title: "How to benefit from move semantics"
 date: 2026-04-13T15:32:37+08:00
 draft: false
 render_with_liquid: false
@@ -7,7 +6,6 @@ render_with_liquid: false
 
 {% raw %}
 ---
-title: How to benefit from move semantics
 tags: [CPP]
 
 ---

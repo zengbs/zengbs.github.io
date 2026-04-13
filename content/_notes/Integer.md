@@ -1,10 +1,8 @@
 ---
-title: Integer
 
 
 ---
 
-###### tags: `C`
 
 # Integer
 

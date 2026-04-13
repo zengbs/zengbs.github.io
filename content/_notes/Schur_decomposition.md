@@ -1,5 +1,4 @@
 ---
-title: Schur decomposition
 
 
 ---

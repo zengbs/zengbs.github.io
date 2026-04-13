@@ -1,11 +1,9 @@
 ---
-title: Error list
 
 
 ---
 
 # Error list
-###### tags: `C`
 # Compile-time error
 
 

@@ -1,5 +1,4 @@
 ---
-title: Nvidia Technical Blog
 
 
 ---

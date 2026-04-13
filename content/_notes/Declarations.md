@@ -1,10 +1,8 @@
 ---
-title: Declarations
 
 
 ---
 
-###### tags: `C`
 
 # Declarations
 

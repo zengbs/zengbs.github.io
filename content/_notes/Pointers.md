@@ -1,10 +1,8 @@
 ---
-title: Pointers
 
 
 ---
 
-###### tags: `C`
 
 # Pointers
 
