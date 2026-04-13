@@ -1,6 +1,5 @@
 ---
-date: 2026-04-13T15:32:37+08:00
-draft: false
+title: Note on C++
 render_with_liquid: false
 ---
 
