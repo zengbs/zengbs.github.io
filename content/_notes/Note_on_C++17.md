@@ -13,7 +13,7 @@ render_with_liquid: false
 - [Mandatory Copy Elision or Passing Unmaterialized Objects]({{ "/notes/Mandatory_Copy_Elision_or_Passing_Unmaterialized_Objects" | relative_url }})
 - [Inline variables]({{ "/notes/Inline_variables" | relative_url }})
 - [Nested namespaces]({{ "/notes/Nested_namespaces" | relative_url }})
-- [\[\[nodiscard\]\], \[\[maybe_unused\]\], \[\[fallthrough\]\] attributes](/znF7YzJnQ9i4NSCqBsUYKg)
+- [\[\[nodiscard\]\], \[\[maybe_unused\]\], \[\[fallthrough\]\] attributes]({{"/notes/nodiscard_maybe_unused_fallthrough_attributes" | relative_url }})
 - [Template argument deduction for class templates]({{ "/notes/Template_argument_deduction_for_class_templates" | relative_url }})
 - [Lambda capture `this` by value]({{ "/notes/Lambda_capture_`this`_by_value" | relative_url }})
 - std::optional
@@ -24,7 +24,7 @@ render_with_liquid: false
 
 ### Moderate
 - [constexpr lambda]({{ "/notes/constexpr_lambda" | relative_url }})
-- [Selection statements with initializer (`if` and `switch` with initialization)]({{ "/notes/Selection_statements_with_initializer_(`if`_and_`switch`_with_initialization)" | relative_url }})
+- [Selection statements with initializer (`if` and `switch` with initialization)]({{ "/notes/Selection_statements_with_initializer" | relative_url }})
 - [Aggregate Extensions]({{ "/notes/Aggregate_Extensions" | relative_url }})
 - UTF-8 character literals
 - Direct-list-initialization of enums

@@ -17,7 +17,7 @@ render_with_liquid: false
 - user-defined literals for standard library types
 
 ### Rare
-- [decltype(auto)](/a4bJIbz2RH-v4MlTkIXDJQ)
+- [decltype(auto)]({{ "/notes/decltype(auto)" | relative_url }})
 - variable templates
 - compile-time integer sequences
 - relaxing constraints on constexpr functions
