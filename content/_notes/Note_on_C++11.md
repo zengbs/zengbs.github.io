@@ -8,23 +8,23 @@ render_with_liquid: false
 
 # [C++11](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md)
 ### Frequently
-- [Move semantics](/zZ7u6W3eSWGPUAe4bqSX2w)
-- [Special member functions for move semantics](https://hackmd.io/S1aGiGVSTqe1RMVq5Y5DWw#Move-Constructor)
-- [Rvalue reference](/CPVfACk0SAqfZkpEkf_yjA)
-- [Auto](/e7x-G2ZaQNSc3KIaZe9FGg)
-- [Lambda expressions](/3-6S9A2DSxSowTtNoMN_rQ)
-- [decltype](https://hackmd.io/CPVfACk0SAqfZkpEkf_yjA?view#Checking-Value-Categories-with-decltype)
+- [Move semantics]({{ "/notes/Move_semantics" | relative_url }})
+- [Special member functions for move semantics]({{ "/notes/Special_member_functions_for_move_semantics" | relative_url }})
+- [Rvalue reference]({{ "/notes/Rvalue_reference" | relative_url }})
+- [Auto]({{ "/notes/Auto" | relative_url }})
+- [Lambda expressions]({{ "/notes/Lambda_expressions" | relative_url }})
+- [decltype]({{ "/notes/decltype" | relative_url }})
 - Nullptr
-- [Range-based for loops](https://hackmd.io/R-av3FWtRXWrw89LVuUgzA#Universal-References-and-the-Range-Based-for-loop)
-- [Strongly-typed enums](/RMKsQc0rSeO83n9TN4Aiyg)
+- [Range-based for loops]({{ "/notes/Range-based_for_loops" | relative_url }})
+- [Strongly-typed enums]({{ "/notes/Strongly-typed_enums" | relative_url }})
 - Type aliases
-- [constexpr](/8Tau6NCyR5C_EAo78AcAbA)
-- [Default functions](/NqumQ9VFRUq3TS7bhFn8-w)
-- [Deleted functions](/fe0w-12FRsqU9sXlzQNhPA)
-- [noexcept specifier](/h3xGM3n7QIiRzjUibx7_0Q)
+- [constexpr]({{ "/notes/constexpr" | relative_url }})
+- [Default functions]({{ "/notes/Default_functions" | relative_url }})
+- [Deleted functions]({{ "/notes/Deleted_functions" | relative_url }})
+- [noexcept specifier]({{ "/notes/noexcept_specifier" | relative_url }})
 - Smart pointers
-- [std::move()](/I-HEDflMQUexU0OaeqtHiw)
-- [std::forward](/zCx-pJytR5SPVjV3Gps-sw)
+- [std::move()]({{ "/notes/std::move()" | relative_url }})
+- [std::forward]({{ "/notes/std::forward" | relative_url }})
 - std::to_string
 - std::make_shared
 - std::chrono
@@ -32,9 +32,9 @@ render_with_liquid: false
 - std::begin/end
 - Unordered containers
 ### Moderate
-- [Initializer lists](/zHjiB8H6SZ-2y16kG2-aeg)
-- [Ref-qualified member functions](/7vPum6kxQfSF_KfVgxlvnw)
-- [Forwarding references](/kh2QV11xSUiEPJhZBPUyHg)
+- [Initializer lists]({{ "/notes/Initializer_lists" | relative_url }})
+- [Ref-qualified member functions]({{ "/notes/Ref-qualified_member_functions" | relative_url }})
+- [Forwarding references]({{ "/notes/Forwarding_references" | relative_url }})
 - *Variadic templates
 - Static assertions
 - Attributes
