@@ -4,7 +4,6 @@ draft: false
 render_with_liquid: false
 ---
 
-{% raw %}
 
 # [C++17](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md)
 
@@ -49,4 +48,3 @@ render_with_liquid: false
 - Splicing for maps and sets
 - Prefix sum algorithms
 - Rounding functions for chrono durations and timepoints
-{% endraw %}

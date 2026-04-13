@@ -4,10 +4,6 @@ draft: false
 render_with_liquid: false
 ---
 
-{% raw %}
----
-
----
 
 # [C++14](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP14.md)
 ### Frequently
@@ -25,5 +21,3 @@ render_with_liquid: false
 - variable templates
 - compile-time integer sequences
 - relaxing constraints on constexpr functions
-
-{% endraw %}

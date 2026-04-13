@@ -4,10 +4,6 @@ draft: false
 render_with_liquid: false
 ---
 
-{% raw %}
----
-
----
 
 
 # [C++11](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP11.md)
@@ -63,4 +59,3 @@ render_with_liquid: false
 - char32_t and char16_t
 - Raw string literals
 - Memory model
-{% endraw %}
