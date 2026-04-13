@@ -121,10 +121,19 @@
                           </ul>
                  <h2><b>Notes</b></h2>
                           <ul>
-                           <li><a href="https://hackmd.io/@zengbs/rkHTkzNM-g">Note on C++</a></li>
+
+                           <li>
+                               {{ with .Site.GetPage "posts/Note on C++.md" }}
+                                   <a href="{{ .Permalink }}">{{ .Title }}</a>
+                               {{ end }}
+                           </li>
+
                            <li><a href="https://hackmd.io/@zengbs/Sk1jNqC2c/%2FZNbmsnHMQTOjD8PLPQAQng">Note on C language</a></li>
+
                            <li><a href="https://hackmd.io/@zengbs/ryS4lUKKs/%2F3xOWlRxkQ8iWea_bqXhHww">Note on CUDA</a></li>
+
                            <li><a href="https://hackmd.io/@zengbs/HJeydCcYi/%2FEx5XG5h1RqyLb3Dy6CgZYQ">Note on Linear Algebra</a></li>
+
                            <!--  <li><a href="">Note on MPI</a></li> -->
                            <!--  <li><a href="">Note on OpenMP</a></li> -->
                           </ul>
