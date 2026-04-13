@@ -1,0 +1,12 @@
+---
+title: "Nested namespaces"
+date: 2026-04-13T15:32:37+08:00
+draft: false
+---
+
+---
+title: Nested namespaces
+tags: [CPP]
+
+---
+

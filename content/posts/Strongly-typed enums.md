@@ -1,0 +1,12 @@
+---
+title: "Strongly-typed enums"
+date: 2026-04-13T15:32:38+08:00
+draft: false
+---
+
+---
+title: Strongly-typed enums
+tags: [CPP]
+
+---
+
