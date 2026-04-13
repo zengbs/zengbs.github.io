@@ -139,12 +139,43 @@ title: Pohsun Tseng
   {% endfor %}
 </ul>
 
+<ul>
+  {% for page in site.pages %}
+    {% if page.path == "content/posts/Note_on_C_language.md" %}
+      <li style="margin-bottom: 10px;">
+        <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
+          {{ page.title | default: "Note on C language" }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
-                           <li><a href="https://hackmd.io/@zengbs/Sk1jNqC2c/%2FZNbmsnHMQTOjD8PLPQAQng">Note on C language</a></li>
+<ul>
+  {% for page in site.pages %}
+    {% if page.path == "content/posts/Note_on_CUDA.md" %}
+      <li style="margin-bottom: 10px;">
+        <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
+          {{ page.title | default: "Note on CUDA" }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
-                           <li><a href="https://hackmd.io/@zengbs/ryS4lUKKs/%2F3xOWlRxkQ8iWea_bqXhHww">Note on CUDA</a></li>
+<ul>
+  {% for page in site.pages %}
+    {% if page.path == "content/posts/Note_on_Linear_Algebra.md" %}
+      <li style="margin-bottom: 10px;">
+        <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
+          {{ page.title | default: "Note on Linear Algebra" }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
 
-                           <li><a href="https://hackmd.io/@zengbs/HJeydCcYi/%2FEx5XG5h1RqyLb3Dy6CgZYQ">Note on Linear Algebra</a></li>
+
 
                            <!--  <li><a href="">Note on MPI</a></li> -->
                            <!--  <li><a href="">Note on OpenMP</a></li> -->
