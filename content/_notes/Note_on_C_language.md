@@ -5,63 +5,63 @@ title: Note on C language
 
 Compiling
 ---
-- [Dynamic linking and loading](/ZNbmsnHMQTOjD8PLPQAQng)
-- [Error list](/u2UKS8qaTuWVF_VovRRbVQ)
+- [Dynamic linking and loading]({{ "/notes/Dynamic_linking_and_loading" | relative_url }})
+- [Error list]({{ "/notes/Error_list" | relative_url }})
 
 Syntax
 ---
-- [Declarations](/bESBSXqdSJa5H2OAI_1x_Q)
-- [Type casting](/MnDwj-aNRwWR7l9D8xvfjg)
-- [Overloading](/9_B2LTlrQLmloA2OKO46sw)
-- [Macro and peprocessor](/_BDYlJ_VRZ2ayFuQY-a-Sg)
-- [Argument passing](/mQJCoGl4Qai_WmeCcJJcEw)
-- [\_\_attribute\_\_](/PFaX74SuQvSo11pAVRqHtg)
+- [Declarations]({{ "/notes/Declarations" | relative_url }})
+- [Type casting]({{ "/notes/Type_casting" | relative_url }})
+- [Overloading]({{ "/notes/Overloading" | relative_url }})
+- [Macro and peprocessor]({{ "/notes/Macro_and_peprocessor" | relative_url }})
+- [Argument passing]({{ "/notes/Argument_passing" | relative_url }})
+- [\_\_attribute\_\_]({{ "/notes/\_\_attribute\_\_" | relative_url }})
 
 Arrays and pointers
 ---
-- [Pointers](/yMt6BTKAS_WQb87eZWXRaA)
-- [1D dynamic memory allocations](/4adsrTUAQgO5n3u712OzYA)
-- [2D dynamic memory allocations](/VjZKEpRQRDqVsj9fbTc6bg)
-- [3D dynamic memory allocations](/iIbKgvZwRiOguq9jrTrAiw)
+- [Pointers]({{ "/notes/Pointers" | relative_url }})
+- [1D dynamic memory allocations]({{ "/notes/1D_dynamic_memory_allocations" | relative_url }})
+- [2D dynamic memory allocations]({{ "/notes/2D_dynamic_memory_allocations" | relative_url }})
+- [3D dynamic memory allocations]({{ "/notes/3D_dynamic_memory_allocations" | relative_url }})
 
 Bitwise operations
 ---
-- [Bitwise operations](/nAX2S4xIRdOwJvCnBfSggQ)
+- [Bitwise operations]({{ "/notes/Bitwise_operations" | relative_url }})
 
 Integer
 ---
-- [Integer](/fSSM-s7AQGyX4LZal92-bQ)
-- [Check integer overflow](/43FTXG62Qu2YX7QjJBJigw)
+- [Integer]({{ "/notes/Integer" | relative_url }})
+- [Check integer overflow]({{ "/notes/Check_integer_overflow" | relative_url }})
 
 String
 ---
-- [String manipulations](/l3F9xJZ1RWuR7iiB-J92Ew)
+- [String manipulations]({{ "/notes/String_manipulations" | relative_url }})
 
 Interview
 ---
-- [Interview questions on C](/lBCu2j4nQ--bomqCeyp3Ow)
+- [Interview questions on C]({{ "/notes/Interview_questions_on_C" | relative_url }})
 
 Memory
 ---
-- [Memory alignment](/oXS0MfrBSpWjfLBYn1WVpw)
+- [Memory alignment]({{ "/notes/Memory_alignment" | relative_url }})
 
 Numerical algorithms
 ---
-- [Trilinear interpolations in 3D space](/2j_ZVi13S3SY2tRDYrdPkA)
+- [Trilinear interpolations in 3D space]({{ "/notes/Trilinear_interpolations_in_3D_space" | relative_url }})
 
 Profiling
 ---
-- [GNU gprof](/ZsetxU8PTum0UmIaRT8kEg)
+- [GNU gprof]({{ "/notes/GNU_gprof" | relative_url }})
 
 Debuggers
 ---
-- [GDB](/Q3AQpwnTTRCUf0V-Cvpf-w)
-- [Valgrind](/Eo1RwDfTR5WlLhCBGgE_Gw)
-- [Debugging with GCC](/e-UncQr4TuyYWvC_T5QUMQ)
+- [GDB]({{ "/notes/GDB" | relative_url }})
+- [Valgrind]({{ "/notes/Valgrind" | relative_url }})
+- [Debugging with GCC]({{ "/notes/Debugging_with_GCC" | relative_url }})
 
 Miscellaneous
 ---
-- [ANSI escapse code](/hS1esTezQTu0B8ba35My_Q)
-- [Reading HDF5 compound data](/l810IqZLTDGbZlxUojJhFQ)
-- [Puzzle but useful expressions in C](/bThkiqdiSDKPoR-5fu2LeA)
-- [Count the number of lines in table](/SU3cPIktQbGUinHrXxyPVg)
+- [ANSI escapse code]({{ "/notes/ANSI_escapse_code" | relative_url }})
+- [Reading HDF5 compound data]({{ "/notes/Reading_HDF5_compound_data" | relative_url }})
+- [Puzzle but useful expressions in C]({{ "/notes/Puzzle_but_useful_expressions_in_C" | relative_url }})
+- [Count the number of lines in table]({{ "/notes/Count_the_number_of_lines_in_table" | relative_url }})

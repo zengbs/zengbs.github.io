@@ -1,19 +1,26 @@
-import os
+import re
+import sys
 
-target = "title: "
+if len(sys.argv) < 2:
+    print("Usage: python convert.py <input_file>")
+    sys.exit(1)
 
-for root, dirs, files in os.walk("."):
-    for file in files:
-        if file.endswith(".md"):
-            path = os.path.join(root, file)
+input_file = sys.argv[1]
 
-            with open(path, "r", encoding="utf-8") as f:
-                lines = f.readlines()
+with open(input_file, "r", encoding="utf-8") as f:
+    content = f.read()
 
-            new_lines = [line for line in lines if target not in line]
+# pattern: [title](/randomID)
+pattern = re.compile(r'\[([^\]]+)\]\(/[^)]+\)')
 
-            if new_lines != lines:
-                with open(path, "w", encoding="utf-8") as f:
-                    f.writelines(new_lines)
+def convert(match):
+    title = match.group(1)
+    slug = title.replace(" ", "_")
+    return f'[{"{}".format(title)}]({{{{ "/notes/{slug}" | relative_url }}}})'
 
-                print(f"Updated: {path}")
+new_content = pattern.sub(convert, content)
+
+with open(input_file, "w", encoding="utf-8") as f:
+    f.write(new_content)
+
+print(f"Converted: {input_file}")
