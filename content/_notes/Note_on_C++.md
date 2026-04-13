@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Note on C++
 ---
 # Note on C++
