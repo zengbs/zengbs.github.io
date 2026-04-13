@@ -1,12 +1,11 @@
 ---
 
-
+title: Note on Linear Algebra
 ---
 
 
+# Note on Linear Algebra
 
-Note on Linear Algebra
-===
 - [Rank of a Matrix](/TOFVUiLnQvGd-w2KxWbZzw)
 - [Particular and Homogeneous Holutions](/ZwEs0NAUSa6ZFFFFfF8Pfw)
 - [Fundamental Theorems of Linear Algebra](/9XdaIiGaRuOHnhahrw-cpw)

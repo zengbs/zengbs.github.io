@@ -1,6 +1,5 @@
 ---
 title: Note on C language
-
 ---
 # Note on C language
 

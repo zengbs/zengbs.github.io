@@ -1,11 +1,9 @@
 ---
-
-
+title: Note on CUDA programming
 ---
 
+# Note on CUDA programming
 
-Note on CUDA programming
-===
 CUDA execution model
 ---
 - [Programming Model](/3xOWlRxkQ8iWea_bqXhHww)
