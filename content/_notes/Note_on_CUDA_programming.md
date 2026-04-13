@@ -6,57 +6,57 @@ title: Note on CUDA programming
 
 CUDA execution model
 ---
-- [Programming Model](/3xOWlRxkQ8iWea_bqXhHww)
-- [Compilation Workflow](/smfOoZv1QKKagZ3oXSauaQ)
+- [Programming Model]({{ "/notes/Programming_Model" | relative_url }})
+- [Compilation Workflow]({{ "/notes/Compilation_Workflow" | relative_url }})
 
 
 
 Global memory
 ---
-- [Memory architecture](/1Rpaxd0BQFWRkRnhZZ3x6g)
-- [Memory management](/MSxX1LiAQJSGz3I7HaeIVQ)
-- [Memory access pattern](/TrwAccEwTiq3pwFrwAi0Cw)
+- [Memory architecture]({{ "/notes/Memory_architecture" | relative_url }})
+- [Memory management]({{ "/notes/Memory_management" | relative_url }})
+- [Memory access pattern]({{ "/notes/Memory_access_pattern" | relative_url }})
 
 Shared memory and constant memory
 ---
-- [Configurations of Shared Memory](/tT7xl4vcSU-LFUda0Ev71Q)
-- [Bank conflict](/wET73P1BQhCXYPDqnHbwUw)
-- [Synchronization of Shared Memory](/pSuPuzNUQeuepkEpRYvFCA)
-- [Warp Shuffles](/Lr3-m6jiReydZjZPlQjsaQ)
+- [Configurations of Shared Memory]({{ "/notes/Configurations_of_Shared_Memory" | relative_url }})
+- [Bank conflict]({{ "/notes/Bank_conflict" | relative_url }})
+- [Synchronization of Shared Memory]({{ "/notes/Synchronization_of_Shared_Memory" | relative_url }})
+- [Warp Shuffles]({{ "/notes/Warp_Shuffles" | relative_url }})
 
 
 Texture memory
 ---
-- [Texture Memory](/bpKNNQcoTXCsnyyO-iU-Sw)
+- [Texture Memory]({{ "/notes/Texture_Memory" | relative_url }})
 
 Streams and concurrency
 ---
-- [Stream and Concurrency](/-VsFMt9dS2OS5UoLZHU2mA)
+- [Stream and Concurrency]({{ "/notes/Stream_and_Concurrency" | relative_url }})
 - [Triple Buffering]()
 
 
 Worked Examples
 ---
-- [Parallel Reduction](/vo-4fPtRTqugpJYLu-T_6A)
-- [Matrix Addition](/k1w1yiRFQvqtJpLmFZaMiQ)
-- [Matrix Transpose](/FVL8I6CCQeqOTmSvB6qLTg)
-- [Matrix Multiplcation](/kzsnoeYKS8qvgh8N6yfsdQ)
+- [Parallel Reduction]({{ "/notes/Parallel_Reduction" | relative_url }})
+- [Matrix Addition]({{ "/notes/Matrix_Addition" | relative_url }})
+- [Matrix Transpose]({{ "/notes/Matrix_Transpose" | relative_url }})
+- [Matrix Multiplcation]({{ "/notes/Matrix_Multiplcation" | relative_url }})
 
 
 Tensor core
 ---
-- [Tensor core](/CnHZ8KhCQvGxdS4lUEarnA)
+- [Tensor core]({{ "/notes/Tensor_core" | relative_url }})
 
 Profiling
 ---
-- [Calculation of Warp Occupancy](/nxg0xlLqQlyeJ5TE_b_YBQ)
-- [Performance tuning](/sXD0tx8DTuyEeWJF-YGEbA)
-- [Nsight compute](/Paa9DzzGTGOzcd9QuoxnTA)
-- [Nsight system](/zOywJzjYQhabhP2ezJ9-9w)
+- [Calculation of Warp Occupancy]({{ "/notes/Calculation_of_Warp_Occupancy" | relative_url }})
+- [Performance tuning]({{ "/notes/Performance_tuning" | relative_url }})
+- [Nsight compute]({{ "/notes/Nsight_compute" | relative_url }})
+- [Nsight system]({{ "/notes/Nsight_system" | relative_url }})
 
 Debugging
 ---
-- [cuda-gdb](/-KNLPssAQNO5xpR6baZj8Q)
+- [cuda-gdb]({{ "/notes/cuda-gdb" | relative_url }})
 
 Mannual
 ---
@@ -76,12 +76,12 @@ Mannual
 
 Miscellaneous
 ---
-- [Nvidia Technical Blog](/TImNuvCaS_ubrl5eFJW2Jw)
-- [CUDA FAQ](/1TwlHGzqRoGDxmM_HfCtkA)
-- [Syntax](/n0uzCKQ1SJ-_thzKY4Kf-Q)
-- [Thread indexing cheatsheet](/zLhfeBSZRSGCmojhXOjLdw)
-- [Trouble shooting](/PuZLlMCXRiWLJYpc85qjEg)
-- [NVIDIA A10](/wn4rhyicTa2YiV8-M-2E5g)
+- [Nvidia Technical Blog]({{ "/notes/Nvidia_Technical_Blog" | relative_url }})
+- [CUDA FAQ]({{ "/notes/CUDA_FAQ" | relative_url }})
+- [Syntax]({{ "/notes/Syntax" | relative_url }})
+- [Thread indexing cheatsheet]({{ "/notes/Thread_indexing_cheatsheet" | relative_url }})
+- [Trouble shooting]({{ "/notes/Trouble_shooting" | relative_url }})
+- [NVIDIA A10]({{ "/notes/NVIDIA_A10" | relative_url }})
 - [kriegalex](https://github.com/kriegalex/wrox-pro-cuda-c/tree/master)
 - [HangJie720 ](https://github.com/HangJie720/Professional-CUDA-C-Programming/tree/master)
 - [deeplearning](https://github.com/deeperlearning/professional-cuda-c-programming)
