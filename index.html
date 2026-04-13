@@ -122,11 +122,18 @@
                  <h2><b>Notes</b></h2>
                           <ul>
 
-                           <li>
-                               {{ with .Site.GetPage "content/posts/Note_on_C++.md" }}
-                                   <a href="{{ .Permalink }}">{{ .Title }}</a>
-                               {{ end }}
-                           </li>
+<ul>
+  {% for page in site.pages %}
+    {% if page.path == "content/posts/Note_on_C++.md" %}
+      <li style="margin-bottom: 10px;">
+        <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
+          {{ page.title | default: "Note on C++" }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
 
                            <li><a href="https://hackmd.io/@zengbs/Sk1jNqC2c/%2FZNbmsnHMQTOjD8PLPQAQng">Note on C language</a></li>
 
