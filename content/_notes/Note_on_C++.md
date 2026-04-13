@@ -1,7 +1,6 @@
 ---
 title: Note on C++
 ---
-
 # Note on C++
 
 - [Note on C++98](/SlsJCn5mRQSu_OZS6muuVg)

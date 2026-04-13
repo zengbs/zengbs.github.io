@@ -1,9 +1,6 @@
 ---
-
 title: Note on Linear Algebra
 ---
-
-
 # Note on Linear Algebra
 
 - [Rank of a Matrix](/TOFVUiLnQvGd-w2KxWbZzw)
