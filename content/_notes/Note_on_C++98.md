@@ -5,7 +5,7 @@ render_with_liquid: false
 ---
 
 
-Note on C++98
+# Note on C++98
 
 
 Scope and Lifetime (2)
