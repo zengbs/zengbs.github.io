@@ -5,11 +5,9 @@ render_with_liquid: false
 ---
 
 {% raw %}
----
-
----
 
 # [C++17](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP17.md)
+
 ### Frequently
 - [Structured bindings](/0P3eLxnXQNmdk9sq9F-DTQ)
 - [if constexpr](/kuK51-a2R0aKSq88-jEcbA)
@@ -24,6 +22,7 @@ render_with_liquid: false
 - std::string_view
 - std::filesystem
 - std::clamp
+
 ### Moderate
 - [constexpr lambda](/zjMNkndzSEWnQfONVADAcw)
 - [Selection statements with initializer (`if` and `switch` with initialization)](/G67j6j-fR-6abvHBQbvgiA)
@@ -39,6 +38,7 @@ render_with_liquid: false
 - std::not_fn
 - std::to_chars() and std::from_chars()
 - gcd, lcm
+
 ### Rare
 - Declaring non-type template parameters with auto
 - Folding expressions
