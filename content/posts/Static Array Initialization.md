@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Static Array Initialization
 tags: [CPP]
@@ -132,3 +133,4 @@ int main() {
     return 0;
 }
 ```
+{% endraw %}

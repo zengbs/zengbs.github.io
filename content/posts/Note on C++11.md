@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Note on C++11
 tags: [CPP]
@@ -65,3 +66,4 @@ tags: [CPP]
 - char32_t and char16_t
 - Raw string literals
 - Memory model
+{% endraw %}

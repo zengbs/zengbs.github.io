@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'Public, Private, and Protected Inheritance'
 tags: [CPP]
@@ -152,3 +153,5 @@ tags: [CPP]
 | by value     | Use when the composed object is **always required** and **has the same lifetime**.              | `Car` has `Engine` (always has one)                          |
 | by reference | Use when the composed object is **shared**, **externally owned**, and **never null**.           | Injecting dependencies (e.g., reference to a logger)         |
 | by pointer   | Use when the composed object is **optional**, **polymorphic**, or **shared/owned dynamically**. | Optional or changeable behavior: `std::unique_ptr<Strategy>` |
+
+{% endraw %}

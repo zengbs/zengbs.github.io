@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Define a Getter for a Movable Object
 tags: [CPP]
@@ -67,3 +68,4 @@ coll.push_back(p.getName());
 // --> move
 coll.push_back(std::move(p).getName());
 ```
+{% endraw %}

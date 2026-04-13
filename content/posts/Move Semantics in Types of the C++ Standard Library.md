@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Move Semantics in Types of the C++ Standard Library
 tags: [CPP]
@@ -368,3 +369,4 @@ int main() {
 }
 ```
 # Move Semantics for Multithreading
+{% endraw %}

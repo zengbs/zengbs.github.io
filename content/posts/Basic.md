@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Basic
 tags: [CPP]
@@ -62,3 +63,4 @@ Note: The body of a range `for` must not change the size of the sequence over wh
 * Two vectors are equal if they have the same number of elements and if the corresponding elements all have the same value.
 *  If the vectors have differing sizes, but the elements that are in common are equal, then the vector with fewer elements is less than the one with more elements.
 *  If the elements have differing values, then the relationship between the vectors is determined by the relationship between the first elements that differ.
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Move semantics
 tags: [CPP]
@@ -24,3 +25,4 @@ tags: [CPP]
 - [Move-Only Types](/tw453IuMTwmU1RPU6wJJtw)
 - [Moving Algorithms and Iterators](/W1qMjjsYRBym1UpNUAMBPA)
 - [Move Semantics in Types of the C++ Standard Library](/YjsAQwk4Qh-v5IK_CbuZ6Q)
+{% endraw %}

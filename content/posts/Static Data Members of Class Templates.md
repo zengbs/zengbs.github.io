@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Static Data Members of Class Templates
 tags: [CPP]
@@ -51,3 +52,4 @@ tags: [CPP]
        return 0;
     }
     ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::deque'
 tags: [CPP]
@@ -39,3 +40,5 @@ double-ended queue
 
 
 ![deque](https://hackmd.io/_uploads/BJg0_M03T.png)
+
+{% endraw %}

@@ -5,9 +5,12 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Strongly-typed enums
 tags: [CPP]
 
 ---
 
+
+{% endraw %}

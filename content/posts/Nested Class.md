@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Nested Class
 tags: [CPP]
@@ -286,3 +287,4 @@ tags: [CPP]
  # Name Resolution in Nested Class Scope
   
  See [Unqualified Name Lookup](/cmvzTXvfTJOizt_Y9XQgUw). 
+{% endraw %}

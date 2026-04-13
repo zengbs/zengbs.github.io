@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Exceptions and Inheritance
 tags: [CPP]
@@ -441,3 +442,4 @@ tags: [CPP]
    //   what():  divide by zero
    // Aborted (core dumped)
    ```
+{% endraw %}

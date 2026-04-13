@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Operator()
 tags: [CPP]
@@ -33,3 +34,4 @@ tags: [CPP]
    ```
 2. An overloaded `operator()` must be declared as a member function.
 3. The fourth argument of `transform()` is a temporary object of class `absInt` created by invoking the default constructor of `absInt`. 
+{% endraw %}

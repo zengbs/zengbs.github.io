@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Motivation of Perfect Forwarding
 tags: [CPP]
@@ -33,3 +34,4 @@ void bar(X&&, Y&);
 void bar(X&&, Y&&);
 ```
 Therefore, C++11 introduced "perfect forwarding" without any overloads but still keeping the type and the value category.
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Selection statements with initializer
 tags: [CPP]
@@ -104,3 +105,4 @@ Result:
 - "qqq/ccc"
 - "qqq/xxx"
 ```
+{% endraw %}

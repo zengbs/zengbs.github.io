@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Move-Only Types
 tags: [CPP]
@@ -141,3 +142,4 @@ Typically, the check is positive—you ask whether the object still has its reso
 * `if (up)` — for a `std::unique_ptr up`, which converts to true if it still owns a pointer.
 * `if (t.joinable())` — for a `std::thread t`, meaning it still represents an active thread of execution.
 * `if (f.valid())` — for a `std::future f`, indicating whether it still refers to a shared state.
+{% endraw %}

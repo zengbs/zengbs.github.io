@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Argument type conversion
 tags: [CPP]
@@ -376,3 +377,4 @@ See [Qualification conversions](/3zUNdV0_THKZYofTSF-D-w)
 	   return 0;
 	}
 	```
+{% endraw %}

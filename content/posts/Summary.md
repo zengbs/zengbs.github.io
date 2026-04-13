@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Summary
 tags: [CPP]
@@ -33,3 +34,4 @@ tags: [CPP]
 # Rules
 1. For each function marked `override` in `Derived`, there must be a function marked `virtual` in `Base`.
 2. The signature of the overriding function should be the same as the virtual function in the `Base`.
+{% endraw %}

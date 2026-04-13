@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Template Explicit Specialization
 tags: [CPP]
@@ -99,3 +100,4 @@ int main(){
 	   max( "hi");
 	}
 	```
+{% endraw %}

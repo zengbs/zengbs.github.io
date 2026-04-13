@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Objects
 tags: [CPP]
@@ -46,3 +47,4 @@ tags: [CPP]
         return 0;
     }
     ```
+{% endraw %}

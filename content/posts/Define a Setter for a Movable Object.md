@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Define a Setter for a Movable Object
 tags: [CPP]
@@ -156,3 +157,5 @@ For the remaining cases, I summarize them in the table for easier comparison.
 
 $\dagger$ Assuming the capacity of existing member is greater than or equal to the passed object. Ie., no allocation occurs in copy/move assignment
 
+
+{% endraw %}

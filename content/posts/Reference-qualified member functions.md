@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Reference-qualified member functions
 tags: [CPP]
@@ -55,3 +56,4 @@ tags: [CPP]
 # Rule of thumb
 * Use reference qualifiers in assignment operators to prevent assigning to rvalue.
 * Use reference qualifiers when references to objects are returned to prevent accessing destroyed temporary object. See [Define a Getter for a Movable Object](/CHxUWNWBT9uGaIc8IeDLuw) for more details.
+{% endraw %}

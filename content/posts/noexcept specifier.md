@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: noexcept specifier
 tags: [CPP]
@@ -61,3 +62,4 @@ tags: [CPP]
    
    int main() { }
    ```
+{% endraw %}

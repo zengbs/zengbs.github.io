@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Operator - >
 tags: [CPP]
@@ -88,3 +89,4 @@ tags: [CPP]
        a->hello();
    }
    ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: How to benefit from move semantics
 tags: [CPP]
@@ -58,3 +59,5 @@ while(std::getline(myStream, line)) {
   }
   ```
 
+
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'Operator[]'
 tags: [CPP]
@@ -22,3 +23,4 @@ tags: [CPP]
     ```
 3. If the return type of the `operator=` is a reference, an object defined by `T obj = arry[3]` can change the value of `arry[3]`, ended up causing unexpected behavior.  True?
     False. `T obj = arry[3]` calls copy ctor, `T obj; obj = arry[3]` calls copy assignment.
+{% endraw %}

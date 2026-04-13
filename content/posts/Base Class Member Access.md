@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Base Class Member Access
 tags: [CPP]
@@ -244,3 +245,4 @@ tags: [CPP]
     ```
 12. If a derived class wishes to access the private members of its base class directly, the base class must declare the derived class explicitly to be a friend. 
 13.  Friendship is not inherited. The derived class does not become a friend of a class that granted friendship to one of its base classes. If the derived class requires one or more of the same friendships, each must be granted explicitly by the respective class.
+{% endraw %}

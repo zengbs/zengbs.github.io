@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'A multiple, Virtual Inheritance Example'
 tags: [CPP]
@@ -74,3 +75,4 @@ int main() {
     d.checkIndex(5);     // Output: Index 5 is valid.
 }
 ```
+{% endraw %}

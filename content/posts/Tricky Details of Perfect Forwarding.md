@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Tricky Details of Perfect Forwarding
 tags: [CPP]
@@ -494,3 +495,4 @@ int main() {
    callFoo(std::string{});
 }
 ```
+{% endraw %}

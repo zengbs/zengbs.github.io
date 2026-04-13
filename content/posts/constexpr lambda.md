@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: constexpr lambda
 tags: [CPP]
@@ -183,3 +184,4 @@ constexpr auto squared = [](auto val) constexpr {
    return val*val;
 };
 ```
+{% endraw %}

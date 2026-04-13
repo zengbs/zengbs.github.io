@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Template Partial Specializations
 tags: [CPP]
@@ -57,3 +58,4 @@ tags: [CPP]
        return 0;
     }
     ```
+{% endraw %}

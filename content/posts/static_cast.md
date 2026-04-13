@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: static_cast
 tags: [CPP]
@@ -20,3 +21,4 @@ tags: [CPP]
    | Declared type of the result                             |      Type               |  Typr&                    |     Type&&                  |
 
 * The `static_cast` operator shall not cast away constness.
+{% endraw %}

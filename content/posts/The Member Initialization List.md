@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Member Initialization List
 tags: [CPP]
@@ -112,3 +113,4 @@ tags: [CPP]
    // preferred idiom
    X::X( int val ) : i( val ) { j = i; }
    ```
+{% endraw %}

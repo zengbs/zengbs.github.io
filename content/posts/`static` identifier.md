@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: '`static` identifier'
 tags: [CPP]
@@ -55,3 +56,5 @@ int main(){
 ```
 # Summary
 ![](https://hackmd.io/_uploads/H1YGo32PC.png)
+
+{% endraw %}

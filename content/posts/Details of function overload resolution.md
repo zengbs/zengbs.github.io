@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Details of function overload resolution
 tags: [CPP]
@@ -371,3 +372,5 @@ int main() {
 
 
 ![936825-20210316030907126-2015925917](https://hackmd.io/_uploads/Bkg_L6o0h1l.png)
+
+{% endraw %}

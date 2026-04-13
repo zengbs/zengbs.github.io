@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class template instantiation
 tags: [CPP]
@@ -161,3 +162,4 @@ tags: [CPP]
    // an implicit pointer conversion is not applied
    BufPtr< 0 > nil;
    ```
+{% endraw %}

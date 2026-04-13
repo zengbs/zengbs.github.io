@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The data members and member fu
 tags: [CPP]
@@ -28,3 +29,4 @@ The members of the abstract base class represent:
 
 
 # Defining the Derived Classes
+{% endraw %}

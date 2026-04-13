@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Move-from States
 tags: [CPP]
@@ -244,3 +245,4 @@ Resolutions:
       }
    };
    ```
+{% endraw %}

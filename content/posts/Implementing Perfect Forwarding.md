@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Implementing Perfect Forwarding
 tags: [CPP]
@@ -137,3 +138,5 @@ foo(std::move(c)); // OK, arg binds to const xvalue
 | xvalue       | n/a              | 4                      | 1                | 3                      |    2 |
 | const xvalue | n/a              | 3                      | n/a              | 1                      |    2 |
 
+
+{% endraw %}

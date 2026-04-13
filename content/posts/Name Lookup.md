@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Name Lookup
 tags: [CPP]
@@ -19,3 +20,4 @@ tags: [CPP]
 4. Post processing (e.g., determining type, evaluating expressions, generating machine code)
 
 The name of a class is inserted in its class scope, the name of a class is also considered a member of that class for the purposes of name hiding and lookup.
+{% endraw %}

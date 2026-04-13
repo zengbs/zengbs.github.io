@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std:set'
 tags: [CPP]
@@ -14,3 +15,5 @@ tags: [CPP]
 ![image](https://hackmd.io/_uploads/B1DjofCn6.png)
 
 ![set](https://hackmd.io/_uploads/BJ-aszAna.png)
+
+{% endraw %}

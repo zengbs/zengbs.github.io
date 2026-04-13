@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: decltype(auto)
 tags: [CPP]
@@ -262,3 +263,4 @@ decltype(auto) call(Func f, Args&&.. args)
   }
   ```
   In this case, `decltype(auto)` switches to the rules of expression and always deduces an lvalue reference (`Type&`).
+{% endraw %}

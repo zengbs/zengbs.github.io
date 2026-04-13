@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Try Block
 tags: [CPP]
@@ -127,3 +128,4 @@ tags: [CPP]
       
    }
    ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'string, char, int conversion'
 tags: [CPP]
@@ -41,3 +42,4 @@ char ch = str[0];
 char ch = 'A';
 std::string str(1, ch);
 ```
+{% endraw %}

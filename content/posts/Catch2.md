@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Catch2
 tags: [CPP]
@@ -31,3 +32,4 @@ TEST_CASE("Benchmark Convolution", "[benchmark]") {
 
 # Reference
 https://github.com/catchorg/Catch2
+{% endraw %}

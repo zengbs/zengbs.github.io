@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Memory Layout of an Object with Methods
 tags: [CPP]
@@ -221,3 +222,4 @@ Non-virtual member functions (symbol addresses):
 https://wenfh2020.com/2023/08/22/cpp-inheritance/
 
 https://selfboot.cn/en/2024/05/10/c++_object_model/
+{% endraw %}

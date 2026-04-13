@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Multiple Inheritance
 tags: [CPP]
@@ -104,3 +105,4 @@ the derived class. `print()`, therefore, is resolved only using name resolution 
    }
    ```
    When a `Bear` or `ZooAnimal` pointer or reference is initialized with or assigned the address of a `Panda` class object, both the `Panda`-specific and `Endangered` portions of the `Panda` interface are no longer accessible. Similarly, when an `Endangered` pointer or reference is initialized with or assigned the address of a Panda class object, both the `Panda`-specific and `Bear` portions of the Panda interface are no longer accessible.
+{% endraw %}

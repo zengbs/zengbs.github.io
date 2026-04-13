@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Initialization
 tags: [CPP]
@@ -33,3 +34,4 @@ tags: [CPP]
 3. Two primary drawbacks to the explicit initialization list are that:
     * It can only be applied to class objects for which all the data members are public
     * It requires the explicit intervention of the programmer, adding to the possibility of accident.
+{% endraw %}

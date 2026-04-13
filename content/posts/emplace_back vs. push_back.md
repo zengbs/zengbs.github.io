@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: emplace_back vs. push_back
 tags: [CPP]
@@ -99,3 +100,4 @@ int main () {
 # Summary
 * `emplace_back()` constructs an element directly in place at the end of the vector, eliminating the need for an extra copy or move operation.
 * The presence of a `noexcept` specifier in move semantics determines whether the existing data can be moved or must be copied into newly allocated memory.
+{% endraw %}

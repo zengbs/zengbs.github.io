@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Scope under Inheritance
 tags: [CPP]
@@ -211,3 +212,4 @@ int main() {
       return os;
    }
    ```
+{% endraw %}

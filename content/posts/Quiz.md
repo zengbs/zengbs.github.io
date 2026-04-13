@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Quiz
 tags: [CPP]
@@ -325,3 +326,5 @@ int main(int argc, char const *argv[])
 ```
 
 ![Ambiguity Inheritance](https://hackmd.io/_uploads/ByHNsRgu1l.png =30%x)
+
+{% endraw %}

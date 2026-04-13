@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Roadmap
 tags: [CPP]
@@ -115,3 +116,4 @@ C++ Primer 作者 Stanley B. Lippman 已於上月底辭世，享壽 72 歲，C++
 C++ Core Guidelines 其實對於從未閱讀過 Effective 系列書籍的現代新入門者而言還是很重要的，如果可能的話，我會推薦先讀過 Effective 系列的書再去看它。但 Effective 系列的書有不少內容已經過時，一個折衷的方法就是從摘要 C++ Core Guidelines 的書來當作切入點。這邊可以推薦兩本：
 Beautiful C++: 30 Core Guidelines for Writing Clean, Safe, and Fast Code (電子版)
 C++ Core Guidelines Explained: Best Practices for Modern C++ (電子版)
+{% endraw %}

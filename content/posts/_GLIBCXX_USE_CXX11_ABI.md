@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: _GLIBCXX_USE_CXX11_ABI
 tags: [CPP]
@@ -12,3 +13,4 @@ tags: [CPP]
 ---
 
 `-D_GLIBCXX_USE_CXX11_ABI=0`
+{% endraw %}

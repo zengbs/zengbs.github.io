@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Candidate functions
 tags: [CPP]
@@ -23,3 +24,5 @@ tags: [CPP]
 
 
 ![3bcc8a47c4c94ea4910bf62665861095~tplv-k3u1fbpfcp-zoom-in-crop-mark_1512_0_0_0](https://hackmd.io/_uploads/BJggtBw5yl.png)
+
+{% endraw %}

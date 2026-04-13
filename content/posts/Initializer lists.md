@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Initializer lists
 tags: [CPP]
@@ -48,3 +49,4 @@ fp({47,11,3});   // copy-list-initialization, error
 fp(P{47,11});    // direct-list-initialization, ok
 fp(P{47,11,3});  // direct-list-initialization, ok
 ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Explicit template arguments
 tags: [CPP]
@@ -59,3 +60,4 @@ tags: [CPP]
 	   return 0;
 	}
 	```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Templates and Compilation Model
 tags: [CPP]
@@ -143,3 +144,5 @@ int main(){
 }
 ```
 ![image](https://hackmd.io/_uploads/Sy9Pi36-ee.png)
+
+{% endraw %}

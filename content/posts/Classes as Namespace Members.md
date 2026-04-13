@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Classes as Namespace Members
 tags: [CPP]
@@ -58,3 +59,4 @@ tags: [CPP]
    ns::EnclosingClass::NestedClass::foo()
    ```
 4. See [Unqualified Name Lookup](/cmvzTXvfTJOizt_Y9XQgUw) for details.
+{% endraw %}

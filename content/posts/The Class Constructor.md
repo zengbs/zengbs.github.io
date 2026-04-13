@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Class Constructor
 tags: [CPP]
@@ -487,3 +488,4 @@ int main() {
    return 0;
 }
 ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Overload Resolution and Inheritance
 tags: [CPP]
@@ -298,3 +299,4 @@ tags: [CPP]
       return 0;
    }
    ```
+{% endraw %}

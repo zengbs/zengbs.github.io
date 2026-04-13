@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Perfect Passing with `auto&&`
 tags: [CPP]
@@ -298,3 +299,4 @@ void assign(Coll& coll, const T& value) {
 # Perfect Forwarding in Lambdas
 
 # Using `auto&&` in C++20 Function Declarations
+{% endraw %}

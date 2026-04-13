@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Base and Derived Class Virtual Functions
 tags: [CPP]
@@ -451,3 +452,4 @@ Derived destructor
 Base destructor
 Base::call()
 ```
+{% endraw %}

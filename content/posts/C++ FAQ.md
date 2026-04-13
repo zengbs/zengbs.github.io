@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: C++ FAQ
 tags: [CPP]
@@ -29,3 +30,5 @@ tags: [CPP]
 
 # Input/Output
 * [Why should I use <iostream> instead of the traditional <cstdio>?](https://isocpp.org/wiki/faq/input-output#iostream-vs-stdio)
+
+{% endraw %}

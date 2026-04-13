@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: '[[nodiscard]], [[maybe_unused]], [[fallthrough]] attributes'
 tags: [CPP]
@@ -119,3 +120,4 @@ void commentPlace(int place)
 Here, passing the place 1 will print:
 `very well`, using a statement of case 1 and case 2.
 Note that the attribute has to be used in an empty statement. It must therefore end with a semicolon. Using the attribute as the last statement in a switch statement is not allowed.
+{% endraw %}

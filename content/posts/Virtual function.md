@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Virtual function
 tags: [CPP]
@@ -123,3 +124,4 @@ The virtual function without implementation is pure virtual function. Sometimes 
 ```
 
 In this case, `Base` is an abstract class, we cannot create an instance of an abstract class.
+{% endraw %}

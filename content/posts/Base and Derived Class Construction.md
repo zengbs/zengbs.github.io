@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Base and Derived Class Construction
 tags: [CPP]
@@ -42,3 +43,4 @@ tags: [CPP]
        return 0;
    }
    ```
+{% endraw %}

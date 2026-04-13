@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Template compilation model
 tags: [CPP]
@@ -193,3 +194,4 @@ t: Local (non-global) symbol in .text.
 * Yes*: inlineable for Extern Template: Inlining works for types not declared with extern template.
 * Extensibility means:
 "Can the code be extended to handle new types or use cases not foreseen originally?"
+{% endraw %}

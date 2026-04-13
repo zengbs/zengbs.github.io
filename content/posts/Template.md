@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Template
 tags: [CPP]
@@ -258,3 +259,4 @@ test.cpp:16:22: note:   couldn’t deduce template parameter ‘T’
 ```
 
 This error occurs because C++ compiler is unable to select the type T based on the target function. To address this issue, we can call the function with an explicit type, e.g. calling `long ans = sum<long>(2,4)`.
+{% endraw %}

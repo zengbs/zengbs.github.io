@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'Union: A Space-Saving Class'
 tags: [CPP]
@@ -110,3 +111,4 @@ int main() {
     return 0;
 }
 ```
+{% endraw %}

@@ -5,9 +5,12 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::forward'
 tags: [CPP]
 
 ---
 
+
+{% endraw %}

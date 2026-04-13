@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Name resolution in template definitions
 tags: [CPP]
@@ -121,3 +122,4 @@ int main(){
 1. When `g<T>` is defined, the compiler does an unqualified lookup of `h`. At that point, it only sees the forward declaration `void h(double);`.
 2. Later, when you call `g(234)`, ADL (argument-dependent lookup) tries to find more overloads in the namespace of `int`, but `int` is a fundamental type with no associated namespace—so no new overloads are found.
 3. Thus, the only candidate is `h(double)`, which is called, printing `"Called h(double)"`. The `h(int)` overload is ignored because it wasn’t visible at `g`'s definition time and ADL doesn’t bring it in.
+{% endraw %}

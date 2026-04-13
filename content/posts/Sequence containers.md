@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Sequence containers
 tags: [CPP]
@@ -19,3 +20,4 @@ tags: [CPP]
 - [std::string](/rdvWWcHIQleT55ChOAdEuA)
 
 ![sequence_containers](https://hackmd.io/_uploads/HyOUCGA2T.png)
+{% endraw %}

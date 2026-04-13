@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Book list
 tags: [CPP]
@@ -51,3 +52,4 @@ C++ brain teasers
 [More C++ Idioms](https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms)
 [5 C++ Puzzler Books](https://leanpub.com/b/5_cpp_puzzler_books)
 [C++ Tip of The Week](https://tip-of-the-week.github.io/cpp/)
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Note on C++
 tags: [CPP]
@@ -17,3 +18,4 @@ tags: [CPP]
 - [Note on C++17](/qSRns4_sRL-xpSyT4a9vjQ)
 - [Note on C++20](/RGzBMf7bT5-kofU3hx02bQ)
 - [Miscellaneous](/EN2pqCXUQc2pkGdS6OAJrQ)
+{% endraw %}

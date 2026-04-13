@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Static Class Members
 tags: [CPP]
@@ -136,3 +137,4 @@ int main() {
    ```
 2. Static member functions have no `this` pointer. This makes sense when you think about it -- the `this` pointer always points to the object that the member function is working on. Static member functions do not work on an object, so the `this` pointer is not needed.
 3. Static member functions can directly access other static members (variables or functions), but not non-static members. This is because non-static members must belong to a class object, and static member functions have no class object to work with!
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Member Templates
 tags: [CPP]
@@ -132,3 +133,4 @@ tags: [CPP]
     }
     ```
 12. The template parameters do not have to have the same name as those specified within the class template definition.
+{% endraw %}

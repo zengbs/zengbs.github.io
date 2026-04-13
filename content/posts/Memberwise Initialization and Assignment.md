@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Memberwise Initialization and Assignment
 tags: [CPP]
@@ -261,3 +262,4 @@ int main() {
     return 0;
 }
 ```
+{% endraw %}

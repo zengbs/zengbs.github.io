@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Numeric conversions
 tags: [CPP]
@@ -61,3 +62,5 @@ int i;
 const int& ri = i;
 const int* pi = &i;
 ```
+
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: '`const` qualifier'
 tags: [CPP]
@@ -92,3 +93,4 @@ If the giver has a low-level const qualifier, then the receiver must also have a
 * `decltype(variable)` is a reference type only if variable is a reference.
 * `decltype(*pointer)` is always a reference type.
 * `decltype` retains top-, low-level `const`, and reference from .
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Lambda function
 tags: [CPP]
@@ -16,3 +17,4 @@ tags: [CPP]
 # 3. Simple lambda with trailing return type
 # 4. Lambda with exception specification
 # 5. Lambda with attribute, exception specification, and trailing return type
+{% endraw %}

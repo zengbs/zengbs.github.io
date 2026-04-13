@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Namespace Definitions
 tags: [CPP]
@@ -40,3 +41,4 @@ tags: [CPP]
 * The names of the members of an unnamed namespace are visible only within a specific file and are invisible to the other files that make up the program.
 * A member of an unnamed namespace has properties that are similar to those of a global entity declared static.
 * The use of global static declarations will be replaced with the use of unnamed namespace members.
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Overloaded resolution with instantiations
 tags: [CPP]
@@ -185,3 +186,4 @@ From the set of candidate functions, keep only the functions that can be called 
 		   return 0;
 		}
 		```
+{% endraw %}

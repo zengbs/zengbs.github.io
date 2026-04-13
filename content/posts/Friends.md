@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Friends
 tags: [CPP]
@@ -189,3 +190,4 @@ tags: [CPP]
       return 0;
    }
    ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: const_cast
 tags: [CPP]
@@ -37,3 +38,4 @@ tags: [CPP]
   *c1 = 50;
   cout << a1 << endl; // 50
 ```
+{% endraw %}

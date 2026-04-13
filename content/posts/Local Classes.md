@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Local Classes
 tags: [CPP]
@@ -27,3 +28,4 @@ tags: [CPP]
       return 0;
    }
    ```
+{% endraw %}

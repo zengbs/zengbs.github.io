@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Constructors (deprecated)
 tags: [CPP]
@@ -127,3 +128,4 @@ The obvious solution is to get rid of the defaulted constructor that accepts no 
 ## Using a Member Initializer List
 ## Using the `explicit` Keyword
 ## Delegating Constructors
+{% endraw %}

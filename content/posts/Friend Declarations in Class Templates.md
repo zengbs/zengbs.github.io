@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Friend Declarations in Class Templates
 tags: [CPP]
@@ -165,3 +166,4 @@ There are three kinds of friend declarations that may appear within a class temp
     ```
 
 # Example: Queue and QueueItem Friend Declarations
+{% endraw %}

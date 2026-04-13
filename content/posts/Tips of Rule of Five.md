@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Tips of Rule of Five
 tags: [CPP]
@@ -130,3 +131,4 @@ private:
    }
    ```
 * In class inheritance, please see [noexcept Declarations in Class Hierarchies](https://hackmd.io/1Fjt2rPQSPqGjqcwUD29yg?view#noexcept-Declarations-in-Class-Hierarchies) for more details about `noexcept`.
+{% endraw %}

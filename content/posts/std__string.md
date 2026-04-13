@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::string'
 tags: [CPP]
@@ -12,3 +13,5 @@ tags: [CPP]
 ---
 
 ![image](https://hackmd.io/_uploads/H1-SK8dUC.png)
+
+{% endraw %}

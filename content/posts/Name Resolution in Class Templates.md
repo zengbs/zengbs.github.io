@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Name Resolution in Class Templates
 tags: [CPP]
@@ -84,3 +85,4 @@ tags: [CPP]
 3. **[Need to be clarified]** Knowing where a template's point of instantiation is located is important because it determines which declarations are considered for the names that depend on a template parameter.
     * A class template point of instantiation is always in namespace scope and it always immdiately ***precedes*** the declaration or definition that refers to the class template instantiation.
     * The point of instantiation of a member function or a static data member of a class template always immediately ***follows*** the declaration or definition that refers to the instantiation of the member of the class template.
+{% endraw %}

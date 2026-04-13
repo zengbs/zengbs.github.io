@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Aggregate Extensions
 tags: [CPP]
@@ -174,3 +175,5 @@ cond2(no)->op2
 | **Copy initialization**<br>Constructor-base only    | `T x = expr;`                   | ❌                                       | ✅ (copy/move/elided) | ✅               | ❌                  | Extra conversions allowed            |
 | **List initialization**    | `T x{args};`<br>`T x = {args};` | Depends on args                          | ✅ (constructor)               | ❌               | ✅                  | `std::initializer_list` preference   |
 
+
+{% endraw %}

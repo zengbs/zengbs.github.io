@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: dynamic_cast
 tags: [CPP]
@@ -119,3 +120,4 @@ int main() {
 }
 
 ```
+{% endraw %}

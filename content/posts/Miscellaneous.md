@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Miscellaneous
 tags: [CPP]
@@ -101,3 +102,4 @@ Learning roadmap
 - [Roadmap](/9NWY8mp1TTi-RUzqvv_TIw)
 - [Book list](/M2Lz0IxzTgeXWFsuKCENPg)
 - [C++ Evolution Viewer](https://cppevo.dev/)
+{% endraw %}

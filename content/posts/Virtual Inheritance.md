@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Virtual Inheritance
 tags: [CPP]
@@ -404,3 +405,4 @@ It's a bad idea. Because:
      return 0;
   }
   ```
+{% endraw %}

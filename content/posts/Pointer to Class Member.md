@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Pointer to Class Member
 tags: [CPP]
@@ -69,3 +70,4 @@ int main(){
    return 0;
 }
 ```
+{% endraw %}

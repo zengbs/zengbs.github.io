@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::array'
 tags: [CPP]
@@ -80,3 +81,4 @@ for (int& element : myArray | std::views::filter([](int x) { return x > 2; })) {
     // Access each filtered element using 'element'
 }
 ```
+{% endraw %}

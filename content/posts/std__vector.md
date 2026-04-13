@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::vector'
 tags: [CPP]
@@ -94,3 +95,4 @@ vector<int> v1 = std::move(v2);
 # Reference
 ![vector](https://hackmd.io/_uploads/Sk9CDzAn6.png)
 [C++11 使用 emplace 取代 push_back 和 insert](https://viml.nchc.org.tw/cpp11-emplace/)
+{% endraw %}

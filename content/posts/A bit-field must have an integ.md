@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: A bit-field must have an integ
 tags: [CPP]
@@ -47,3 +48,4 @@ int main(){
    return 0;
 }
 ```
+{% endraw %}

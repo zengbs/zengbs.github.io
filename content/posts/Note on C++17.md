@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Note on C++17
 tags: [CPP]
@@ -51,3 +52,4 @@ tags: [CPP]
 - Splicing for maps and sets
 - Prefix sum algorithms
 - Rounding functions for chrono durations and timepoints
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Inline variables
 tags: [CPP]
@@ -125,3 +126,4 @@ int main() {
    // lName = thread1 name
 }
  ```
+{% endraw %}

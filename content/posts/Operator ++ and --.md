@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Operator ++ and --
 tags: [CPP]
@@ -90,3 +91,4 @@ int main(){
    return 0;
 }
 ```
+{% endraw %}

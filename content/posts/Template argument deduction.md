@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Template argument deduction
 tags: [CPP]
@@ -225,3 +226,4 @@ tags: [CPP]
          func4(cri);  // 00
      }
      ```
+{% endraw %}

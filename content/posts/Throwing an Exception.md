@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Throwing an Exception
 tags: [CPP]
@@ -61,3 +62,4 @@ using classes.
    ```
    Because exceptions are now used to indicate the failure of the `pop()` and `push()` operations, the return values from these functions are now unnecessary.
 * Although exceptions are most often objects of class type, a throw expression can throw an object of any type. 
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Value Categories
 tags: [CPP]
@@ -642,3 +643,4 @@ int main() {
     return 0;
 }
 ```
+{% endraw %}

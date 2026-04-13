@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Moving Algorithms and Iterators
 tags: [CPP]
@@ -152,3 +153,4 @@ std::vector v3{
 };
 ```
 The first move an entire object to another with time complexity O(1). However, in the second, each element was moved individually to another with time complexity O(N).
+{% endraw %}

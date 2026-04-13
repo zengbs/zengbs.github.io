@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Implicit this Pointer
 tags: [CPP]
@@ -90,3 +91,4 @@ public:
     }
 };
 ```
+{% endraw %}

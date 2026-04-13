@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Memory alignment
 tags: [CPP]
@@ -121,3 +122,4 @@ https://nimrod.blog/posts/what-does-cpp-object-layout-look-like/
 https://dev.to/visheshpatel/memory-layout-of-c-object-1p17
 
 https://selfboot.cn/en/2024/05/10/c++_object_model/
+{% endraw %}

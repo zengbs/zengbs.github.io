@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Numeric promotions
 tags: [CPP]
@@ -20,3 +21,5 @@ tags: [CPP]
 # Floating-point Promotion
 * `float` can be converted to a value of type `double`.
 
+
+{% endraw %}

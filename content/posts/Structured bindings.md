@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Structured bindings
 tags: [CPP]
@@ -245,3 +246,5 @@ if (!ok){
    // if insertion failed, handle error using iterator pos
 }
 ```
+
+{% endraw %}

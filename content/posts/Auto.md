@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Auto
 tags: [CPP]
@@ -63,3 +64,4 @@ tags: [CPP]
    // error: inconsistent deduction for ‘auto’: ‘int’ and then ‘const int’
    auto &n = i, *p2 = &ci;
    ```
+{% endraw %}

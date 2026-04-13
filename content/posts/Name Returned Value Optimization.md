@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Name Returned Value Optimization
 tags: [CPP]
@@ -360,3 +361,4 @@ A f5(A a){ return std::move(a); }
 2. At `return std::move(a)`: use move ctor to construct an `c` from `std::move(a)`.
 4. At the end of `A f5(A a){...}`: use destructor to remove `a`.
 4. At the end of `A c = f5({})`: use destructor to remove `c`.
+{% endraw %}

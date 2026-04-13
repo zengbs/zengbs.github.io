@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Mandatory Copy Elision or Passing Unmaterialized Objects
 tags: [CPP]
@@ -43,3 +44,4 @@ Please see below for more details:
 [How does a function return local object internally?](/oPiyQizIR5u70ybjT583Dw)
 [Name Returned Value Optimization](/7PW3XTjqSA-TYgnsRdQkwQ)
 [Avoid Unnecessary `std::move()`](https://hackmd.io/tD4j7zd4SqaDuwXmKk74Jg#Avoid-Unnecessary-stdmove)
+{% endraw %}

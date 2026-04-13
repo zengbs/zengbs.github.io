@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Containers
 tags: [CPP]
@@ -16,3 +17,5 @@ tags: [CPP]
 
 
 ![](https://hackingcpp.com/cpp/design/which_std_sequence_container_crop.svg)
+
+{% endraw %}

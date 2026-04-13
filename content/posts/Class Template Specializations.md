@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Template Specializations
 tags: [CPP]
@@ -128,3 +129,4 @@ tags: [CPP]
 6. The generic member definitions of the class template are never used to create the definitions for the members of an explicit specialization. This is because the class template specialization may have a completely different set of class members from the generic template.
 7. If we decide to provide an explicit specialization definition for the class type `MyClass<longDouble>`, not only must we provide the definitions for the member functions `sum()`, but we must also provide the definitions for all of the other member functions as well.
 8. A class template cannot be instantiated from the generic template definition in some files and be specialized in other files for the same set of template arguments. 
+{% endraw %}

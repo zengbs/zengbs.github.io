@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Catching an Exception
 tags: [CPP]
@@ -399,3 +400,4 @@ int main()
    }
    ```
 * Catch clauses are examined in turn, in the order in which they appear following the try block. Once a match is found, subsequent catch clauses are not examined. This implies that if a `catch (...)` is used in combination with other catch clauses, it must always be placed last in a list of exception handlers; otherwise, a compiler error is issued.
+{% endraw %}

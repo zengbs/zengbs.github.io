@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Define Constructor for Movable Object
 tags: [CPP]
@@ -178,3 +179,4 @@ Clang: https://quick-bench.com/q/ewH4cWNZOf6_r24Qea2w8BNvzHs
 |      ` Person(std::string n) : name{std::move(n)} {}`       |1. Copy construct `n` from lvalue arg<br>2. Move construct  | 1. Move construct `n` from rvalue arg<br>2. Move construct |
 | ` Person(const std::string& n) : name{n} {}` | 1. Bind `n` to lvalue arg<br>2. Copy construct | 1.Bind `n` to rvalue arg<br>2. Copy construct  | 
 |    `Person(std::string&& n) : name{std::move(n)} {}`    | N/A                                                | 1. Bind `n` to rvalue arg<br>2. Move construct |
+{% endraw %}

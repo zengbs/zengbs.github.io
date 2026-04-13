@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Standard Conversions
 tags: [CPP]
@@ -16,3 +17,5 @@ Convert row to column:
 ![image](https://hackmd.io/_uploads/ByDz4veqkl.png =150%x)
 
 ![image](https://hackmd.io/_uploads/SkyvNwxcJe.png =40%x)
+
+{% endraw %}

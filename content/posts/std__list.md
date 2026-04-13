@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::list'
 tags: [CPP]
@@ -36,3 +37,5 @@ double-linked list
 
 
 ![list](https://hackmd.io/_uploads/SynGKz03T.png)
+
+{% endraw %}

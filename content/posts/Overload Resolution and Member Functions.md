@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Overload Resolution and Member Functions
 tags: [CPP]
@@ -90,3 +91,4 @@ There are some minor differences in how candidate functions and viable functions
        return 0;
    }
    ```
+{% endraw %}

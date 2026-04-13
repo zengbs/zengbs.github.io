@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Lambda expressions
 tags: [CPP]
@@ -132,3 +133,5 @@ Inside the lambda introducer (brackets at the beginning of a lambda), you can sp
  
 
 
+
+{% endraw %}

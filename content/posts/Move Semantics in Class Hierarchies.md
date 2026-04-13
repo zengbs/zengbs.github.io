@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Move Semantics in Class Hierarchies
 tags: [CPP]
@@ -71,3 +72,4 @@ Here, we have to declare copy/move constructors in the base class to allow deriv
 
 # Avoid Declaring Destructor in Polymorphic Derived Class
 Based on the [Rules for Special Member Functions](/S1aGiGVSTqe1RMVq5Y5DWw), declaring a destructor will disable move semantics. That's why we avoid declaring destructor in a polymorphic derived class.
+{% endraw %}

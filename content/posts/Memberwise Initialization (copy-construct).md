@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Memberwise Initialization (copy-construct)
 tags: [CPP]
@@ -97,3 +98,4 @@ tags: [CPP]
       int _index;
    };
    ```
+{% endraw %}

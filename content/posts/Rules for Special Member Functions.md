@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Rules for Special Member Functions
 tags: [CPP]
@@ -128,3 +129,4 @@ Deleting the copying special member functions is enough. (Never `=delete` the sp
 
 * “Not declared” means: the function doesn’t exist.
 * “Deleted” means: it exists, but you cannot call it.
+{% endraw %}

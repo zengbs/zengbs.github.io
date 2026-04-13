@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Operators new and delete
 tags: [CPP]
@@ -259,3 +260,4 @@ int main(){
    return 0;
 }
 ```
+{% endraw %}

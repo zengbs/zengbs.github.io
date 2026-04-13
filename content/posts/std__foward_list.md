@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: 'std::foward_list'
 tags: [CPP]
@@ -33,3 +34,5 @@ single-linked list
 
 
 ![forward_list](https://hackmd.io/_uploads/HklItz02a.png)
+
+{% endraw %}

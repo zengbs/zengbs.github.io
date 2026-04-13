@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: insert_or_assign
 tags: [CPP]
@@ -38,3 +39,5 @@ int main() {
     return 0;
 }
 ```
+
+{% endraw %}

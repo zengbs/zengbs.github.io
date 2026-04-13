@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Lambda capture `this` by value
 tags: [CPP]
@@ -94,3 +95,4 @@ tags: [CPP]
        t.join();
    }
    ```
+{% endraw %}

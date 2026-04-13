@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Note on C++14
 tags: [CPP]
@@ -27,3 +28,5 @@ tags: [CPP]
 - variable templates
 - compile-time integer sequences
 - relaxing constraints on constexpr functions
+
+{% endraw %}

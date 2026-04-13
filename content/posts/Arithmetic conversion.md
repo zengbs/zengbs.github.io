@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Arithmetic conversion
 tags: [CPP]
@@ -34,3 +35,4 @@ After promotion, if one operand is `signed` and the other `unsigned`, special ru
 * If the type of the `signed` operand can represent all the values of the type of the `unsigned` operand, the type of the `unsigned` operand is converted to the type of the `signed` operand.
 * Otherwise both operands are converted to the corresponding `unsigned` type of the `signed` operand.
 :::
+{% endraw %}

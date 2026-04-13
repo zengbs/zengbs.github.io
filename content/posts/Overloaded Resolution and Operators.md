@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Overloaded Resolution and Operators
 tags: [CPP]
@@ -211,3 +212,5 @@ tags: [CPP]
 2. User-defined conversions are applied implicitly by the compiler. This may cause built-in opeators to become viable functions for the use of an operator with operands of class types. Conversion functions and nonexplicit constructors should therefore be used judiciously.
 
 
+
+{% endraw %}

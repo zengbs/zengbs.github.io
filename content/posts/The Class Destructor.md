@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: The Class Destructor
 tags: [CPP]
@@ -184,3 +185,4 @@ However, using `std::vector` is safer and more flexible.
    // single return point
    return;
    ```
+{% endraw %}

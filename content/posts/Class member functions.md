@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class member functions
 tags: [CPP]
@@ -116,3 +117,4 @@ tags: [CPP]
 
 # Mutable data members
 To allow a class data member to be modified even though it is the data member of a const object, we can declare the data member as mutable. A mutable data member is a member that is never const, even when it is the data member of a const object. A mutable member can always be updated, even in a const member function. To declare a member as a mutable data member, the keyword mutable must precede the declaration of the data member in the class member list.
+{% endraw %}

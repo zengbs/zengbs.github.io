@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Member Function of Class Templates
 tags: [CPP]
@@ -43,3 +44,4 @@ tags: [CPP]
     }
     ```
 2. A member function of a class template is not instantiated automatically when the class template is itself instantiated. The member function is instantiated only if it is used by the program (a use of a function, recall, invokes the function or takes its address).
+{% endraw %}

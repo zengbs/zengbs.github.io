@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Note on C++20
 tags: [CPP]
@@ -49,3 +50,4 @@ tags: [CPP]
 - std::is_constant_evaluated
 - three-way comparison helpers
 - std::lexicographical_compare_three_way
+{% endraw %}

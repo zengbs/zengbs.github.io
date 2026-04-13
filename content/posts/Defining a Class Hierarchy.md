@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Defining a Class Hierarchy
 tags: [CPP]
@@ -58,3 +59,4 @@ tags: [CPP]
    class Query;
    class NameQuery;
    ```
+{% endraw %}

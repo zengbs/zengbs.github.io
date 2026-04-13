@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Template Definition
 tags: [CPP]
@@ -115,3 +116,4 @@ tags: [CPP]
       return 0;
    }
    ```
+{% endraw %}

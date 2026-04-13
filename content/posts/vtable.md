@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: vtable
 tags: [CPP]
@@ -40,3 +41,4 @@ Given a member function in a class...
 * If `func()` does appear in the vtable, `ptr->func()` calls the `func()` in the vtable.
 ## Calling a function via an object
 * When calling a function on an object directly (e.g., `B b;` `b.func();`), without using a pointer, the vtable lookup is not used — even if `B` and its ancestors have virtual functions.
+{% endraw %}

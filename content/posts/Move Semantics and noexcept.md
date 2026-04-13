@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Move Semantics and noexcept
 tags: [CPP]
@@ -251,3 +252,4 @@ With `noexcept(false)`, you can declare them without this guarantee, but that us
      COPY
      COPY
      ```
+{% endraw %}

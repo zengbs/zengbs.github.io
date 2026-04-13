@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Function template instantiation
 tags: [CPP]
@@ -64,3 +65,4 @@ tags: [CPP]
 	    return 0;
 	}
 	```
+{% endraw %}

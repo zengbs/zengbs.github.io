@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Note on C++98
 tags: [CPP]
@@ -128,3 +129,5 @@ Use of Inheritance in C++ (3)
 - [Run-Time Type Identification](/HrTVPlCmRMO6Znf2Cbvmsw)
 - [Exceptions and Inheritance](/xmnfbT9aQvyO8yW-I33fMA)
 - [Overload Resolution and Inheritance](/LE5Eht3dQq-lXtht1DY7Hg)
+
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: C++ cheatsheet
 tags: [CPP]
@@ -12,3 +13,4 @@ tags: [CPP]
 ---
 
 https://leetcode.com/discuss/interview-question/3828150/OOPS-Cheatsheet-for-Interviews-or-30-questions
+{% endraw %}

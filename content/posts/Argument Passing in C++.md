@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Argument Passing in C++
 tags: [CPP]
@@ -66,3 +67,4 @@ void f2()
     window = screen(); // calls screen(ht(), 80, '*')
 }
 ```
+{% endraw %}

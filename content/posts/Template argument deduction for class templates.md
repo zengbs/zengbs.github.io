@@ -5,9 +5,12 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Template argument deduction for class templates
 tags: [CPP]
 
 ---
 
+
+{% endraw %}

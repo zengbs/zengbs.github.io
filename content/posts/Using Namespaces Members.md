@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Using Namespaces Members
 tags: [CPP]
@@ -139,3 +140,4 @@ tags: [CPP]
       manip();
    }
    ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Definition
 tags: [CPP]
@@ -74,3 +75,4 @@ tags: [CPP]
        LinkScreen *prev; // ok
     };
     ```
+{% endraw %}

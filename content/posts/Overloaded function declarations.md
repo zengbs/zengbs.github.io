@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Overloaded function declarations
 tags: [CPP]
@@ -247,3 +248,5 @@ The candidate functions are the union of the overloaded functions that 1) has th
         // long double print(long double)
 	}
     ```
+
+{% endraw %}

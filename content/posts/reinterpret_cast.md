@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: reinterpret_cast
 tags: [CPP]
@@ -29,3 +30,4 @@ int main() {
 }
 
 ```
+{% endraw %}

@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Namespaces and Class Templates
 tags: [CPP]
@@ -153,3 +154,4 @@ tags: [CPP]
        return 0;
     }
     ```
+{% endraw %}

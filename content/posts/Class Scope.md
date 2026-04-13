@@ -5,6 +5,7 @@ draft: false
 render_with_liquid: false
 ---
 
+{% raw %}
 ---
 title: Class Scope
 tags: [CPP]
@@ -113,3 +114,4 @@ tags: [CPP]
    
    # Name Resolution in Class Scope
    - [Unqualified Name Lookup](/cmvzTXvfTJOizt_Y9XQgUw)
+{% endraw %}
