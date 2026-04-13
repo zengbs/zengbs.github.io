@@ -129,12 +129,13 @@ title: Pohsun Tseng
 
 
 
+
+{% assign targets = "Note_on_C++,Note_on_C_language,Note_on_CUDA,Note_on_Linear_Algebra" | split: "," %}
+
 <ul>
   {% for page in site.notes %}
-    {% if page.path == "_notes/Note_on_C++.md" or
-          page.path == "_notes/Note_on_C_language.md" or
-          page.path == "_notes/Note_on_CUDA.md" or
-          page.path == "_notes/Note_on_Linear_Algebra.md" %}
+    {% assign name = page.path | split: "/" | last | split: "." | first %}
+    {% if targets contains name %}
       <li style="margin-bottom: 10px;">
         <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
           {{ page.title | default: page.name }}
