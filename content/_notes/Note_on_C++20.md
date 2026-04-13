@@ -4,12 +4,9 @@ draft: false
 render_with_liquid: false
 ---
 
-{% raw %}
----
-
----
 
 # [C++20](https://github.com/AnthonyCalandra/modern-cpp-features/blob/master/CPP20.md)
+
 ### Frequently
 - Concepts
 - Three-way comparison
@@ -47,4 +44,3 @@ render_with_liquid: false
 - std::is_constant_evaluated
 - three-way comparison helpers
 - std::lexicographical_compare_three_way
-{% endraw %}
