@@ -1,4 +1,5 @@
 collections:
-  posts:
+  notes:
     output: true
-    directory: content/posts
+
+collections_dir: content
