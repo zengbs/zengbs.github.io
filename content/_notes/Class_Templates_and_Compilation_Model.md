@@ -6,7 +6,6 @@ render_with_liquid: false
 
 {% raw %}
 ---
-tags: [CPP]
 
 ---
 
