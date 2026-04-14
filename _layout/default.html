@@ -180,47 +180,7 @@ pre:has(code.language-cuda) { background: #272822; }
 </style>
 <script>
 (function () {
-  // ── Register a custom 'cuda' language that extends C++ ──
-  hljs.registerLanguage('cuda', function (hljs) {
-    // Get the already-compiled C++ language object (contains live RegExp objects).
-    // Do NOT JSON.stringify/parse — that silently drops all RegExp patterns.
-    var cpp = hljs.getLanguage('cpp');
-
-    // CUDA-specific rules prepended so they take priority over C++ rules.
-    var cudaRules = [
-      // Execution-space qualifiers: __global__, __device__, etc.
-      {
-        className: 'cuda-qualifier',
-        begin: /\b(__global__|__device__|__host__|__shared__|__constant__|__managed__|__restrict__)\b/
-      },
-      // Built-in variables: threadIdx.x, blockIdx.y, …
-      {
-        className: 'cuda-builtin-var',
-        begin: /\b(threadIdx|blockIdx|blockDim|gridDim|warpSize)\b/
-      },
-      // CUDA runtime API calls: cudaMalloc, cudaMemcpy, cudaFree, …
-      {
-        className: 'cuda-runtime',
-        begin: /\bcuda[A-Za-z][A-Za-z0-9_]*/
-      },
-      // Kernel launch chevrons <<<  >>>
-      {
-        className: 'cuda-launch-chevron',
-        begin: /<<<|>>>/
-      }
-    ];
-
-    return {
-      name: 'CUDA',
-      aliases: ['cuda'],
-      keywords: cpp.keywords,
-      contains: cudaRules.concat(cpp.contains || [])
-    };
-  });
-
   document.addEventListener('DOMContentLoaded', function () {
-    // Match class names produced by Rouge for ```cuda and ```cuda= blocks:
-    // language-cuda  /  language-cuda=  /  language-cudaa  /  language-cudaa=
     var selector = [
       'code.language-cuda',
       'code[class*="language-cuda"]',
@@ -231,20 +191,47 @@ pre:has(code.language-cuda) { background: #272822; }
     document.querySelectorAll(selector).forEach(function (block) {
       // Strip any residual Rouge empty-span markup, keep raw text only
       block.textContent = block.textContent;
-      block.className   = 'language-cuda';
+
+      // 1. Highlight as C++ so all keywords/types/operators get coloured
+      block.className = 'language-cpp';
       hljs.highlightElement(block);
 
-      // Make the <pre> wrapper fully dark so there is no white bleed
+      // 2. Post-process the highlighted HTML to colour CUDA-specific tokens.
+      //    These tokens won't be inside any existing hljs span (cpp doesn't
+      //    know them), so the replacement is safe.
+      block.innerHTML = block.innerHTML
+        // Execution-space qualifiers — pink/bold
+        .replace(
+          /\b(__global__|__device__|__host__|__shared__|__constant__|__managed__|__restrict__)\b/g,
+          '<span class="hljs-cuda-qualifier">$1</span>'
+        )
+        // Built-in thread/block variables — orange/bold
+        .replace(
+          /\b(threadIdx|blockIdx|blockDim|gridDim|warpSize)\b/g,
+          '<span class="hljs-cuda-builtin-var">$1</span>'
+        )
+        // CUDA runtime API calls — cyan
+        .replace(
+          /\b(cuda[A-Za-z][A-Za-z0-9_]*)/g,
+          '<span class="hljs-cuda-runtime">$1</span>'
+        )
+        // Kernel launch chevrons <<< >>> — pink/bold
+        .replace(
+          /(<<<|>>>)/g,
+          '<span class="hljs-cuda-launch-chevron">$1</span>'
+        );
+
+      // Make the surrounding <pre> dark
       var pre = block.closest('pre');
       if (pre) {
-        pre.style.background  = '#272822';
-        pre.style.padding     = '0';
-        pre.style.margin      = '0';
-        pre.style.border      = 'none';
+        pre.style.background   = '#272822';
+        pre.style.padding      = '0';
+        pre.style.margin       = '0';
+        pre.style.border       = 'none';
         pre.style.borderRadius = '6px';
-        pre.style.overflow    = 'auto';
+        pre.style.overflow     = 'auto';
       }
-      // Also darken the outer Rouge .highlight wrapper
+      // Darken the outer Rouge .highlight wrapper
       var wrap = block.closest('.highlight');
       if (wrap) {
         wrap.style.background   = '#272822';
