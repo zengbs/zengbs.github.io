@@ -9,7 +9,7 @@
 
 ![image](https://hackmd.io/_uploads/rkakRkc86.png =40%x)
 
-```c=
+```cuda=
 // Allocation
 int *host_input_arr = (int*)malloc(sizeof(int) * elementSize);
 int *host_output_arr = (int*)malloc(sizeof(int) * elementSize);
@@ -29,7 +29,7 @@ free(host_output_arr);
 ```
 
 ## Pinned memory
-Page-locking excessive amounts of memory with cudaMallocHost() may degrade system performance, since it reduces the amount of memory available to the system for paging. As a result, this function is best used sparingly to allocate staging areas for data exchange between host and device. 
+Page-locking excessive amounts of memory with cudaMallocHost() may degrade system performance, since it reduces the amount of memory available to the system for paging. As a result, this function is best used sparingly to allocate staging areas for data exchange between host and device.
 ![image](https://hackmd.io/_uploads/SJ7zRy5Ua.png =40%x)
 
 ```c=
@@ -96,7 +96,7 @@ cudaFree(host_input_arr);
 | CPU allocation |   `malloc`   | `cudaHostAlloc` |        `cudaHostAlloc`</br>   |         |
 | GPU allocaion  | `cudaMalloc` |   `cudaMalloc`   |         N/A  |         |
 |      Copy      | `cudaMemcpy` |   `cudaMemcpy`</br>`cudaMemcpyAsync`   |        `cudaHostGetDevicePointer`   |         |
-|      Pros      |      - Easy to use and manage.<br>- Abundant compared to other types.<br>- Managed automatically by OS.        |        - Fast data transfer to GPU.<br>- Allows asynchronous operations.<br>- Avoids paging overhead.         |   - Direct GPU access to host memory.<br>- No need to explicitly copy data.   |   - Simplifies memory management.<br>- Automatically migrates data between host and device.  | 
+|      Pros      |      - Easy to use and manage.<br>- Abundant compared to other types.<br>- Managed automatically by OS.        |        - Fast data transfer to GPU.<br>- Allows asynchronous operations.<br>- Avoids paging overhead.         |   - Direct GPU access to host memory.<br>- No need to explicitly copy data.   |   - Simplifies memory management.<br>- Automatically migrates data between host and device.  |
 |      Cons      |   - Slowest for GPU access due to copying overhead.<br>- Data might be paged out, causing further delays.           |         - Scarce resource; can lead to system performance issues if overused.<br>- Requires manual management.         |       - Slower than pinned memory for large data sets.<br>- May lead to performance issues in some architectures.   |  - Performance can be unpredictable.<br>- May not be optimal for all workloads or hardware configurations.  |
 
 # Reference
