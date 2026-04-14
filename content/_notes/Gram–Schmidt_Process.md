@@ -1,7 +1,0 @@
----
-
-
----
-
-
-# Gram–Schmidt process

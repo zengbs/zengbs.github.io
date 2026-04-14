@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <!DOCTYPE html>
 <!--
     Plain-Academic by Vasilios Mavroudis
@@ -11,9 +7,15 @@ layout: default
 
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-322YDYC5FZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-
-
+    gtag('config', 'G-322YDYC5FZ');
+  </script>
   <title>Pohsun Tseng (Rocky)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,6 +42,7 @@ layout: default
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
 		  </ul>
 		</div>
 	  </div>
@@ -105,52 +108,23 @@ layout: default
                  <h2><b>Read List</b></h2>
                  <h4>2026</h4>
                           <ul>
-                          <li>C++17: The Complete Guide, Nicolai M. Josuttis (
-<a href="{{ '/notes/Note_on_C++17' | relative_url }}">
-  study note
-</a>
-)</li>
+                          <li>C++17: The Complete Guide, Nicolai M. Josuttis (<a href="https://hackmd.io/@zengbs/By8w0b4zZg">study note</a>)</li>
                           </ul>
                  <h4>2025</h4>
                           <ul>
-                          <li>C++ Move Semantics: The Complete Guide, Nicolai M. Josuttis (
-<a href="{{ '/notes/Move_semantics' | relative_url }}">
-  study note
-</a>
-)</li>
+                          <li>C++ Move Semantics: The Complete Guide, Nicolai M. Josuttis (<a href="https://hackmd.io/@zengbs/SJCueAXcex">study note</a>)</li>
                           <li>Inside The C++ Object Model, Stanley B. Lippman</li>
                           </ul>
                  <h4>2024</h4>
                           <ul>
-                          <li>C++ Primer (3rd ed.), Lippman & Lajoie (
-<a href="{{ '/notes/Note_on_C++98' | relative_url }}">
-  study note
-</a>
-)</li>
+                          <li>C++ Primer (3rd ed.), Lippman & Lajoie (<a href="https://hackmd.io/@zengbs/HktXuVI8ex">study note</a>)</li>
                           </ul>
                  <h2><b>Notes</b></h2>
                           <ul>
-
-
-
-
-
-{% assign targets = "Note_on_C++,Note_on_CUDA_programming" | split: "," %}
-
-<ul>
-  {% for page in site.notes %}
-    {% assign name = page.path | split: "/" | last | split: "." | first %}
-    {% if targets contains name %}
-      <li style="margin-bottom: 10px;">
-        <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
-          {{ page.title | default: page.name }}
-        </a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-
+                           <li><a href="https://hackmd.io/@zengbs/rkHTkzNM-g">Note on C++</a></li>
+                           <li><a href="https://hackmd.io/@zengbs/Sk1jNqC2c/%2FZNbmsnHMQTOjD8PLPQAQng">Note on C language</a></li>
+                           <li><a href="https://hackmd.io/@zengbs/ryS4lUKKs/%2F3xOWlRxkQ8iWea_bqXhHww">Note on CUDA</a></li>
+                           <li><a href="https://hackmd.io/@zengbs/HJeydCcYi/%2FEx5XG5h1RqyLb3Dy6CgZYQ">Note on Linear Algebra</a></li>
                            <!--  <li><a href="">Note on MPI</a></li> -->
                            <!--  <li><a href="">Note on OpenMP</a></li> -->
                           </ul>

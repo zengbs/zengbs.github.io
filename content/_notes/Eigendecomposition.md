@@ -1,7 +1,0 @@
----
-
-
----
-
-# Existness
-# Uniqueness
