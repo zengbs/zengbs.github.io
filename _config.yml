@@ -1,5 +1,14 @@
 layouts_dir: _layout
 
+# Syntax highlighting
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false   # set to true if you want line numbers
+
 collections:
   notes:
     output: true
