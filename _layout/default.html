@@ -177,6 +177,22 @@ pre:has(code.language-cuda) { background: #272822; }
   line-height: 1.5;
   overflow-x: auto;
 }
+
+/* hljs Monokai token colours for CUDA blocks */
+.hljs-keyword,
+.hljs-type                { color: #66d9ef; font-weight: bold; }
+.hljs-string,
+.hljs-attr                { color: #e6db74; }
+.hljs-number              { color: #ae81ff; }
+.hljs-comment             { color: #75715e; font-style: italic; }
+.hljs-title.function_     { color: #a6e22e; }
+.hljs-title.class_        { color: #a6e22e; font-weight: bold; }
+.hljs-operator            { color: #f92672; }
+.hljs-meta                { color: #75715e; } /* #include, #pragma */
+.hljs-params,
+.hljs-variable,
+.hljs-punctuation         { color: #f8f8f2; }
+.hljs-built_in            { color: #66d9ef; }
 </style>
 <script>
 (function () {
@@ -215,11 +231,9 @@ pre:has(code.language-cuda) { background: #272822; }
           /\b(cuda[A-Za-z][A-Za-z0-9_]*)/g,
           '<span class="hljs-cuda-runtime">$1</span>'
         )
-        // Kernel launch chevrons <<< >>> — pink/bold
-        .replace(
-          /(<<<|>>>)/g,
-          '<span class="hljs-cuda-launch-chevron">$1</span>'
-        );
+        // Kernel launch chevrons — in innerHTML < is escaped to &lt;
+        .replace(/&lt;&lt;&lt;/g, '<span class="hljs-cuda-launch-chevron">&lt;&lt;&lt;</span>')
+        .replace(/&gt;&gt;&gt;/g, '<span class="hljs-cuda-launch-chevron">&gt;&gt;&gt;</span>');
 
       // Make the surrounding <pre> dark
       var pre = block.closest('pre');
