@@ -59,7 +59,8 @@ pre, code {
 }
 
 /* Inline code (outside blocks) */
-code {
+:not(.hljs) > code,
+p > code, li > code, td > code, h1 > code, h2 > code, h3 > code, h4 > code {
   background: #f0f0f0;
   color: #c7254e;
   padding: 2px 5px;
@@ -178,12 +179,11 @@ pre:has(code.language-cuda) { background: #272822; }
 (function () {
   // ── Register a custom 'cuda' language that extends C++ ──
   hljs.registerLanguage('cuda', function (hljs) {
-    var cppLang = hljs.getLanguage('cpp');
+    // Get the already-compiled C++ language object (contains live RegExp objects).
+    // Do NOT JSON.stringify/parse — that silently drops all RegExp patterns.
+    var cpp = hljs.getLanguage('cpp');
 
-    // Deep-clone the C++ definition so we don't mutate it
-    var cuda = JSON.parse(JSON.stringify(cppLang));
-
-    // Prepend CUDA-specific rules at the top so they take priority
+    // CUDA-specific rules prepended so they take priority over C++ rules.
     var cudaRules = [
       // Execution-space qualifiers: __global__, __device__, etc.
       {
@@ -195,21 +195,24 @@ pre:has(code.language-cuda) { background: #272822; }
         className: 'cuda-builtin-var',
         begin: /\b(threadIdx|blockIdx|blockDim|gridDim|warpSize)\b/
       },
-      // CUDA runtime & driver API calls
+      // CUDA runtime API calls: cudaMalloc, cudaMemcpy, cudaFree, …
       {
         className: 'cuda-runtime',
         begin: /\bcuda[A-Za-z][A-Za-z0-9_]*/
       },
-      // Launch chevrons <<< and >>>
+      // Kernel launch chevrons <<<  >>>
       {
         className: 'cuda-launch-chevron',
         begin: /<<<|>>>/
       }
     ];
 
-    // Insert custom rules before the existing C++ ones
-    cuda.contains = cudaRules.concat(cuda.contains || []);
-    return cuda;
+    return {
+      name: 'CUDA',
+      aliases: ['cuda'],
+      keywords: cpp.keywords,
+      contains: cudaRules.concat(cpp.contains || [])
+    };
   });
 
   document.addEventListener('DOMContentLoaded', function () {
