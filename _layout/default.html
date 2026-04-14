@@ -140,6 +140,36 @@ code {
 .highlight .gl  { color: #7f7f7f; user-select: none; }
 </style>
 
+<!-- highlight.js (only for CUDA blocks — Rouge doesn't have a cuda lexer) -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Rouge wraps unknown languages as: <div class="highlight"><pre><code class="language-cuda">
+    // We treat cuda/cudaa as C++ for highlighting purposes.
+    document.querySelectorAll('code.language-cuda, code.language-cudaa').forEach(function (block) {
+      // Reset any prior Rouge plain-text wrapping by stripping empty spans
+      block.innerHTML = block.textContent;
+      // Tell highlight.js to parse as C++
+      block.className = 'language-cpp';
+      hljs.highlightElement(block);
+      // Give the parent <pre> / wrapper the same monokai look
+      var pre = block.closest('pre');
+      if (pre) {
+        pre.style.background = 'transparent';
+        pre.style.padding    = '0';
+        pre.style.margin     = '0';
+      }
+      var wrap = block.closest('.highlight');
+      if (wrap) {
+        wrap.style.background = '#23241f'; // monokai-sublime background
+      }
+    });
+  });
+</script>
+
 </head>
 
 <body>
