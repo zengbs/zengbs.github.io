@@ -165,6 +165,9 @@ pre:has(code.language-cuda) { background: #272822; }
 
 /* Make highlight.js output look the same as Rouge blocks */
 .hljs {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
   background: #272822 !important;
   color: #f8f8f2 !important;
   border-radius: 6px;
@@ -231,17 +234,23 @@ pre:has(code.language-cuda) { background: #272822; }
       block.className   = 'language-cuda';
       hljs.highlightElement(block);
 
-      // Remove background from the inner <pre> so the .hljs block controls it
+      // Make the <pre> wrapper fully dark so there is no white bleed
       var pre = block.closest('pre');
       if (pre) {
-        pre.style.background = 'transparent';
-        pre.style.padding    = '0';
-        pre.style.margin     = '0';
-        pre.style.border     = 'none';
+        pre.style.background  = '#272822';
+        pre.style.padding     = '0';
+        pre.style.margin      = '0';
+        pre.style.border      = 'none';
+        pre.style.borderRadius = '6px';
+        pre.style.overflow    = 'auto';
       }
-      // Let the outer .highlight wrapper use the same dark background
+      // Also darken the outer Rouge .highlight wrapper
       var wrap = block.closest('.highlight');
-      if (wrap) wrap.style.background = '#272822';
+      if (wrap) {
+        wrap.style.background   = '#272822';
+        wrap.style.borderRadius = '6px';
+        wrap.style.padding      = '0';
+      }
     });
   });
 }());
