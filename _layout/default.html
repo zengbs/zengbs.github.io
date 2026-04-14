@@ -140,34 +140,108 @@ code {
 .highlight .gl  { color: #7f7f7f; user-select: none; }
 </style>
 
-<!-- highlight.js (only for CUDA blocks — Rouge doesn't have a cuda lexer) -->
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai-sublime.min.css">
+<!-- highlight.js — CUDA syntax highlighting (Rouge has no CUDA lexer) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
+<style>
+/* ── CUDA-specific token colours (Monokai palette) ── */
+
+/* __global__, __device__, __host__, __shared__, __constant__, __managed__, __restrict__ */
+.hljs-cuda-qualifier        { color: #f92672; font-weight: bold; }
+
+/* threadIdx, blockIdx, blockDim, gridDim, warpSize */
+.hljs-cuda-builtin-var      { color: #fd971f; font-weight: bold; }
+
+/* cudaMalloc, cudaMemcpy, cudaFree, cudaDeviceSynchronize, … */
+.hljs-cuda-runtime          { color: #66d9ef; }
+
+/* <<< >>> launch chevrons */
+.hljs-cuda-launch-chevron   { color: #f92672; font-weight: bold; }
+
+/* Wrap the highlight.js block background to match Monokai */
+.highlight > .hljs-cuda-wrap,
+pre:has(code.language-cuda) { background: #272822; }
+
+/* Make highlight.js output look the same as Rouge blocks */
+.hljs {
+  background: #272822 !important;
+  color: #f8f8f2 !important;
+  border-radius: 6px;
+  padding: 12px 16px !important;
+  font-size: 1.05em;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+</style>
 <script>
+(function () {
+  // ── Register a custom 'cuda' language that extends C++ ──
+  hljs.registerLanguage('cuda', function (hljs) {
+    var cppLang = hljs.getLanguage('cpp');
+
+    // Deep-clone the C++ definition so we don't mutate it
+    var cuda = JSON.parse(JSON.stringify(cppLang));
+
+    // Prepend CUDA-specific rules at the top so they take priority
+    var cudaRules = [
+      // Execution-space qualifiers: __global__, __device__, etc.
+      {
+        className: 'cuda-qualifier',
+        begin: /\b(__global__|__device__|__host__|__shared__|__constant__|__managed__|__restrict__)\b/
+      },
+      // Built-in variables: threadIdx.x, blockIdx.y, …
+      {
+        className: 'cuda-builtin-var',
+        begin: /\b(threadIdx|blockIdx|blockDim|gridDim|warpSize)\b/
+      },
+      // CUDA runtime & driver API calls
+      {
+        className: 'cuda-runtime',
+        begin: /\bcuda[A-Za-z][A-Za-z0-9_]*/
+      },
+      // Launch chevrons <<< and >>>
+      {
+        className: 'cuda-launch-chevron',
+        begin: /<<<|>>>/
+      }
+    ];
+
+    // Insert custom rules before the existing C++ ones
+    cuda.contains = cudaRules.concat(cuda.contains || []);
+    return cuda;
+  });
+
   document.addEventListener('DOMContentLoaded', function () {
-    // Rouge wraps unknown languages as: <div class="highlight"><pre><code class="language-cuda">
-    // We treat cuda/cudaa as C++ for highlighting purposes.
-    document.querySelectorAll('code.language-cuda, code.language-cudaa').forEach(function (block) {
-      // Reset any prior Rouge plain-text wrapping by stripping empty spans
-      block.innerHTML = block.textContent;
-      // Tell highlight.js to parse as C++
-      block.className = 'language-cpp';
+    // Match class names produced by Rouge for ```cuda and ```cuda= blocks:
+    // language-cuda  /  language-cuda=  /  language-cudaa  /  language-cudaa=
+    var selector = [
+      'code.language-cuda',
+      'code[class*="language-cuda"]',
+      'code.language-cudaa',
+      'code[class*="language-cudaa"]'
+    ].join(', ');
+
+    document.querySelectorAll(selector).forEach(function (block) {
+      // Strip any residual Rouge empty-span markup, keep raw text only
+      block.textContent = block.textContent;
+      block.className   = 'language-cuda';
       hljs.highlightElement(block);
-      // Give the parent <pre> / wrapper the same monokai look
+
+      // Remove background from the inner <pre> so the .hljs block controls it
       var pre = block.closest('pre');
       if (pre) {
         pre.style.background = 'transparent';
         pre.style.padding    = '0';
         pre.style.margin     = '0';
+        pre.style.border     = 'none';
       }
+      // Let the outer .highlight wrapper use the same dark background
       var wrap = block.closest('.highlight');
-      if (wrap) {
-        wrap.style.background = '#23241f'; // monokai-sublime background
-      }
+      if (wrap) wrap.style.background = '#272822';
     });
   });
+}());
 </script>
 
 </head>
