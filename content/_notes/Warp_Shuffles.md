@@ -12,7 +12,7 @@
 * The `__shfl_*sync()` intrinsics permit exchanging of a variable between threads within a warp without use of shared memory. The exchange occurs **simultaneously** for all active threads within the warp.
 
 # Broadcast
-```c=
+```cuda=
 T __shfl_sync(unsigned mask, T var, int srcLane, int width=warpSize);
 ```
 `__shfl_sync(0xffffffff, var, 2, warpSize)`, where `var=input[2]`.
@@ -21,14 +21,14 @@ T __shfl_sync(unsigned mask, T var, int srcLane, int width=warpSize);
 ![image](https://hackmd.io/_uploads/Hy_ZmOlwT.png =70%x)
 
 
-* `mask`: The new *_sync shfl intrinsics take in a mask indicating the threads participating in the call. A bit, representing the threadâ€™s lane id, must be set for each participating thread to ensure they are properly converged before the intrinsic is executed by the hardware. Each calling thread must have its own bit set in the mask and all non-exited threads named in mask must execute the same intrinsic with the same mask, or the result is undefined.
+* `mask`: The new *_sync shfl intrinsics take in a mask indicating the threads participating in the call. A bit, representing the thread?™s lane id, must be set for each participating thread to ensure they are properly converged before the intrinsic is executed by the hardware. Each calling thread must have its own bit set in the mask and all non-exited threads named in mask must execute the same intrinsic with the same mask, or the result is undefined.
 * `var`: input values to be broadcast. i.e., `var=input[srcLane]`.
 * `srcLane`: all threads get the same value from the thread at lane `srcLane`. For instance, if `srcLane` is set to 5, each participating thread in the warp will receive the value of var from the thread whose lane ID is 5. `srcLane = (srcLane % width) + k*width`, `k=0,...,(warpSize/width)`.
 * `width`: . Value must have a power of two in the range `[1, warpSize]` (i.e., 1, 2, 4, 8, 16 or 32)
 * Return: the value of `var` held by the thread whose ID is given by `srcLane`.
 
 # Shuffle Up
-```c=
+```cuda=
 T __shfl_up_sync(unsigned mask, T var, unsigned int delta, int width=warpSize);
 ```
 `__shfl_up_sync(0xffffffff, var, 2, warpSize)`, where `var=input[2]`.
@@ -38,7 +38,7 @@ T __shfl_up_sync(unsigned mask, T var, unsigned int delta, int width=warpSize);
 
 # Shuffle Down
 
-```c=
+```cuda=
 T __shfl_down_sync(unsigned mask, T var, unsigned int delta, int width=warpSize);
 ```
 `__shfl_down_sync(0xffffffff, var, 3, warpSize)`
@@ -49,7 +49,7 @@ T __shfl_down_sync(unsigned mask, T var, unsigned int delta, int width=warpSize)
 
 
 # XOR Shuffle
-```c=
+```cuda=
 T __shfl_xor_sync(unsigned mask, T var, int laneMask, int width=warpSize);
 ```
 
@@ -69,7 +69,7 @@ The table below shows the XOR result between `tid` and `laneMask`:
 
 # Examples
 ## Local Reduction with XOR shuffle
-```c=
+```cuda=
 for (int i=1; i<warpSize; i*=2)
    value += __shfl_xor_sync(0xffffffff, value, i);
 ```
@@ -78,7 +78,7 @@ for (int i=1; i<warpSize; i*=2)
 
 
 ## Local Reduction with Down Shuffle
-```c=
+```cuda=
 for (int i=warpSize/2; i>0; i=i/2)
    value += __shfl_down_sync(0xffffffff, value, i);
 ```
@@ -87,7 +87,7 @@ for (int i=warpSize/2; i>0; i=i/2)
 
 
 ## Block Reduction with Warp Shuffle
-```c=
+```cuda=
 __inline__ __device__
 int WarpReduceMin(int value)                                                               
 {  
@@ -98,7 +98,7 @@ int WarpReduceMin(int value)
 }
 ```
 
-```c=
+```cuda=
 __inline__ __device__                                                                          
 int BlockReduceMin(int value)                                                                  
 {                                                                                              

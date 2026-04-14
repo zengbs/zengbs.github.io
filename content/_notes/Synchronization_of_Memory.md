@@ -28,7 +28,7 @@
 
 # Example 1
    * The code below could lead to race condition. If a thread (say `t0`) in the second half of the block starts executing `B[idx] = A[(BLOCK_SIZE-1) - idx];` before another thread in the first half has executed its write to `A[idx]`, the `t0` thread might read an initial value in `A[]`.
-```c=
+```cuda=
 #define BLOCK_SIZE 512
 
 __global__ void swap (int* A, int* B)
@@ -45,7 +45,7 @@ __global__ void swap (int* A, int* B)
 ```
 # Example 2
 1. thread 1 executes `writeXY()`, while thread 2 executes `readXY()`.
-```c=
+```cuda=
 __device__ int X = 1, Y = 2;
 
 __device__ void writeXY()
@@ -75,7 +75,7 @@ There are 24 possible memory access orderings.
 \* A<X represents the thread 2 write `A` first, and then the thread 1 write `X`.
 
 If we add memory fence as shown as below, we can only remove the case 3 but not also the case 1 since memory fence take effect only when initial writings have occurred.
-```c=
+```cuda=
 __device__ int X = 1, Y = 2;
 
 __device__ void writeXY()
@@ -97,7 +97,7 @@ __device__ void readXY()
 
 # Example 3
 
-```c=
+```cuda=
 __device__ unsigned int count = 0;
 __shared__ bool isLastBlockDone;
 __global__ void sum(const float* array, unsigned int N,

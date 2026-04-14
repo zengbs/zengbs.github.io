@@ -47,11 +47,11 @@ This function exhibits ***synchronous*** behavior because the host application b
 See [here](https://developer.nvidia.com/blog/using-shared-memory-cuda-cc/#:~:text=Shared%20memory%20is%20a%20powerful,mechanism%20for%20threads%20to%20cooperate.)
 ## Kernel call
 ### Declaration
-```c=
+```cuda=
 __global__ void Kernel(argument list)
 ```
 ### Do it
-```c=
+```cuda=
 Kernel<<<dim3 GridDim, dim3 BlockDim, size_t Ns, cudaStream_t S>>>(argument list)
 ```
 * `Ns` specifies the number of bytes in shared memory that is dynamically allocated per block for this call in addition to the statically allocated memory; this dynamically allocated memory is used by any of the variables declared as an external array as mentioned in __shared__; Ns is an optional argument which defaults to 0;
@@ -76,7 +76,7 @@ A kernel call is ***asynchronous*** with respect to the host thread. After a ker
 ## `threadIdx`
 ## `warpSize`
 ## Handling errors
-```c=
+```cuda=
 #define CHECK(call)                                                        \
 {                                                                          \
    const cudaError_t error = call;                                         \
@@ -89,17 +89,17 @@ A kernel call is ***asynchronous*** with respect to the host thread. After a ker
 }
 ```
 Built-in API usage:
-```c=
+```cuda=
 CHECK(cudaMemcpy(d_C, gpuRef, nBytes, cudaMemcpyHostToDevice));
 ```
 Kernel call usage:
-```c=
+```cuda=
 kernel_function<<<grid, block>>>(argument list);
 CHECK(cudaDeviceSynchronize());
 ```
 
 ## Timing with CPU timer
-```c=
+```cuda=
 double cpuSecond() {
     struct timeval tp;
     gettimeofday(&tp,NULL);
@@ -107,7 +107,7 @@ double cpuSecond() {
 }
 ```
 Timing kernel:
-```c=
+```cuda=
 double iStart = cpuSecond();
 kernel_name<<<grid, block>>>(argument list);
 cudaDeviceSynchronize();

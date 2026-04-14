@@ -32,7 +32,7 @@ free(host_output_arr);
 Page-locking excessive amounts of memory with cudaMallocHost() may degrade system performance, since it reduces the amount of memory available to the system for paging. As a result, this function is best used sparingly to allocate staging areas for data exchange between host and device.
 ![image](https://hackmd.io/_uploads/SJ7zRy5Ua.png =40%x)
 
-```c=
+```cuda=
 // Allocation
 int *host_input_arr;
 int *host_output_arr;
@@ -58,7 +58,7 @@ cudaFreeHost(host_output_arr);
 
 ![image](https://hackmd.io/_uploads/r1xiLlx58p.png =40%x)
 
-```c=
+```cuda=
 // Allocation
 int *host_input_arr;
 cudaHostAlloc((void**)&host_input_arr, sizeof(int) * elementSize, cudaHostAllocMapped);
@@ -76,7 +76,7 @@ cudaFree(device_input_arr);
 
 ![image](https://hackmd.io/_uploads/S139WgcI6.png =40%x)
 
-```c=
+```cuda=
 // Allocation
 int *host_input_arr;
 cudaMallocManaged((void**)&host_input_arr, sizeof(int) * elementSize);

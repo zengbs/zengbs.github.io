@@ -15,7 +15,7 @@
 1. Each iteration suffers warp divergence.
 2. Access non-contiguous global memory.
 
-```c=
+```cuda=
 __global__ void ReduceNeighbored( int *g_array, int *g_output, int arrayLength ){
     
    int tid = blockIdx.x*blockDim.x + threadIdx.x;
@@ -42,7 +42,7 @@ __global__ void ReduceNeighbored( int *g_array, int *g_output, int arrayLength )
 1. Warp divergence only occurs in the last five rounds when the number of active threads is less than a warp size.
 2. Access non-contiguous global memory.
 
-```c=
+```cuda=
 __global__ void ReduceNeighboredLess( int *g_array, int *g_output, int arrayLength ){
  
    int tid = blockIdx.x*blockDim.x + threadIdx.x;
@@ -71,7 +71,7 @@ __global__ void ReduceNeighboredLess( int *g_array, int *g_output, int arrayLeng
 1. Warp divergence only occurs in the last five rounds when the number of active threads is less than a warp size.
 2. Access contiguous global memory.
 
-```c=
+```cuda=
 __global__ void ReduceInterleaved( int *g_array, int *g_output, int arrayLength ){
  
    int tid = blockIdx.x*blockDim.x + threadIdx.x;
@@ -99,7 +99,7 @@ __global__ void ReduceInterleaved( int *g_array, int *g_output, int arrayLength 
 ![image](https://hackmd.io/_uploads/H1EEtmlOT.png)
 
 
-```c=
+```cuda=
 __global__ void ReduceUnrolling2( int *g_array, int *g_output, int arrayLength ){
  
    int *idata = g_array + 2*blockIdx.x*blockDim.x;
@@ -129,7 +129,7 @@ __global__ void ReduceUnrolling2( int *g_array, int *g_output, int arrayLength )
 ![image](https://hackmd.io/_uploads/BJ2rYXe_a.png)
 
 
-```c=
+```cuda=
 __global__ void ReduceUnrolling3( int *g_array, int *g_output, int arrayLength ){                         
  
    int *idata = g_array + 3*blockIdx.x*blockDim.x;
@@ -160,7 +160,7 @@ __global__ void ReduceUnrolling3( int *g_array, int *g_output, int arrayLength )
 See [Block Reduction with Warp Shuffle](https://hackmd.io/Lr3-m6jiReydZjZPlQjsaQ#Block-Reduction-with-Warp-Shuffle).
 
 # Grid Reduction
-```c=
+```cuda=
 __device__ unsigned int count = 0;
 __shared__ bool isLastBlockDone;
 __global__ void sum(const float* array, unsigned int N,

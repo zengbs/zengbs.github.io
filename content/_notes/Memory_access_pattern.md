@@ -39,7 +39,7 @@ Keep in mind that the size of the granularity on the L1/L2 cache can vary depend
 
 1. Misalignment read/write occurs when `offset` is not a multiple of the size of granuality.
 
-```c=
+```cuda=
 __global__ void readOffset(float *A, float *B, float *C, float *D, const int n) {
     unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
     int offset, k;
@@ -57,7 +57,7 @@ __global__ void readOffset(float *A, float *B, float *C, float *D, const int n) 
 ```
 
 2. Uncoalesce read/write occurs when all 32 threads in a warp do not access a contiguous chunk of memory.
-```c=
+```cuda=
 __global__ void readOffset(float *A, float *B, float *C, const int n, int offset) {
     unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
     unsigned int k = (i%2==0) ? (2*i) : (i);
@@ -67,7 +67,7 @@ __global__ void readOffset(float *A, float *B, float *C, const int n, int offset
 ```
 
 3. Array copy
-```c=
+```cuda=
 #include <stdio.h>
 
 // Kernel that processes an array
@@ -122,7 +122,7 @@ int main() {
 }
 ```
 4. The starting address of device memory is neither a multiple of 32, 64, nor 128 bytes.
-```c=
+```cuda=
 #include <cuda_runtime.h>
 #include <iostream>
 
@@ -182,7 +182,7 @@ int main() {
 ### SoA vs. AoS
 #### SoA: structure of array
 
-```c=
+```cuda=
 struct innerStruct {
     float x;
     float y;
@@ -190,7 +190,7 @@ struct innerStruct {
 ```
 
 
-```c=
+```cuda=
 __global__ void testInnerStruct(innerStruct *data,
  	innerStruct *result, const int n) {
  	unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
@@ -209,7 +209,7 @@ The above code shows uncoalesced reading/writing, since `t0` reads at `data[0]`,
 
 #### AoS: array of structure
 
-```c=
+```cuda=
 struct innerArray {
     float x[N];
     float y[N];
@@ -217,7 +217,7 @@ struct innerArray {
 ```
 
 
-```c=
+```cuda=
 __global__ void testInnerArray(InnerArray *data, InnerArray *result, const int n) {
 	unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
 	if (i<n) {

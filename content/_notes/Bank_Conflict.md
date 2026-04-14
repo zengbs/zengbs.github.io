@@ -21,7 +21,7 @@
 ## Example: Accessing Row-Major versus Column-Major
 
 Row-major write/column-major read:
-```c=
+```cuda=
 __global__ void setRowReadRow(int *out) {
    // static shared memory
    __shared__ int tile[BDIMY][BDIMX];
@@ -49,7 +49,7 @@ __global__ void setRowReadRow(int *out) {
 
 ## Padding Statically Declared Shared Memory
 
-```c=
+```cuda=
 __global__ void setRowReadColPad(int *out) {
     
     // static shared memory

@@ -7,14 +7,14 @@
 # Thread indexing cheatsheet
 
 ## 1D Grid 1D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_1D_1D(){
 return blockIdx.x *blockDim.x + threadIdx.x;
 }
 ```
 ## 1D Grid 2D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_1D_2D(){
 return
@@ -24,7 +24,7 @@ return
 }
 ```
 ## 1D Grid 3D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_1D_3D(){
 return
@@ -35,7 +35,7 @@ return
 }
 ```
 ## 2D Grid 1D Block
-```c=
+```cuda=
 __device__ int getGlobalIdx_2D_1D(){
 int blockId = blockIdx.y * gridDim.x + blockIdx.x;
 int threadId = blockId * blockDim.x + threadIdx.x;
@@ -43,7 +43,7 @@ return threadId;
 }
 ```
 ## 2D Grid 2D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_2D_2D(){
 int blockId = blockIdx.x + blockIdx.y * gridDim.x;
@@ -53,7 +53,7 @@ return threadId;
 }
 ```
 ## 2D Grid 3D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_2D_3D(){
 int blockId = blockIdx.x + blockIdx.y * gridDim.x;
@@ -64,7 +64,7 @@ return threadId;
 }
 ```
 ## 3D Grid 1D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_3D_1D(){
 int blockId = blockIdx.x + blockIdx.y * gridDim.x
@@ -74,7 +74,7 @@ return threadId;
 }
 ```
 ## 3D Grid 2D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_3D_2D(){
 int blockId = blockIdx.x + blockIdx.y * gridDim.x
@@ -85,7 +85,7 @@ return threadId;
 }
 ```
 ## 3D Grid 3D Block
-```c=
+```cuda=
 __device__
 int getGlobalIdx_3D_3D(){
 int blockId = blockIdx.x + blockIdx.y * gridDim.x

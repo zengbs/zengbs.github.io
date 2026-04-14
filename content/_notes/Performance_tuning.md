@@ -67,7 +67,7 @@ __global__ void mathKernel2(void) {
 ```
 Note that the two versions of Example 2 give the same output, but in differnt order.
 
-```c=
+```cuda=
 int f(int x){
    
     if (0 <=x && x <= 10){
@@ -78,7 +78,7 @@ int f(int x){
 }
 ```
 
-```c=
+```cuda=
 int f(int x){
     return (int)(0 <=x && x <= 10)
 }
@@ -153,7 +153,7 @@ $\displaystyle\text{Bank index}=\left(\frac{\text{byte addess}}{8 \text{ bytes p
 1. Avoid warp divergence.
 2. Avoid register spilling.
 11. Enhance warp occupancy.
-4. A large bank size may yield higher bandwidth for shared memory access, but may result in more bank conflicts depending on the application’s shared memory access patterns.
+4. A large bank size may yield higher bandwidth for shared memory access, but may result in more bank conflicts depending on the application?�s shared memory access patterns.
 12. Adjust the amount of shared memory and L2 cache
 13. Avoid bank conflict
 14. Coalesced and aligned memory access.
@@ -168,7 +168,7 @@ $\displaystyle\text{Bank index}=\left(\frac{\text{byte addess}}{8 \text{ bytes p
 21. Efficient Use of Atomic Operations:
     Use atomic operations judiciously as they can serialize access to memory, but they are essential for certain operations like reductions and histograms.
 23. More computation per memory access
-24. Re‐compute may be faster than re‐loading data
+24. Re?�compute may be faster than re?�loading data
 25. Minimize memory transfers from host to device
 26. Check each [metric](https://docs.nvidia.com/cuda/profiler-users-guide/index.html#metrics-for-capability-7-x) with `nvprof` as you can as possible.
 27. Turn on the [MPS](https://docs.nvidia.com/deploy/mps/index.html#topic_6_1) daemon.
@@ -196,8 +196,8 @@ $\displaystyle\text{Bank index}=\left(\frac{\text{byte addess}}{8 \text{ bytes p
 Microbenchmarking](http://www.stuffedcow.net/files/gpuarch-ispass2010.pdf)
 * [Register spilling](https://developer.download.nvidia.com/CUDA/training/register_spilling.pdf)
 * [Bank conflict](https://www.itread01.com/content/1541908989.html)
-* [GPU 的硬體架構](https://kheresy.wordpress.com/2008/03/31/hotballs-hivegpu-%e7%9a%84%e7%a1%ac%e9%ab%94%e6%9e%b6%e6%a7%8b/)
-* [Block 和 Grid 的設定與 Warp](https://kheresy.wordpress.com/2008/07/09/cuda-%E7%9A%84-threading%EF%BC%9Ablock-%E5%92%8C-grid-%E7%9A%84%E8%A8%AD%E5%AE%9A%E8%88%87-warp/)
+* [GPU ?�硬體架構](https://kheresy.wordpress.com/2008/03/31/hotballs-hivegpu-%e7%9a%84%e7%a1%ac%e9%ab%94%e6%9e%b6%e6%a7%8b/)
+* [Block ??Grid ?�設定�? Warp](https://kheresy.wordpress.com/2008/07/09/cuda-%E7%9A%84-threading%EF%BC%9Ablock-%E5%92%8C-grid-%E7%9A%84%E8%A8%AD%E5%AE%9A%E8%88%87-warp/)
 * [cudaDeviceProp Struct Reference](https://docs.nvidia.com/cuda/cuda-runtime-api/structcudaDeviceProp.html)
 * [How do I choose grid and block dimensions for CUDA kernels?](https://stackoverflow.com/questions/9985912/how-do-i-choose-grid-and-block-dimensions-for-cuda-kernels)
 * [CUDA_Occupancy_Calculator](https://docs.google.com/spreadsheets/d/16Wgo2pONQdS0NQCFkW3-10M2OoAQeSvf5eQQPqMsy-M/edit?usp=sharing)

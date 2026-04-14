@@ -12,7 +12,7 @@
 
 ## Non-default Stream
 * For non-default stream, all operations are non-blocking with respect to the host.
-```c=
+```cuda=
 #include <cuda_runtime.h>
 
 int main() {
@@ -32,7 +32,7 @@ int main() {
 *  Non-default blocking stream can be blocked waiting for earlier operations in the NULL stream to complete.
 *  Default stream can be blocked waiting for earlier operations in the non-default blocking stream to complete.
 * Non-default blocking stream is equivalent to the stream created by `cudaStreamCreate(&stream)`.
-```c=
+```cuda=
 #include <cuda_runtime.h>
 
 int main() {
@@ -51,7 +51,7 @@ int main() {
 * Non-default non-blocking stream will not be blocked on operations in the NULL stream. 
 
 
-```c=
+```cuda=
 #include <cuda_runtime.h>
 
 int main() {
@@ -77,7 +77,7 @@ int main() {
 | Non-default non-blocking stream |             Asynchronous             |                 No                 | `cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking)`    |
 
 ## Example
-```c=
+```cuda=
 K1<<<1, 1, 0, stream_1>>>();
 K2<<<1, 1>>>();
 K3<<<1, 1, 0, stream_2>>>();
@@ -111,7 +111,7 @@ Hyper-Q is a feature introduced in the Kepler architecture. It expands the capab
 * Under the condition of not violating the issue order:
     * Each hardware (work/copy) queue is capable of sequentially (executing/copying) a single work in a stream, or concurrently (executing/copying) multiple works in different stream.
 ## Depth-first
-```c=
+```cuda=
 for (int i = 0; i < n_streams; i++) {
    kernel_1<<<grid, block, 0, streams[i]>>>();
    kernel_2<<<grid, block, 0, streams[i]>>>();
@@ -132,7 +132,7 @@ for (int i = 0; i < n_streams; i++) {
 
 
 ## Breadth-first
-```c=
+```cuda=
 for (int i = 0; i < n_streams; i++)
    kernel_1<<<grid, block, 0, streams[i]>>>();
 for (int i = 0; i < n_streams; i++)
@@ -159,7 +159,7 @@ for (int i = 0; i < n_streams; i++)
 
 
 ## Depth-first
-```c=
+```cuda=
 for (int i = 0; i < NSTREAM; ++i) {
    int ioffset = i * iElem;
    cudaMemcpyAsync(&d_A[ioffset], &h_A[ioffset], iBytes, cudaMemcpyHostToDevice, stream[i]);
@@ -178,7 +178,7 @@ for (int i = 0; i < NSTREAM; ++i) {
 
 ## Breadth-first
 
-```c=
+```cuda=
 // initiate all asynchronous transfers to the device
 for (int i = 0; i < NSTREAM; ++i) {
    int ioffset = i * iElem;
