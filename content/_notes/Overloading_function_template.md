@@ -13,6 +13,7 @@ render_with_liquid: false
 1. Between two templates that both match, the one that can handle **fewer** types is chosen as **more specialized**.
 2. Partial ordering does not provide a complete (total) order among all templates; it only establishes a relative order among the candidates that are viable for the function call.
 # Example
+
 ```c++
 #include <iostream>
 
@@ -78,7 +79,7 @@ void foo(T&){
 int main(){
 
    // Call version 2
-   // Since we cannot deduce temlplate parameter U 
+   // Since we cannot deduce temlplate parameter U
    int ia[10];
    foo(ia);
 
