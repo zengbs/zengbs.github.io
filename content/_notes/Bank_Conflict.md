@@ -78,4 +78,4 @@ __global__ void setRowReadColPad(int *out) {
 
 | Conflict-free                        | Conflict-free                        |            Conflict-free             |       Conflict-free (broadcast)       |            Bank conflict             |
 | ------------------------------------ | ------------------------------------ |:------------------------------------:|:------------------------------------:|:------------------------------------:|
-| ![](https://i.imgur.com/CUWLbQI.png) | ![](https://i.imgur.com/GnJ7sMu.png) | ![](https://i.imgur.com/yOYWjxL.png) | ![](https://i.imgur.com/zLHwtHx.png) | ![](https://i.imgur.com/EZPtRmN.png) |
+| <img src="https://i.imgur.com/CUWLbQI.png" width="100%"> | <img src="https://i.imgur.com/GnJ7sMu.png" width="100%"> | <img src="https://i.imgur.com/yOYWjxL.png" width="100%"> | <img src="https://i.imgur.com/zLHwtHx.png" width="100%"> | <img src="https://i.imgur.com/EZPtRmN.png" width="100%"> |
