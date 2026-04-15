@@ -21,7 +21,7 @@ T __shfl_sync(unsigned mask, T var, int srcLane, int width=warpSize);
 ![image](https://hackmd.io/_uploads/Hy_ZmOlwT.png =70%x)
 
 
-* `mask`: The new *_sync shfl intrinsics take in a mask indicating the threads participating in the call. A bit, representing the thread?™s lane id, must be set for each participating thread to ensure they are properly converged before the intrinsic is executed by the hardware. Each calling thread must have its own bit set in the mask and all non-exited threads named in mask must execute the same intrinsic with the same mask, or the result is undefined.
+* `mask`: The new *_sync shfl intrinsics take in a mask indicating the threads participating in the call. A bit, representing the thread?ï¿½s lane id, must be set for each participating thread to ensure they are properly converged before the intrinsic is executed by the hardware. Each calling thread must have its own bit set in the mask and all non-exited threads named in mask must execute the same intrinsic with the same mask, or the result is undefined.
 * `var`: input values to be broadcast. i.e., `var=input[srcLane]`.
 * `srcLane`: all threads get the same value from the thread at lane `srcLane`. For instance, if `srcLane` is set to 5, each participating thread in the warp will receive the value of var from the thread whose lane ID is 5. `srcLane = (srcLane % width) + k*width`, `k=0,...,(warpSize/width)`.
 * `width`: . Value must have a power of two in the range `[1, warpSize]` (i.e., 1, 2, 4, 8, 16 or 32)
