@@ -35,10 +35,10 @@ Person(const std::string& n) : name{n} {}
 # Lvalue Argument
 ## Pass-by-value
 GCC: https://quick-bench.com/q/TAj4y76nTywf73Dit6hok_dCBA0
-![image](https://hackmd.io/_uploads/H1_C82X2ex.png =60%x)
+<img src="https://hackmd.io/_uploads/H1_C82X2ex.png" width="60%">
 
 Clang: https://quick-bench.com/q/9cXSSD5AZ7VC0cwdYBK-fq4pKUM
-![image](https://hackmd.io/_uploads/rkRJv2Q3gg.png =60%x)
+<img src="https://hackmd.io/_uploads/rkRJv2Q3gg.png" width="60%">
 
 
 ```c++
@@ -64,10 +64,10 @@ BENCHMARK(TakeValue_lvalue);
 
 ## Pass-by-reference
 GCC: https://quick-bench.com/q/Di-71lEKR30kBict_AMGOOGLRWU
-![image](https://hackmd.io/_uploads/SkyP8h73gg.png =60%x)
+<img src="https://hackmd.io/_uploads/SkyP8h73gg.png" width="60%">
 
 Clang: https://quick-bench.com/q/W7RzNVMf0ga4mxq9IS0r6LYd1GU
-![image](https://hackmd.io/_uploads/rykM83X3ex.png =60%x)
+<img src="https://hackmd.io/_uploads/rykM83X3ex.png" width="60%">
 ```c++
 class Person {
 public:
@@ -113,9 +113,9 @@ static void rvalue(benchmark::State& state) {
 BENCHMARK(rvalue);
 ```
 GCC: https://quick-bench.com/q/GjLYdlyRLPiwGEgmVulHDtbzReQ
-![image](https://hackmd.io/_uploads/HkEd_nmhle.png =60%x)
+<img src="https://hackmd.io/_uploads/HkEd_nmhle.png" width="60%">
 Clang: https://quick-bench.com/q/Mlt4tRPB6wuqsd6svDZaUFxvblg
-![image](https://hackmd.io/_uploads/SJsQd2mhgl.png =60%x)
+<img src="https://hackmd.io/_uploads/SJsQd2mhgl.png" width="60%">
 ## Pass-by-reference
 
 ```c++
@@ -139,9 +139,9 @@ static void rvalue(benchmark::State& state) {
 BENCHMARK(rvalue);
 ```
 GCC: https://quick-bench.com/q/H_33D9MRmpfUJdy8_zaCbP504-Q
-![image](https://hackmd.io/_uploads/rJG6dh7heg.png =60%x)
+<img src="https://hackmd.io/_uploads/rJG6dh7heg.png" width="60%">
 Clang: https://quick-bench.com/q/LNzBy3uBlVRC22PBVLW8xafCT1o
-![image](https://hackmd.io/_uploads/BkmmK2m2lg.png =60%x)
+<img src="https://hackmd.io/_uploads/BkmmK2m2lg.png" width="60%">
 ## Pass-by-rvalue-reference
 
 ```c++
@@ -165,9 +165,9 @@ static void rvalue(benchmark::State& state) {
 BENCHMARK(rvalue);
 ```
 GCC: https://quick-bench.com/q/MjO6qPy4y2Q_MDF1rn3CfVUMExk
-![image](https://hackmd.io/_uploads/Hyee92mhgl.png =60%x)
+<img src="https://hackmd.io/_uploads/Hyee92mhgl.png" width="60%">
 Clang: https://quick-bench.com/q/ewH4cWNZOf6_r24Qea2w8BNvzHs
-![image](https://hackmd.io/_uploads/ry5YY3mnll.png =60%x)
+<img src="https://hackmd.io/_uploads/ry5YY3mnll.png" width="60%">
 
 
 # Summary

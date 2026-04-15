@@ -6,11 +6,11 @@
 
 
 # CUDA Programming Model
-![](https://i.imgur.com/fG2HjlE.png =60%x)
+<img src="https://i.imgur.com/fG2HjlE.png" width="60%">
 Figure: The layout of streaming multiprocessor (SM) on Fermi
-![](https://developer.ridgerun.com/wiki/images/9/9e/Nvidia-microarchitecture.png =60%x)
+<img src="https://developer.ridgerun.com/wiki/images/9/9e/Nvidia-microarchitecture.png" width="60%">
 Figure: The memory layouts of device and streaming multiprocessor (SM) are shown on the left and right side, respectively.
-![](https://i.imgur.com/XxYakNo.png =60%x)
+<img src="https://i.imgur.com/XxYakNo.png" width="60%">
 
 
 
@@ -53,4 +53,4 @@ Figure: The memory layouts of device and streaming multiprocessor (SM) are shown
 * If there are `N` blocks in a SM, `x` registers per thread, `y` bytes of shareed memory per block, then the amount of blocks that are concurrently running on a SM would be `min(N, min( floor(f/(x*BLOCK_SIZE)), floor(size of shared memory per SM/y) ))`
 
 ## Thread block cluster
-![圖片](https://hackmd.io/_uploads/rkU49FLBC.png =70%x)
+<img src="https://hackmd.io/_uploads/rkU49FLBC.png" width="70%" alt="圖片">

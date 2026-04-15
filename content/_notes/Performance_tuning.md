@@ -184,7 +184,7 @@ $\displaystyle\text{Bank index}=\left(\frac{\text{byte addess}}{8 \text{ bytes p
         * `0/DEFAULT, 1/EXCLUSIVE_PROCESS, 2/PROHIBITED`
 
 
-![image](https://hackmd.io/_uploads/rJ3yCwNaT.png =50%x)
+<img src="https://hackmd.io/_uploads/rJ3yCwNaT.png" width="50%">
 
 
 

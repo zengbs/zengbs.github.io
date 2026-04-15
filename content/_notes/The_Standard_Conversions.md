@@ -11,8 +11,8 @@ render_with_liquid: false
 
 
 Convert row to column:
-![image](https://hackmd.io/_uploads/ByDz4veqkl.png =150%x)
+<img src="https://hackmd.io/_uploads/ByDz4veqkl.png" width="150%">
 
-![image](https://hackmd.io/_uploads/SkyvNwxcJe.png =40%x)
+<img src="https://hackmd.io/_uploads/SkyvNwxcJe.png" width="40%">
 
 {% endraw %}

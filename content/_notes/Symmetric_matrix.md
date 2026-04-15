@@ -24,7 +24,7 @@ Suppose $A\pmb{x}=\lambda_{1}\pmb{x}$, and $A\pmb{y}=\lambda_{2}\pmb{y}$. Taking
 $(\lambda_{1}\pmb{x})^{T}\pmb{y}=(A\pmb{x})^{T}\pmb{y}=\pmb{x}^{T}A^{T}\pmb{y}=\pmb{x}^{T}A\pmb{y}=\pmb{x}^{T}\lambda_{2}\pmb{y}$
 $\Longrightarrow \pmb{x}^{T}\lambda_{1}\pmb{y}=\pmb{x}^{T}\lambda_{2}\pmb{y}$
 $\Longrightarrow\pmb{x}^{T}\pmb{y}=0$, since $\lambda_{1}\neq\lambda_{2}$.
-![](https://i.imgur.com/d7o6hco.gif =60%x)
+<img src="https://i.imgur.com/d7o6hco.gif" width="60%">
 * If $A$ is symmetric, the number of positive/negative eigenvalues equals to the number of positive/negative pivots.
 * Rank of a symmetric matrix $A$ is equal to the number of non-zero eigenvalues of $A$.
 

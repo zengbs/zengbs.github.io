@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ---
 
-![Template(3)](https://hackmd.io/_uploads/SJ-lQ4QWex.jpg =60%x)
+<img src="https://hackmd.io/_uploads/SJ-lQ4QWex.jpg" width="60%" alt="Template(3)">
 
 
 # Syntax rules

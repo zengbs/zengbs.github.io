@@ -116,12 +116,12 @@ int main() {
 
 |     | Copy elision ON | Copy elision OFF |
 |:--- |:---------------:|:----------------:|
-![圖片](https://hackmd.io/_uploads/S15JrbKhge.png =60%x)<br>`Person person("YL");`<br>`person = foo1();` |   Move ctor<br>Move assign      |  Move ctor <br>Move assign           |
-| ![圖片](https://hackmd.io/_uploads/Hkp7HWFhel.png =60%x)<br>`Person person("YL");`<br>`person = foo2();`         | (NRVO is applicable)<br>Move assign | Move ctor<br>Move assign |
-| ![圖片](https://hackmd.io/_uploads/HJRVHWFhex.png =60%x)<br>```Person person("YL");```<br>```person = foo3();``` | (NRVO is applicable)<br>Move assign | Copy ctor<br>Move assign |
-| ![圖片](https://hackmd.io/_uploads/H1TiSbt2xg.png =60%x)<br>```Person person("YL");```<br>```person = foo4();``` | Copy ctor<br>Move assign            | Copy ctor<br>Move assign |
-| ![圖片](https://hackmd.io/_uploads/H17jpPq2gg.png =60%x)<br>`Person obj("YL");`<br>`obj = foo5();`               | Copy ctor<br>Move assign | Copy ctor<br>Move assign |
-|   ![圖片](https://hackmd.io/_uploads/BywHRP5heg.png =60%x)<br>`Person obj("YL");`<br>`obj = foo6();`|               (NRVO is applicable)<br>Copy assign                      |                        Copy ctor<br>Copy assign  |
+<img src="https://hackmd.io/_uploads/S15JrbKhge.png" width="60%" alt="圖片"><br>`Person person("YL");`<br>`person = foo1();` |   Move ctor<br>Move assign      |  Move ctor <br>Move assign           |
+| <img src="https://hackmd.io/_uploads/Hkp7HWFhel.png" width="60%" alt="圖片"><br>`Person person("YL");`<br>`person = foo2();`         | (NRVO is applicable)<br>Move assign | Move ctor<br>Move assign |
+| <img src="https://hackmd.io/_uploads/HJRVHWFhex.png" width="60%" alt="圖片"><br>```Person person("YL");```<br>```person = foo3();``` | (NRVO is applicable)<br>Move assign | Copy ctor<br>Move assign |
+| <img src="https://hackmd.io/_uploads/H1TiSbt2xg.png" width="60%" alt="圖片"><br>```Person person("YL");```<br>```person = foo4();``` | Copy ctor<br>Move assign            | Copy ctor<br>Move assign |
+| <img src="https://hackmd.io/_uploads/H17jpPq2gg.png" width="60%" alt="圖片"><br>`Person obj("YL");`<br>`obj = foo5();`               | Copy ctor<br>Move assign | Copy ctor<br>Move assign |
+|   <img src="https://hackmd.io/_uploads/BywHRP5heg.png" width="60%" alt="圖片"><br>`Person obj("YL");`<br>`obj = foo6();`|               (NRVO is applicable)<br>Copy assign                      |                        Copy ctor<br>Copy assign  |
 
 
 

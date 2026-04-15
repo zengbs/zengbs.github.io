@@ -11,9 +11,9 @@ An individual CUDA thread can access 1,2,4,8,or 16 bytes in a single instruction
 * **Aligned memory accesses**: the first address of device memory is an multiple of 32, 64, or 128 bytes. Performing a misaligned load will cause wasted bandwidth.
 * **Coalesced memory accesses**: all 32 threads in a warp access a contiguous chunk of memory.
 * **Aligned coalesced memory accesses**
-![](https://i.imgur.com/7Y9h2ir.png =70%x)
+<img src="https://i.imgur.com/7Y9h2ir.png" width="70%">
 * **Misaligned uncoalesced memory accesses**
-![](https://i.imgur.com/rfndahT.png =70%x)
+<img src="https://i.imgur.com/rfndahT.png" width="70%">
 
 #### Read
 

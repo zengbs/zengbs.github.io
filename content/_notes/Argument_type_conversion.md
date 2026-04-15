@@ -28,7 +28,7 @@ render_with_liquid: false
 * Table 16 summarizes the conversions defined in 7.3 and partitions them into four disjoint categories: Lvalue Transformation, Qualification Adjustment, Promotion, and Conversion. ⸺ [over.ics.scs]/1
 * A standard conversion sequence either is the Identity conversion by itself (that is, no conversion) or consists of one to three conversions from the other four categories. If there are two or more conversions in the sequence, the conversions are applied in the canonical order: Lvalue Transformation, Promotion or Conversion, Qualification Adjustment. ⸺ [over.ics.scs]/2
 * Each conversion in Table 16 also has an associated rank (Exact Match, Promotion, or Conversion). These are used to rank standard conversion sequences. The rank of a conversion sequence is determined by considering the rank of each conversion in the sequence and the rank of any reference binding. If any of those has Conversion rank, the sequence has Conversion rank; otherwise, if any of those has Promotion rank, the sequence has Promotion rank; otherwise, the sequence has Exact Match rank. ⸺ [over.ics.scs]/3
-![image](https://hackmd.io/_uploads/ByltpwTeZl.png =70%x)
+<img src="https://hackmd.io/_uploads/ByltpwTeZl.png" width="70%">
 
 
 ## User-Defined Conversion Sequence
@@ -200,7 +200,7 @@ Standard conversion sequence `S1` is a better conversion sequence than standard 
 
 
 # Flowchart
-![Ranking implicit conversion](https://hackmd.io/_uploads/BJHVX8fvll.jpg =60%x)
+<img src="https://hackmd.io/_uploads/BJHVX8fvll.jpg" width="60%" alt="Ranking implicit conversion">
 
 
 # Exact match

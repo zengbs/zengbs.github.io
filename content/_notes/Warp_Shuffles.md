@@ -16,9 +16,9 @@
 T __shfl_sync(unsigned mask, T var, int srcLane, int width=warpSize);
 ```
 `__shfl_sync(0xffffffff, var, 2, warpSize)`, where `var=input[2]`.
-![image](https://hackmd.io/_uploads/rJax7dePp.png =70%x)
+<img src="https://hackmd.io/_uploads/rJax7dePp.png" width="70%">
 `__shfl_sync(0xffffffff, var, 2, warpSize/2)`, where `var=input[2]` or `var=input[18]`.
-![image](https://hackmd.io/_uploads/Hy_ZmOlwT.png =70%x)
+<img src="https://hackmd.io/_uploads/Hy_ZmOlwT.png" width="70%">
 
 
 * `mask`: The new *_sync shfl intrinsics take in a mask indicating the threads participating in the call. A bit, representing the thread?�s lane id, must be set for each participating thread to ensure they are properly converged before the intrinsic is executed by the hardware. Each calling thread must have its own bit set in the mask and all non-exited threads named in mask must execute the same intrinsic with the same mask, or the result is undefined.
@@ -32,9 +32,9 @@ T __shfl_sync(unsigned mask, T var, int srcLane, int width=warpSize);
 T __shfl_up_sync(unsigned mask, T var, unsigned int delta, int width=warpSize);
 ```
 `__shfl_up_sync(0xffffffff, var, 2, warpSize)`, where `var=input[2]`.
-![image](https://hackmd.io/_uploads/B1qjV_evT.png =70%x)
+<img src="https://hackmd.io/_uploads/B1qjV_evT.png" width="70%">
 `__shfl_up_sync(0xffffffff, var, 2, warpSize/2)`, where `var=input[2]`.
-![image](https://hackmd.io/_uploads/SkShE_lD6.png =70%x)
+<img src="https://hackmd.io/_uploads/SkShE_lD6.png" width="70%">
 
 # Shuffle Down
 
@@ -42,9 +42,9 @@ T __shfl_up_sync(unsigned mask, T var, unsigned int delta, int width=warpSize);
 T __shfl_down_sync(unsigned mask, T var, unsigned int delta, int width=warpSize);
 ```
 `__shfl_down_sync(0xffffffff, var, 3, warpSize)`
-![image](https://hackmd.io/_uploads/rya4H_xPp.png =70%x)
+<img src="https://hackmd.io/_uploads/rya4H_xPp.png" width="70%">
 `__shfl_down_sync(0xffffffff, var, 3, warpSize/4)`
-![image](https://hackmd.io/_uploads/By_HB_gPp.png =70%x)
+<img src="https://hackmd.io/_uploads/By_HB_gPp.png" width="70%">
 
 
 
@@ -61,9 +61,9 @@ The table below shows the XOR result between `tid` and `laneMask`:
 `__shfl_xor_sync(0xffffffff, var, 1, warpSize)`
 
 
-![image](https://hackmd.io/_uploads/rkJwr_lwa.png =70%x)
+<img src="https://hackmd.io/_uploads/rkJwr_lwa.png" width="70%">
 `__shfl_xor_sync(0xffffffff, var, 3, warpSize)`
-![image](https://hackmd.io/_uploads/HyYPHdxvp.png =70%x)
+<img src="https://hackmd.io/_uploads/HyYPHdxvp.png" width="70%">
 
 
 
@@ -74,7 +74,7 @@ for (int i=1; i<warpSize; i*=2)
    value += __shfl_xor_sync(0xffffffff, value, i);
 ```
 
-![image](https://hackmd.io/_uploads/HyFZkCCUa.png =40%x)
+<img src="https://hackmd.io/_uploads/HyFZkCCUa.png" width="40%">
 
 
 ## Local Reduction with Down Shuffle
@@ -83,7 +83,7 @@ for (int i=warpSize/2; i>0; i=i/2)
    value += __shfl_down_sync(0xffffffff, value, i);
 ```
 
-![image](https://hackmd.io/_uploads/Hy_fy0ALa.png =40%x)
+<img src="https://hackmd.io/_uploads/Hy_fy0ALa.png" width="40%">
 
 
 ## Block Reduction with Warp Shuffle

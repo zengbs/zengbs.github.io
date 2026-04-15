@@ -134,7 +134,7 @@ void func()
 ```
 
 # Flowchart
-![The best viable function](https://hackmd.io/_uploads/rymFKDxDex.jpg =70%x)
+<img src="https://hackmd.io/_uploads/rymFKDxDex.jpg" width="70%" alt="The best viable function">
 
 # The best viable functions
 ICS = Implicit Conversion Sequence.
@@ -153,7 +153,7 @@ Given these definitions, a viable function F1 is defined to be a better function
 
 # Example
 ## 1st Path
-![The best viable function.-1](https://hackmd.io/_uploads/rkNL-FgDge.jpg =50%x)
+<img src="https://hackmd.io/_uploads/rkNL-FgDge.jpg" width="50%" alt="The best viable function.-1">
 ```c++
 #include<iostream>
 
@@ -197,7 +197,7 @@ int main() {
 }
 ```
 ## 2nd Path
-![The best viable function.-2](https://hackmd.io/_uploads/SyqdZKgDel.jpg =50%x)
+<img src="https://hackmd.io/_uploads/SyqdZKgDel.jpg" width="50%" alt="The best viable function.-2">
 ```c++
 #include <iostream>
 
@@ -224,7 +224,7 @@ int main() {
 }
 ```
 ## 3rd Path
-![The best viable function-3](https://hackmd.io/_uploads/rkgMtWtxPex.jpg =50%x)
+<img src="https://hackmd.io/_uploads/rkgMtWtxPex.jpg" width="50%" alt="The best viable function-3">
 
 ```c++
 #include <iostream>
@@ -268,7 +268,7 @@ int main() {
 ```
 
 ## 4th Path
-![The best viable function-4](https://hackmd.io/_uploads/rJ5KbKgDgx.jpg =50%x)
+<img src="https://hackmd.io/_uploads/rJ5KbKgDgx.jpg" width="50%" alt="The best viable function-4">
 ```c++
 #include <iostream>
 
@@ -311,7 +311,7 @@ int main() {
 }
 ```
 ## 5th Path
-![The best viable function-5](https://hackmd.io/_uploads/BJJqZKxPxx.jpg =50%x)
+<img src="https://hackmd.io/_uploads/BJJqZKxPxx.jpg" width="50%" alt="The best viable function-5">
 
 ```c++
 #include <iostream>
@@ -338,7 +338,7 @@ int main() {
 ```
 
 ## 6th Path
-![The best viable function-6](https://hackmd.io/_uploads/By7cZKlvex.jpg =50%x)
+<img src="https://hackmd.io/_uploads/By7cZKlvex.jpg" width="50%" alt="The best viable function-6">
 
 ```c++
 #include <iostream>

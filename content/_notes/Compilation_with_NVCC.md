@@ -3,18 +3,18 @@
 
 ---
 
-![image](https://hackmd.io/_uploads/ry96CCPHA.png =80%x)
+<img src="https://hackmd.io/_uploads/ry96CCPHA.png" width="80%">
 
 ---
-![image](https://hackmd.io/_uploads/HynXl1drR.png =80%x)
+<img src="https://hackmd.io/_uploads/HynXl1drR.png" width="80%">
 
 ---
-![cuda-compilation-from-cu-to-cu-cpp-ii-1](https://hackmd.io/_uploads/BJt_yGOSC.png =70%x)
+<img src="https://hackmd.io/_uploads/BJt_yGOSC.png" width="70%" alt="cuda-compilation-from-cu-to-cu-cpp-ii-1">
 
 
-![image](https://hackmd.io/_uploads/S1cSbMuBA.png =60%x)
+<img src="https://hackmd.io/_uploads/S1cSbMuBA.png" width="60%">
 
-![image](https://hackmd.io/_uploads/rJUiZzuSR.png =60%x)
+<img src="https://hackmd.io/_uploads/rJUiZzuSR.png" width="60%">
 
 
 # Just-In-Time Compilation

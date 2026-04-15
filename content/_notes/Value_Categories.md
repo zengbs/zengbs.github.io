@@ -124,7 +124,7 @@ The change is:
       takeC(createC()); // Ok since C++17 (error prior to C++17)
    }
    ```
-   ![image](https://hackmd.io/_uploads/ByOasyP8Wl.png =60%x)
+   <img src="https://hackmd.io/_uploads/ByOasyP8Wl.png" width="60%">
    However, all C++ versions can compile this code provided that copy and move constructors are enabled:
    ```c++=
    #include <iostream>
@@ -293,7 +293,7 @@ In generic code, you might not know whether members are static or references. Th
 
 
 
-![image](https://hackmd.io/_uploads/SkiUpWR0el.png =80%x)
+<img src="https://hackmd.io/_uploads/SkiUpWR0el.png" width="80%">
 
 
 

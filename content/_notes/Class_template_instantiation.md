@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ---
 
-![Template(3)](https://hackmd.io/_uploads/r1AbX47bgg.jpg =60%x)
+<img src="https://hackmd.io/_uploads/r1AbX47bgg.jpg" width="60%" alt="Template(3)">
 
 1. This generation, `Queue<int> qi`, of a class from the generic class template definition is called template instantiation.
 2. There is no special relationship between the instantiations of a class template for different types. Rather, each instantiation of a class template constitutes an independent class type.

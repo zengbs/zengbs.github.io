@@ -23,7 +23,7 @@ $\begin{align}
 
 Note that the last line has assumed $\text{rank}(A)=n$, resulting $\text{rank}(A^{T}A)=n$, and thus $A^{T}A$ is invertible.
 
-![image](https://hackmd.io/_uploads/BJyweJFsa.png =50%x)
+<img src="https://hackmd.io/_uploads/BJyweJFsa.png" width="50%">
 
 
 ## Case 2: $\text{rank}(A)<n$ and $\text{rank}(A)<m$ (i.e., $A$ is not full column rank)
@@ -35,7 +35,7 @@ The particular solution $\hat{\pmb{x}}=A^{+}\pmb{b}$ provides the following two 
 2. $\hat{\pmb{x}}=A^{+}\pmb{b}$ is the smallest Euclidean norm in the all solutions.
 
 
-![image](https://hackmd.io/_uploads/HJCVhJKja.png =50%x)
+<img src="https://hackmd.io/_uploads/HJCVhJKja.png" width="50%">
 
 When $A$ has full column rank, $A^{+}=(A^{T}A)^{-1}A^{T}$, resulting in $\hat{\pmb{x}}=(A^{T}A)^{-1}A^{T} \pmb{b}$.
 

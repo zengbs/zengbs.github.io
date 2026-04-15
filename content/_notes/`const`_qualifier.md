@@ -68,7 +68,7 @@ extern const int var = 2;
 ### General Rule of `const` assignment
 If the giver has a low-level const qualifier, then the receiver must also have a low-level const qualifier; all other conditions are allowed. (I.e., Always keep the information of low-level const)
 
-![image](https://hackmd.io/_uploads/rJxxh4cYkl.png =60%x)
+<img src="https://hackmd.io/_uploads/rJxxh4cYkl.png" width="60%">
 
 
 

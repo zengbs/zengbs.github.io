@@ -39,10 +39,10 @@ There are several common approaches to writing setters in modern C++. Today, we 
 # Lvalue Argument
 
 GCC: https://quick-bench.com/q/PbEMn4tk0uYIZWC9_ZJ3Oi9R0V8
-![image](https://hackmd.io/_uploads/B1NrmoXnll.png =60%x)
+<img src="https://hackmd.io/_uploads/B1NrmoXnll.png" width="60%">
 
 Clang: https://quick-bench.com/q/6cCqUiQ56fL0eyT2Vu49doSc1bA
-![image](https://hackmd.io/_uploads/HyL0Shmnxl.png =60%x)
+<img src="https://hackmd.io/_uploads/HyL0Shmnxl.png" width="60%">
 
 
 ```c++
@@ -83,10 +83,10 @@ BENCHMARK(setName2_lvalue);
 # Rvalue Argument
 
 GCC: https://quick-bench.com/q/mUFg5UXJj28ZTqtE2v7eGr30T70
-![image](https://hackmd.io/_uploads/rk3YZiQ2xg.png =60%x)
+<img src="https://hackmd.io/_uploads/rk3YZiQ2xg.png" width="60%">
 
 Clang: https://quick-bench.com/q/a1pANo1yjRH3K_mjUq7AfttJx7E
-![image](https://hackmd.io/_uploads/BJynWj72xl.png =60%x)
+<img src="https://hackmd.io/_uploads/BJynWj72xl.png" width="60%">
 
 
 ```c++

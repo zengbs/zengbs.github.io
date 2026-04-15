@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ---
 
-![Throwing Exception](https://hackmd.io/_uploads/S1VY70lHlg.jpg =60%x)
+<img src="https://hackmd.io/_uploads/S1VY70lHlg.jpg" width="60%" alt="Throwing Exception">
 
 * A C++ exception handler is a catch clause. When an exception is thrown from statements within a try block, the list of catch clauses that follows the try block is searched to find a catch clause that can handle the exception.
 * A catch clause consists of three parts: the keyword `catch`, the declaration of a single type or single object within parentheses (referred to as an exception declaration), and a set of statements within a compound statement.

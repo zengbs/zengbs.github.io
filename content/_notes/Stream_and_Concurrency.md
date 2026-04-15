@@ -87,10 +87,10 @@ K3<<<1, 1, 0, stream_2>>>();
 
 | Non-default blocking | Non-default non-blocking |                 Execution timeline                 |
 | -------------------- | ------------------------ |:--------------------------------------------------:|
-| K1, K3               |                          | ![image](https://hackmd.io/_uploads/HkdkW-Vw6.png =80%x) |
-|                      | K1,K3                    | ![image](https://hackmd.io/_uploads/r1g_mZZEPp.png =40%x)
-| K1                   | K3                       |          ![image](https://hackmd.io/_uploads/SkrBZZNDp.png =60%x)
-| K3                   | K1                       |          ![image](https://hackmd.io/_uploads/S1YUZZNPa.png =60%x)
+| K1, K3               |                          | <img src="https://hackmd.io/_uploads/HkdkW-Vw6.png" width="80%"> |
+|                      | K1,K3                    | <img src="https://hackmd.io/_uploads/r1g_mZZEPp.png" width="40%">
+| K1                   | K3                       |          <img src="https://hackmd.io/_uploads/SkrBZZNDp.png" width="60%">
+| K3                   | K1                       |          <img src="https://hackmd.io/_uploads/S1YUZZNPa.png" width="60%">
 
 
 
@@ -119,13 +119,13 @@ for (int i = 0; i < n_streams; i++) {
    kernel_4<<<grid, block, 0, streams[i]>>>();
 }
 ```
-![image](https://hackmd.io/_uploads/HyJdHb4wa.png =80%x)
+<img src="https://hackmd.io/_uploads/HyJdHb4wa.png" width="80%">
 
 
 
 |                       with Hyper-Q</br>(multiple hardware work queues)                       |                     without Hyper-Q</br>(single hardware work queue)                      |
 |:--------------------------------------------------------:|:--------------------------------------------------------:|
-| ![image](https://hackmd.io/_uploads/B1puPW4vT.png =70%x) | ![image](https://hackmd.io/_uploads/S1G4DZ4v6.png =80%x) |
+| <img src="https://hackmd.io/_uploads/B1puPW4vT.png" width="70%"> | <img src="https://hackmd.io/_uploads/S1G4DZ4v6.png" width="80%"> |
 
 
 
@@ -142,11 +142,11 @@ for (int i = 0; i < n_streams; i++)
 for (int i = 0; i < n_streams; i++)
    kernel_4<<<grid, block, 0, streams[i]>>>();
 ```
-![image](https://hackmd.io/_uploads/rJ2dHZVPa.png =80%x)
+<img src="https://hackmd.io/_uploads/rJ2dHZVPa.png" width="80%">
 
 |                       with Hyper-Q</br>(multiple hardware work queues)                       |                     without Hyper-Q</br>(single hardware work queue)                      |
 |:--------------------------------------------------------:|:--------------------------------------------------------:|
-| ![image](https://hackmd.io/_uploads/B1puPW4vT.png =40%x) | ![image](https://hackmd.io/_uploads/B1puPW4vT.png =40%x) |
+| <img src="https://hackmd.io/_uploads/B1puPW4vT.png" width="40%"> | <img src="https://hackmd.io/_uploads/B1puPW4vT.png" width="40%"> |
 
 
 
@@ -168,7 +168,7 @@ for (int i = 0; i < NSTREAM; ++i) {
    cudaMemcpyAsync(&gpuRef[ioffset],&d_C[ioffset],iBytes, cudaMemcpyDeviceToHost, stream[i]);
 }
 ```
-![image](https://hackmd.io/_uploads/BkHUgzHw6.png =90%x)
+<img src="https://hackmd.io/_uploads/BkHUgzHw6.png" width="90%">
 
 
 |                  | w/ GMU | w/o GMU |
@@ -199,7 +199,7 @@ for (int i = 0; i < NSTREAM; ++i) {
    cudaMemcpyDeviceToHost, stream[i]);
 }
 ```
-![image](https://hackmd.io/_uploads/SJu_lzrw6.png =90%x)
+<img src="https://hackmd.io/_uploads/SJu_lzrw6.png" width="90%">
 
 
 
@@ -214,7 +214,7 @@ for (int i = 0; i < NSTREAM; ++i) {
 
 
 # The Limit of Speedup
-![image](https://hackmd.io/_uploads/r1Pz4d9D6.png =70%x)
+<img src="https://hackmd.io/_uploads/r1Pz4d9D6.png" width="70%">
 
 
 

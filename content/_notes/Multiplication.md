@@ -19,7 +19,7 @@ for (int i=0;i<N;i++){
     }
 }
 ```
-![image](https://hackmd.io/_uploads/SkP_cO16a.png =25%x)
+<img src="https://hackmd.io/_uploads/SkP_cO16a.png" width="25%">
 
 # jik
 ```c=
@@ -31,7 +31,7 @@ for (int j=0;j<N;j++){
         }
     }
 ```
-![image](https://hackmd.io/_uploads/rJUModk6a.png =25%x)
+<img src="https://hackmd.io/_uploads/rJUModk6a.png" width="25%">
 
 
 # kij
@@ -44,7 +44,7 @@ for (int k=0;k<N;k++){
         }
     }
 ```
-![image](https://hackmd.io/_uploads/BkO7sOkTa.png =25%x)
+<img src="https://hackmd.io/_uploads/BkO7sOkTa.png" width="25%">
 
 
 # ikj
@@ -57,7 +57,7 @@ for (int i=0;i<N;i++){
         }
     }
 ```
-![image](https://hackmd.io/_uploads/rJKVoOkTT.png =25%x)
+<img src="https://hackmd.io/_uploads/rJKVoOkTT.png" width="25%">
 
 
 # jki
@@ -70,7 +70,7 @@ for (int j=0;j<N;j++){
         }
     }
 ```
-![image](https://hackmd.io/_uploads/HyqrsOkpa.png =25%x)
+<img src="https://hackmd.io/_uploads/HyqrsOkpa.png" width="25%">
 
 
 # kji
@@ -83,7 +83,7 @@ for (int k=0;k<N;k++){
         }
     }
 ```
-![image](https://hackmd.io/_uploads/SJ9IodJa6.png =25%x)
+<img src="https://hackmd.io/_uploads/SJ9IodJa6.png" width="25%">
 
 
 
