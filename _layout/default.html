@@ -33,6 +33,37 @@ pre, code {
   font-size: 1.05em;
 }
 
+/* ── Tables ── */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.2em 0;
+  font-size: 0.95em;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #f0f0f0;
+  font-weight: bold;
+  text-align: center;
+}
+tr:nth-child(even) td {
+  background: #fafafa;
+}
+tr:hover td {
+  background: #f5f8ff;
+}
+td:first-child {
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  background: #f7f7f7;
+}
+
 /* ── Rouge / Monokai syntax highlighting ── */
 .highlight {
   background: #272822;
