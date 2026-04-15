@@ -7,7 +7,7 @@
 # Memory Management (global memory)
 ## Pageable memory
 
-![image](https://hackmd.io/_uploads/rkakRkc86.png =40%x)
+<img src="https://hackmd.io/_uploads/rkakRkc86.png" width="40%">
 
 ```cuda=
 // Allocation
@@ -30,7 +30,7 @@ free(host_output_arr);
 
 ## Pinned memory
 Page-locking excessive amounts of memory with cudaMallocHost() may degrade system performance, since it reduces the amount of memory available to the system for paging. As a result, this function is best used sparingly to allocate staging areas for data exchange between host and device.
-![image](https://hackmd.io/_uploads/SJ7zRy5Ua.png =40%x)
+<img src="https://hackmd.io/_uploads/SJ7zRy5Ua.png" width="40%">
 
 ```cuda=
 // Allocation
@@ -56,7 +56,7 @@ cudaFreeHost(host_output_arr);
 
 ## Zero-copy memory
 
-![image](https://hackmd.io/_uploads/r1xiLlx58p.png =40%x)
+<img src="https://hackmd.io/_uploads/r1xiLlx58p.png" width="40%">
 
 ```cuda=
 // Allocation
@@ -74,7 +74,7 @@ cudaFree(device_input_arr);
 
 ## Unified Virtual Addressing
 
-![image](https://hackmd.io/_uploads/S139WgcI6.png =40%x)
+<img src="https://hackmd.io/_uploads/S139WgcI6.png" width="40%">
 
 ```cuda=
 // Allocation
