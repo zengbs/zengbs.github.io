@@ -36,29 +36,33 @@ c. `int *ip = (int *)p; p = (char *)(ip + 1);`
 The compiler doesn't know the size of the pointed-to objects. Before performing arithmetic, convert the pointer either to char * or to the pointer type you're trying to manipulate
 
 3. <span style="color:blue">I've got some code that's trying to unpack external structures, but it's crashing with a message about an ``unaligned access.'' What does this mean? The code looks like this: 
-```c=
-struct mystruct {
-   char c;
-   long int i32;
-   int i16;
-} s;
 
-char buf[7], *p;
-fread(buf, 7, 1, fp);
-p = buf;
-s.c = *p++;
-s.i32 = *(long int *)p;
-p += 4;
-s.i16 = *(int *)p;
-```
+   ```c=
+   struct mystruct {
+      char c;
+      long int i32;
+      int i16;
+   } s;
+   
+   char buf[7], *p;
+   fread(buf, 7, 1, fp);
+   p = buf;
+   s.c = *p++;
+   s.i32 = *(long int *)p;
+   p += 4;
+   s.i16 = *(int *)p;
+   ```
+
 4. <span style="color:blue">I have a function which accepts, and is supposed to initialize, a pointer: 
-```c=
-void f(int *ip)
-{
-   static int dummy = 5;
-   ip = &dummy;
-}
-```
+
+   ```c=
+   void f(int *ip)
+   {
+      static int dummy = 5;
+      ip = &dummy;
+   }
+   ```
+
 <span style="color:blue">But when I call it like this:</span>
 ```c=
    int *ip;
@@ -69,11 +73,13 @@ See [here.](https://hackmd.io/mQJCoGl4Qai_WmeCcJJcEw?view)
 
     
 5. <span style="color:blue">Suppose I want to write a function that takes a generic pointer as an argument and I want to simulate passing it by reference. Can I give the formal parameter type `void **`, and do something like this? </span>
-```c=
-void f(void **);
-double *dp;
-f((void **)&dp);
-```
+
+   ```c=
+   void f(void **);
+   double *dp;
+   f((void **)&dp);
+   ```
+
     
 ## Reference
 [Everything you need to know about pointers in C](https://boredzo.org/pointers/)

@@ -13,68 +13,69 @@ render_with_liquid: false
 1. Each element in turn is initialized with the default Account constructor.
 2. Those elements without an explicit set of constructor arguments are initialized with the default constructor of the class.
 3. The declaration `Account *pact = new Account[ 10 ];` creates an array of ten `Account` class objects allocated on the heap. Each is initialized with the `Account` class default constructor.
-```c++
-#include <iostream>
-#include <string>
-#include <array>
 
-class Image {
-public:
-   Image(){ _name = "default_name"; _index = -1; }
-   Image(const std::string& name, int index) : _name(name), _index(index) {}
-   ~Image() {
-       _name.clear();
-       _index = -1;
+   ```c++
+   #include <iostream>
+   #include <string>
+   #include <array>
+   
+   class Image {
+   public:
+      Image(){ _name = "default_name"; _index = -1; }
+      Image(const std::string& name, int index) : _name(name), _index(index) {}
+      ~Image() {
+          _name.clear();
+          _index = -1;
+      }
+      std::string& getName() { return _name; }
+      int getIndex() { return _index; }
+   private:
+      std::string _name;
+      int _index;
+   };
+   
+   int main() {
+   
+       const int len = 4;
+   
+       Image images1[len];             // calls default ctor len times
+       std::array<Image, len> images2; // calls default ctor len times
+   
+       std::cout << "Case 1:" << std::endl;
+   
+       for ( auto & img : images1){
+          std::cout << img.getName() << ", " << img.getIndex() << std::endl;
+       }
+   
+       std::cout << "\nCase 2:" << std::endl;
+       Image images3[] = {
+           Image("edwd", 2),
+           Image(),
+       };
+   
+       for ( auto & img : images3){
+          std::cout << img.getName() << ", " << img.getIndex() << std::endl;
+       }
+   
+       std::cout << "\nCase 3:" << std::endl;
+       Image images4[4] = {
+           Image("edwd", 2),
+           Image(),
+       };
+   
+       for ( auto & img : images4){
+          std::cout << img.getName() << ", " << img.getIndex() << std::endl;
+       }
+   
+       std::cout << "\nCase 4:" << std::endl;
+       Image *images5 = new Image[3];
+       for ( int i=0;i<3;i++ ){
+          std::cout << images5[i].getName() << ", " << images5[i].getIndex() << std::endl;
+       }
+       delete [] images5;
+       return 0;
    }
-   std::string& getName() { return _name; }
-   int getIndex() { return _index; }
-private:
-   std::string _name;
-   int _index;
-};
-
-int main() {
-
-    const int len = 4;
-
-    Image images1[len];             // calls default ctor len times
-    std::array<Image, len> images2; // calls default ctor len times
-
-    std::cout << "Case 1:" << std::endl;
-
-    for ( auto & img : images1){
-       std::cout << img.getName() << ", " << img.getIndex() << std::endl;
-    }
-
-    std::cout << "\nCase 2:" << std::endl;
-    Image images3[] = {
-        Image("edwd", 2),
-        Image(),
-    };
-
-    for ( auto & img : images3){
-       std::cout << img.getName() << ", " << img.getIndex() << std::endl;
-    }
-
-    std::cout << "\nCase 3:" << std::endl;
-    Image images4[4] = {
-        Image("edwd", 2),
-        Image(),
-    };
-
-    for ( auto & img : images4){
-       std::cout << img.getName() << ", " << img.getIndex() << std::endl;
-    }
-
-    std::cout << "\nCase 4:" << std::endl;
-    Image *images5 = new Image[3];
-    for ( int i=0;i<3;i++ ){
-       std::cout << images5[i].getName() << ", " << images5[i].getIndex() << std::endl;
-    }
-    delete [] images5;
-    return 0;
-}
-```
+   ```
 
 # Heap Array Initialization
 

@@ -16,83 +16,83 @@ render_with_liquid: false
 * A handler is selected to handle an exception if the type of its exception declaration matches the type of the exception thrown. 
 * After a catch clause has completed its work, the execution of the program continues at the statement that follows the last catch clause in the list. 
 
-```c++
-#include <vector>
-#include <iostream>
-
-template<class T> class pushOnFull;
-template<class T> class popOnEmpty;
-
-template<class T>
-class Stack {
-public:
-   Stack(int len) : _len(len) {}
-   void push( const T& e );
-   void pop();
-   int len() { return _len; }
-private:
-   std::vector<T> vec;
-   int _len;
-};
-
-
-template<class T>
-void Stack<T>::push( const T& e ){
-   if ( vec.size() >= _len ){
-      throw pushOnFull<T>(e);
-   }
-   vec.emplace_back(e);
-}
-
-template<class T>
-void Stack<T>::pop(){
-   if ( vec.size() == 0 ){
-      throw popOnEmpty<T>();
-   }
-   vec.pop_back();
-}
-
-template<class T>
-class pushOnFull {
-public:
-   pushOnFull(T value) : _val(value){}
-   int value() { return _val; }
-private:
-   T _val;
-};
-
-
-template<class T>
-class popOnEmpty {
-public:
-   popOnEmpty() = default;
-};
-
-int main()
-{
-   try {
-
-      Stack<float>* s = new Stack<float>(2);
-
-      s->push(3.0f);
-      s->push(2.0f);
-      s->push(1.0f);
-
-      return 0;
-   }
-   catch ( popOnEmpty<float>& e){
-      std::cerr << "Pop on empty stack!\n";
-   }
-   catch ( pushOnFull<float>& e ){
-      std::cerr << "Push " << e.value() << " on full stack!\n";
-   }
-   catch (...) {
-
-   }
-
-   std::cerr << "Finished the program\n";
-}
-```
+  ```c++
+  #include <vector>
+  #include <iostream>
+  
+  template<class T> class pushOnFull;
+  template<class T> class popOnEmpty;
+  
+  template<class T>
+  class Stack {
+  public:
+     Stack(int len) : _len(len) {}
+     void push( const T& e );
+     void pop();
+     int len() { return _len; }
+  private:
+     std::vector<T> vec;
+     int _len;
+  };
+  
+  
+  template<class T>
+  void Stack<T>::push( const T& e ){
+     if ( vec.size() >= _len ){
+        throw pushOnFull<T>(e);
+     }
+     vec.emplace_back(e);
+  }
+  
+  template<class T>
+  void Stack<T>::pop(){
+     if ( vec.size() == 0 ){
+        throw popOnEmpty<T>();
+     }
+     vec.pop_back();
+  }
+  
+  template<class T>
+  class pushOnFull {
+  public:
+     pushOnFull(T value) : _val(value){}
+     int value() { return _val; }
+  private:
+     T _val;
+  };
+  
+  
+  template<class T>
+  class popOnEmpty {
+  public:
+     popOnEmpty() = default;
+  };
+  
+  int main()
+  {
+     try {
+  
+        Stack<float>* s = new Stack<float>(2);
+  
+        s->push(3.0f);
+        s->push(2.0f);
+        s->push(1.0f);
+  
+        return 0;
+     }
+     catch ( popOnEmpty<float>& e){
+        std::cerr << "Pop on empty stack!\n";
+     }
+     catch ( pushOnFull<float>& e ){
+        std::cerr << "Push " << e.value() << " on full stack!\n";
+     }
+     catch (...) {
+  
+     }
+  
+     std::cerr << "Finished the program\n";
+  }
+  ```
 
 # Exception Objects
 * When should the exception declaration in a catch clause declare an object? An object should be declared when it is necessary to obtain the value or manipulate the exception object created by the throw expression. If we design our exception classes to store information in the exception object when the exception is thrown and if the exception declaration of the catch clause declares an object, the statements within the catch clause can use this object to refer to the information stored by the throw expression.

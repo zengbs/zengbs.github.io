@@ -12,59 +12,64 @@ All threads in a warp execute the same instruction at the same time. i.e. avoid 
 If threads of warp diverge, the warp serially execuates each branch path.
 
 1. Warp divergence (Example 1):
-```cuda=
-__global__ void warpDivergenceKernel(int *data) {
-    int index = threadIdx.x + blockIdx.x * blockDim.x;
-    
-    // Conditional statement causing warp divergence
-    if (index % 2 == 0) {
-        data[index] = index;  // Path for even indices
-    } else {
-        data[index] = 0;        // Path for odd indices
-    }
-}
-```
+
+   ```cuda=
+   __global__ void warpDivergenceKernel(int *data) {
+       int index = threadIdx.x + blockIdx.x * blockDim.x;
+       
+       // Conditional statement causing warp divergence
+       if (index % 2 == 0) {
+           data[index] = index;  // Path for even indices
+       } else {
+           data[index] = 0;        // Path for odd indices
+       }
+   }
+   ```
 
 2. No warp divergence (Example 1):
-```cuda=
-__global__ void optimizedKernel(int *data) {
-    int index = threadIdx.x + blockIdx.x * blockDim.x;
 
-    // Using arithmetic operations to avoid conditional branching
-    int isEven = index % 2;  // will be 1 for even indices, 0 for odd
-    data[index] = (1-isEven) * index;
-}
-```
+   ```cuda=
+   __global__ void optimizedKernel(int *data) {
+       int index = threadIdx.x + blockIdx.x * blockDim.x;
+   
+       // Using arithmetic operations to avoid conditional branching
+       int isEven = index % 2;  // will be 1 for even indices, 0 for odd
+       data[index] = (1-isEven) * index;
+   }
+   ```
 
 3. Warp divergence (Example 2):
-```cuda=
-__global__ void mathKernel1(float *c) {
-    int tid = blockIdx.x * blockDim.x + threadIdx.x;
-    float a, b;
-    a = b = 0.0f;
-    if (tid % 2 == 0) {
-        a = 100.0f;
-    } else {
-        b = 200.0f;
-    }
-    c[tid] = a + b;
-}
-```
+
+   ```cuda=
+   __global__ void mathKernel1(float *c) {
+       int tid = blockIdx.x * blockDim.x + threadIdx.x;
+       float a, b;
+       a = b = 0.0f;
+       if (tid % 2 == 0) {
+           a = 100.0f;
+       } else {
+           b = 200.0f;
+       }
+       c[tid] = a + b;
+   }
+   ```
 
 4. No warp divergence (Example 2):
-```cuda=
-__global__ void mathKernel2(void) {
-    int tid = blockIdx.x * blockDim.x + threadIdx.x;
-    float a, b;
-    a = b = 0.0f;
-    if ((tid / warpSize) % 2 == 0) {
-        a = 100.0f;
-    } else {
-        b = 200.0f;
-    }
-    c[tid] = a + b;
-}
-```
+
+   ```cuda=
+   __global__ void mathKernel2(void) {
+       int tid = blockIdx.x * blockDim.x + threadIdx.x;
+       float a, b;
+       a = b = 0.0f;
+       if ((tid / warpSize) % 2 == 0) {
+           a = 100.0f;
+       } else {
+           b = 200.0f;
+       }
+       c[tid] = a + b;
+   }
+   ```
+
 Note that the two versions of Example 2 give the same output, but in differnt order.
 
 ```cuda=

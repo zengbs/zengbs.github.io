@@ -53,18 +53,19 @@ Drawbacks:
 # Exclusion Model (explicit instantiations)
 1. The definition for the function template must be provided in the file in which the explicit instantiation declaration appears.
 2. An explicit instantiation declaration for a given function template instantiation must appear only once in a program.
-```c++
-// my_template.h
-#include <iostream>
 
-// Generic template declaration
-template <typename T>
-void printValue(const T& value);
-
-// Explicit specialize template declaration
-template <>
-void printValue(const char& value);
-```
+   ```c++
+   // my_template.h
+   #include <iostream>
+   
+   // Generic template declaration
+   template <typename T>
+   void printValue(const T& value);
+   
+   // Explicit specialize template declaration
+   template <>
+   void printValue(const char& value);
+   ```
 
 ```c++
 // my_template.cpp

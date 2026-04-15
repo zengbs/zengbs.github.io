@@ -17,47 +17,50 @@ Templates are not actually compiled until they are instantiated, or specialized,
 
 ## Implicit instantiation
 * Must call template function in the same file as the declaration is located.
-```cpp
-#include <iostream>
 
-template <typename T>
-T max(T a, T b) {
-  return (a > b) ? a : b;
-}
-
-int main(){
-   int x = max(3, 4);  // Implicit instantiation of max<int>
-   double y = max(3.14, 2.72);  // Implicit instantiation of max<double>
-}
-```
+  ```cpp
+  #include <iostream>
+  
+  template <typename T>
+  T max(T a, T b) {
+    return (a > b) ? a : b;
+  }
+  
+  int main(){
+     int x = max(3, 4);  // Implicit instantiation of max<int>
+     double y = max(3.14, 2.72);  // Implicit instantiation of max<double>
+  }
+  ```
 
 ## Explicit instantiation
 
 * `template.cpp`:
-```cpp
-template <typename T>
-T max(T a, T b) {
-  return (a > b) ? a : b;
-}
 
-template int max<int>(int, int);
-template double max<double>(double, double);
-```
+  ```cpp
+  template <typename T>
+  T max(T a, T b) {
+    return (a > b) ? a : b;
+  }
+  
+  template int max<int>(int, int);
+  template double max<double>(double, double);
+  ```
 
 * `main.cpp`:
-```cpp=
-#include<iostream>
 
-template <typename T>
-T max(T a, T b);
-
-int main(){
- int x = max(3, 4);           // Implicit instantiation of max<int>
- double y = max(3.14, 2.72);  // Implicit instantiation of max<double>
-
- printf("%d, %e\n", x, y);
-}
-```
+  ```cpp=
+  #include<iostream>
+  
+  template <typename T>
+  T max(T a, T b);
+  
+  int main(){
+   int x = max(3, 4);           // Implicit instantiation of max<int>
+   double y = max(3.14, 2.72);  // Implicit instantiation of max<double>
+  
+   printf("%d, %e\n", x, y);
+  }
+  ```
 
 # Reduced Redundant Code Generation
 ## Implicit Instantiation:

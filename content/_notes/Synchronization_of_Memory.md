@@ -45,21 +45,22 @@ __global__ void swap (int* A, int* B)
 ```
 # Example 2
 1. thread 1 executes `writeXY()`, while thread 2 executes `readXY()`.
-```cuda=
-__device__ int X = 1, Y = 2;
 
-__device__ void writeXY()
-{
-    X = 10;
-    Y = 20;
-}
-
-__device__ void readXY()
-{
-    int B = Y;
-    int A = X;
-}
-```
+   ```cuda=
+   __device__ int X = 1, Y = 2;
+   
+   __device__ void writeXY()
+   {
+       X = 10;
+       Y = 20;
+   }
+   
+   __device__ void readXY()
+   {
+       int B = Y;
+       int A = X;
+   }
+   ```
 
 There are 24 possible memory access orderings.
 

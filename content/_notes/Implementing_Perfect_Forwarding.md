@@ -42,18 +42,19 @@ void callFoo(Ts&& ... args) {
 * If we pass an rvalue to arg, we have the same effect as calling `foo(std::move(arg))`.
 * If we pass an lvalue to arg, we have the same effect as calling `foo(arg)`.
 
-```c++
-template<class T>
-void callFoo(T&& arg);
+  ```c++
+  template<class T>
+  void callFoo(T&& arg);
+  
+  X v;
+  const X c;
+  callFoo(v);            // type of arg is X&, calls foo(X&)
+  callFoo(c);            // type of arg is const X&, calls foo(const X&)
+  callFoo(X{});          // type of arg is X&&, calls foo(X&&)
+  callFoo(std::move(v)); // type of arg is X&&, calls foo(X&&)
+  callFoo(std::move(c)); // type of arg is const X&&, calls foo(const X&)
+  ```
 
-X v;
-const X c;
-callFoo(v);            // type of arg is X&, calls foo(X&)
-callFoo(c);            // type of arg is const X&, calls foo(const X&)
-callFoo(X{});          // type of arg is X&&, calls foo(X&&)
-callFoo(std::move(v)); // type of arg is X&&, calls foo(X&&)
-callFoo(std::move(c)); // type of arg is const X&&, calls foo(const X&)
-```
 Note that 
 1) A generic rvalue reference that is qualified with `const` (or `volatile`) is not a universal reference.
 2) Generic arguments preserve the constness and type of argument.

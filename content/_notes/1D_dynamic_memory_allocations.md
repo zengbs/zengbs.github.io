@@ -9,13 +9,16 @@
 
 ## Method 1 (pointer to the first element in 1D array)
 * ### Memory allocation
-```c=
-int *array = (int *)malloc(size * sizeof(int));
-```
+
+  ```c=
+  int *array = (int *)malloc(size * sizeof(int));
+  ```
+
 * ### Free memory
-```c=
-free(array);
-```
+
+  ```c=
+  free(array);
+  ```
 
 
 

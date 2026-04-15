@@ -33,30 +33,32 @@ By function overloading, we can have multiple definitions for the same function 
   
   
 * [Function call operator](https://hackmd.io/eXvnjQjXQEiLpYW17YcKEA?both#Function-call-operator)
-```cpp=
-#include <iostream>
-using namespace std;
-       
-class Distance {
-   public: 
-      void operator()(int a, int b) {
-         printf("Two parameters\n");
-      }
-      void operator()(int a, int b, int c) {
-         printf("Three parameters\n");
-      } 
-};  
-       
-int main() {
-       
-   Distance myClass;
-       
-   myClass(11, 10);
-   myClass(11, 10, 3); 
-       
-   return 0;
-}
-```
+
+  ```cpp=
+  #include <iostream>
+  using namespace std;
+         
+  class Distance {
+     public: 
+        void operator()(int a, int b) {
+           printf("Two parameters\n");
+        }
+        void operator()(int a, int b, int c) {
+           printf("Three parameters\n");
+        } 
+  };  
+         
+  int main() {
+         
+     Distance myClass;
+         
+     myClass(11, 10);
+     myClass(11, 10, 3); 
+         
+     return 0;
+  }
+  ```
+
 Output:
 ```
 Two parameters

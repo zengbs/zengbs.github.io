@@ -26,24 +26,25 @@ render_with_liquid: false
 * Passing an argument to a function parameter is copy-initialization instead of direct-initialization.
 * `explicit` constructors are allowed only in direct-initialization, not in copy-initialization.
 
-```c++
-class P {
-public:
-   P(int a, int b);
-   explicit P(int a, int b, int c);
-};
+  ```c++
+  class P {
+  public:
+     P(int a, int b);
+     explicit P(int a, int b, int c);
+  };
+  
+  P x(77,5);       // direct-initialization, ok
+  P y{77,5};       // direct-list-initialization, ok
+  P z{77,5,42};    // direct-list-initialization, ok
+  P v = {77,5};    // copy-list-initialization, ok
+  P w = {77,5,42}; // copy-list-initialization, error
+  
+  void fp(const P&);
+  
+  fp({47,11});     // copy-list-initialization, ok
+  fp({47,11,3});   // copy-list-initialization, error
+  fp(P{47,11});    // direct-list-initialization, ok
+  fp(P{47,11,3});  // direct-list-initialization, ok
+  ```
 
-P x(77,5);       // direct-initialization, ok
-P y{77,5};       // direct-list-initialization, ok
-P z{77,5,42};    // direct-list-initialization, ok
-P v = {77,5};    // copy-list-initialization, ok
-P w = {77,5,42}; // copy-list-initialization, error
-
-void fp(const P&);
-
-fp({47,11});     // copy-list-initialization, ok
-fp({47,11,3});   // copy-list-initialization, error
-fp(P{47,11});    // direct-list-initialization, ok
-fp(P{47,11,3});  // direct-list-initialization, ok
-```
 {% endraw %}

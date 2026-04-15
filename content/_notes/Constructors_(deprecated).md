@@ -14,9 +14,11 @@ render_with_liquid: false
 # Constructors (deprecated)
 * A class constructor provides the opportunity to initialize the new object as it is created and to ensure that member variables contain valid values.
 * A ***default constructor*** is a constructor that can be called without arguments. This constructor is invoked by default if you do not explicitly invoke a constructor with given arguments.
-```c++
-Box myBox; // Invokes the default constructor
-```
+
+  ```c++
+  Box myBox; // Invokes the default constructor
+  ```
+
 * If you do not define any constructor for a class—neither a default constructor nor any other constructor—then the compiler generates one for you: a default constructor. 
 * It is a special member function of a class that is ***manually/automatically*** executed whenever we create new objects of that class.
 * It has ***exact same*** name as the class.

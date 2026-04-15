@@ -16,11 +16,12 @@ for (int i=0;i<nrows;i++)
   array[i] = (int *) malloc(ncolumns * sizeof(int));
 ```
 * ### Free memory
-```c=
-for (int i=0;i<nrows;i++) free((void*)array[i]);
 
-free((void*)array);
-```
+  ```c=
+  for (int i=0;i<nrows;i++) free((void*)array[i]);
+  
+  free((void*)array);
+  ```
 
 ## Method 2
 ### Reference: [Athena](https://www.astro.princeton.edu/~jstone/Athena/doxygen/html.with_source/ath__array_8c_source.html)
@@ -55,37 +56,44 @@ void free_2d_array(mytype **array)
 
 ## Method 3 (pointer to the first element in 2D array)
 * ### Memory allocation
-```c=
-int *array = (int *)malloc(nrows * ncolumns * sizeof(int));
-```
+
+  ```c=
+  int *array = (int *)malloc(nrows * ncolumns * sizeof(int));
+  ```
+
 * ### Free memory
-```c=
-free(array);
-```
+
+  ```c=
+  free(array);
+  ```
 
 ## Method 4 (A pointer to an array of `NCOLUMNS` integers)
 * ### Memory allocation
-```c=
-int (*array)[NCOLUMNS] = (int(*)[NCOLUMNS])malloc(nrows*sizeof(*array));
-int (*array)[NCOLUMNS] = (int(*)[NCOLUMNS])malloc(nrows*NCOLUMNS*sizeof(int));
-```
+
+  ```c=
+  int (*array)[NCOLUMNS] = (int(*)[NCOLUMNS])malloc(nrows*sizeof(*array));
+  int (*array)[NCOLUMNS] = (int(*)[NCOLUMNS])malloc(nrows*NCOLUMNS*sizeof(int));
+  ```
+
 * ### Free memory
 
-```c=
-free(array);
-```
+  ```c=
+  free(array);
+  ```
 
 ## Method 5 (a pointer to whole 2D array)
 * ### Memory allocation
-```c=
-int (*array)[NROWS][NCOLUMNS] = (int(*)[NROWS][NCOLUMNS])malloc(sizeof(*array));
-int (*array)[NROWS][NCOLUMNS] = (int(*)[NROWS][NCOLUMNS])malloc(NROWS*NCOLUMNS*sizeof(int));
-```
+
+  ```c=
+  int (*array)[NROWS][NCOLUMNS] = (int(*)[NROWS][NCOLUMNS])malloc(sizeof(*array));
+  int (*array)[NROWS][NCOLUMNS] = (int(*)[NROWS][NCOLUMNS])malloc(NROWS*NCOLUMNS*sizeof(int));
+  ```
+
 * ### Free memory
 
-```c=
-free(array);
-```
+  ```c=
+  free(array);
+  ```
 
 ## Comparison of various methods
 |          | Contiguous memory |      Access array       | Number of allocations |

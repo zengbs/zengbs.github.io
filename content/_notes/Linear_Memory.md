@@ -15,11 +15,12 @@
 * If the data is only accessed once, such data accesses can be considered to be *streaming*.
 * A portion of the L2 cache can be set aside to be used for persisting data accesses to global memory.
 
-```cudaa=
-cudaGetDeviceProperties(&prop, device_id);
-size_t size = min(int(prop.l2CacheSize * 0.75), prop.persistingL2CacheMaxSize);
-cudaDeviceSetLimit(cudaLimitPersistingL2CacheSize, size); 
-```
+  ```cudaa=
+  cudaGetDeviceProperties(&prop, device_id);
+  size_t size = min(int(prop.l2CacheSize * 0.75), prop.persistingL2CacheMaxSize);
+  cudaDeviceSetLimit(cudaLimitPersistingL2CacheSize, size); 
+  ```
+
 ## L2 Policy for Persisting Accesses
 ### L2 Access Properties
 ### L2 Persistence Example

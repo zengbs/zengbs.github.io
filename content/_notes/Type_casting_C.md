@@ -50,39 +50,48 @@ bool isPositive(float x) {
 
 # Use cases
 1. Between two arithmetic types
-```c=
-double pi = 3.14159;
-int integer_part = (int)pi;  // Casting double to int, result is 3
-```
-2. Between a pointer type and an integer type:
-```c=
-char* buffer = "Hello";
-uintptr_t address = (uintptr_t)buffer;  // Casting pointer to integer
-```
-3. Between two pointer types:
-```c=
-int x = 10;
-char* ptr = (char*)&x;  // Casting an int pointer to a char pointer
-```
-4. Between a cv-qualified and cv-unqualified type:
-```c=
-void print_value(int* ptr) {
-    // Function does not modify the value pointed by ptr
-    printf("Value: %d\n", *ptr);
-}
 
-int main() {
-    const int num = 10;
-    // Correctly passing pointer for non-modifying usage
-    print_value((int*)&num);
-    return 0;
-}
-```
+   ```c=
+   double pi = 3.14159;
+   int integer_part = (int)pi;  // Casting double to int, result is 3
+   ```
+
+2. Between a pointer type and an integer type:
+
+   ```c=
+   char* buffer = "Hello";
+   uintptr_t address = (uintptr_t)buffer;  // Casting pointer to integer
+   ```
+
+3. Between two pointer types:
+
+   ```c=
+   int x = 10;
+   char* ptr = (char*)&x;  // Casting an int pointer to a char pointer
+   ```
+
+4. Between a cv-qualified and cv-unqualified type:
+
+   ```c=
+   void print_value(int* ptr) {
+       // Function does not modify the value pointed by ptr
+       printf("Value: %d\n", *ptr);
+   }
+   
+   int main() {
+       const int num = 10;
+       // Correctly passing pointer for non-modifying usage
+       print_value((int*)&num);
+       return 0;
+   }
+   ```
+
 5. A combination of (4) and either (1), (2), or (3):
-```c=
-const int* nums = (const int[3]){1, 2, 3};
-int* modifiable_nums = (int*)nums;  // Casting away const from a pointer type
-```
+
+   ```c=
+   const int* nums = (const int[3]){1, 2, 3};
+   int* modifiable_nums = (int*)nums;  // Casting away const from a pointer type
+   ```
 
 # Reference
 [Aliasing (computing)](https://en.wikipedia.org/wiki/Aliasing_(computing)#Aliased_pointers)

@@ -13,45 +13,46 @@ render_with_liquid: false
 1. Unions can have static data members in C++11 and later, because static members are not stored inside the union's memory.
 2. Reference members in union are not allowed. Because a reference must be initialized when declared, and unions can’t guarantee how or when that memory will be initialized.
 3. In C++11 and later, you can have class-type members with non-trivial constructors/destructors, but you must explicitly construct/destruct them using placement new or similar techniques — they are not automatically managed.
-```c++
-#include <iostream>
-#include <string>
 
-class Screen {
-public:
-    Screen();
-    ~Screen();
-};
-
-union MyUnion {
-    Screen s;
-    std::string str;  // non-trivial member
-    static int i;
-
-    // Constructor
-    // --> Placement new
-    MyUnion() {
-        new (&str) std::string("hello");
-    }
-
-    // Deconstructor
-    // --> Explicit destructor
-    ~MyUnion() {
-        // Use the actual class name instead of the typedef.
-        str.~basic_string<char, std::char_traits<char>, std::allocator<char>>();
-    }
-};
-
-int MyUnion::i = 3;
-
-int main() {
-    MyUnion u;
-    u.str = "123";
-    std::cout << u.str << std::endl;
-    std::cout << MyUnion::i << std::endl;
-    return 0;
-}
-```
+   ```c++
+   #include <iostream>
+   #include <string>
+   
+   class Screen {
+   public:
+       Screen();
+       ~Screen();
+   };
+   
+   union MyUnion {
+       Screen s;
+       std::string str;  // non-trivial member
+       static int i;
+   
+       // Constructor
+       // --> Placement new
+       MyUnion() {
+           new (&str) std::string("hello");
+       }
+   
+       // Deconstructor
+       // --> Explicit destructor
+       ~MyUnion() {
+           // Use the actual class name instead of the typedef.
+           str.~basic_string<char, std::char_traits<char>, std::allocator<char>>();
+       }
+   };
+   
+   int MyUnion::i = 3;
+   
+   int main() {
+       MyUnion u;
+       u.str = "123";
+       std::cout << u.str << std::endl;
+       std::cout << MyUnion::i << std::endl;
+       return 0;
+   }
+   ```
 
 # Anonymous union
 

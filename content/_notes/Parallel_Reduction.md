@@ -15,26 +15,26 @@
 1. Each iteration suffers warp divergence.
 2. Access non-contiguous global memory.
 
-```cuda=
-__global__ void ReduceNeighbored( int *g_array, int *g_output, int arrayLength ){
-    
-   int tid = blockIdx.x*blockDim.x + threadIdx.x;
-    
-   if (tid >= arrayLength) return;
-    
-   int *idata = g_array + blockIdx.x*blockDim.x;
-    
-   for ( int offset = 1; offset < blockDim.x; offset *= 2 ){
-    
-      if (threadIdx.x % ( 2*offset ) == 0){
-         idata[threadIdx.x] += idata[threadIdx.x+offset];
+   ```cuda=
+   __global__ void ReduceNeighbored( int *g_array, int *g_output, int arrayLength ){
+       
+      int tid = blockIdx.x*blockDim.x + threadIdx.x;
+       
+      if (tid >= arrayLength) return;
+       
+      int *idata = g_array + blockIdx.x*blockDim.x;
+       
+      for ( int offset = 1; offset < blockDim.x; offset *= 2 ){
+       
+         if (threadIdx.x % ( 2*offset ) == 0){
+            idata[threadIdx.x] += idata[threadIdx.x+offset];
+         }
+         __syncthreads();
       }
-      __syncthreads();
+       
+      if (threadIdx.x == 0) g_output[blockIdx.x] = g_array[blockIdx.x*blockDim.x];   
    }
-    
-   if (threadIdx.x == 0) g_output[blockIdx.x] = g_array[blockIdx.x*blockDim.x];   
-}
-```
+   ```
 
 ## Interleaved Pairs with Non-coalesced Access
 
@@ -42,27 +42,27 @@ __global__ void ReduceNeighbored( int *g_array, int *g_output, int arrayLength )
 1. Warp divergence only occurs in the last five rounds when the number of active threads is less than a warp size.
 2. Access non-contiguous global memory.
 
-```cuda=
-__global__ void ReduceNeighboredLess( int *g_array, int *g_output, int arrayLength ){
- 
-   int tid = blockIdx.x*blockDim.x + threadIdx.x;
- 
-   if (tid >= arrayLength) return;
- 
-   int *idata = g_array + blockIdx.x*blockDim.x;
- 
-   for ( int offset = 1; offset < blockDim.x; offset *= 2 ){
- 
-      if ( threadIdx.x < blockDim.x/2/offset ){
-         idata[threadIdx.x*offset*2] += idata[threadIdx.x*offset*2 + offset];
+   ```cuda=
+   __global__ void ReduceNeighboredLess( int *g_array, int *g_output, int arrayLength ){
+    
+      int tid = blockIdx.x*blockDim.x + threadIdx.x;
+    
+      if (tid >= arrayLength) return;
+    
+      int *idata = g_array + blockIdx.x*blockDim.x;
+    
+      for ( int offset = 1; offset < blockDim.x; offset *= 2 ){
+    
+         if ( threadIdx.x < blockDim.x/2/offset ){
+            idata[threadIdx.x*offset*2] += idata[threadIdx.x*offset*2 + offset];
+         }
+         __syncthreads();
       }
-      __syncthreads();
+    
+      if (threadIdx.x == 0) g_output[blockIdx.x] = g_array[blockIdx.x*blockDim.x];
+    
    }
- 
-   if (threadIdx.x == 0) g_output[blockIdx.x] = g_array[blockIdx.x*blockDim.x];
- 
-}
-```
+   ```
 
 ## Interleaved Pairs with Coalesced Access
 
@@ -71,26 +71,26 @@ __global__ void ReduceNeighboredLess( int *g_array, int *g_output, int arrayLeng
 1. Warp divergence only occurs in the last five rounds when the number of active threads is less than a warp size.
 2. Access contiguous global memory.
 
-```cuda=
-__global__ void ReduceInterleaved( int *g_array, int *g_output, int arrayLength ){
- 
-   int tid = blockIdx.x*blockDim.x + threadIdx.x;
- 
-   if (tid >= arrayLength) return;
- 
-   int *idata = g_array + blockIdx.x*blockDim.x;
- 
-   for ( int offset = blockDim.x/2; offset > 0; offset /= 2 ){
- 
-      if (threadIdx.x < offset){
-         idata[threadIdx.x] += idata[threadIdx.x+offset];
+   ```cuda=
+   __global__ void ReduceInterleaved( int *g_array, int *g_output, int arrayLength ){
+    
+      int tid = blockIdx.x*blockDim.x + threadIdx.x;
+    
+      if (tid >= arrayLength) return;
+    
+      int *idata = g_array + blockIdx.x*blockDim.x;
+    
+      for ( int offset = blockDim.x/2; offset > 0; offset /= 2 ){
+    
+         if (threadIdx.x < offset){
+            idata[threadIdx.x] += idata[threadIdx.x+offset];
+         }
+         __syncthreads();
       }
-      __syncthreads();
+    
+      if (threadIdx.x == 0) g_output[blockIdx.x] = g_array[blockIdx.x*blockDim.x];
    }
- 
-   if (threadIdx.x == 0) g_output[blockIdx.x] = g_array[blockIdx.x*blockDim.x];
-}
-```
+   ```
 
 
 

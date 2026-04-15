@@ -12,41 +12,45 @@
 
 ## Non-default Stream
 * For non-default stream, all operations are non-blocking with respect to the host.
-```cuda=
-#include <cuda_runtime.h>
 
-int main() {
-    cudaStream_t stream;
-    cudaError_t result = cudaStreamCreate(&stream);
+  ```cuda=
+  #include <cuda_runtime.h>
+  
+  int main() {
+      cudaStream_t stream;
+      cudaError_t result = cudaStreamCreate(&stream);
+  
+      // Use the stream for operations...
+  
+      // Clean up and destroy the stream
+      cudaStreamDestroy(stream);
+      
+      return 0;
+  }
+  
+  ```
 
-    // Use the stream for operations...
-
-    // Clean up and destroy the stream
-    cudaStreamDestroy(stream);
-    
-    return 0;
-}
-
-```
 ### Non-default blocking stream
 *  Non-default blocking stream can be blocked waiting for earlier operations in the NULL stream to complete.
 *  Default stream can be blocked waiting for earlier operations in the non-default blocking stream to complete.
 * Non-default blocking stream is equivalent to the stream created by `cudaStreamCreate(&stream)`.
-```cuda=
-#include <cuda_runtime.h>
 
-int main() {
-    cudaStream_t stream;
-    cudaError_t result = cudaStreamCreateWithFlags(&stream, cudaStreamDefault);
+  ```cuda=
+  #include <cuda_runtime.h>
+  
+  int main() {
+      cudaStream_t stream;
+      cudaError_t result = cudaStreamCreateWithFlags(&stream, cudaStreamDefault);
+  
+      // Use the stream for operations...
+  
+      // Clean up and destroy the stream
+      cudaStreamDestroy(stream);
+  
+      return 0;
+  }
+  ```
 
-    // Use the stream for operations...
-
-    // Clean up and destroy the stream
-    cudaStreamDestroy(stream);
-
-    return 0;
-}
-```
 ### Non-default non-blocking stream
 * Non-default non-blocking stream will not be blocked on operations in the NULL stream. 
 

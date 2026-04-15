@@ -39,145 +39,149 @@ Keep in mind that the size of the granularity on the L1/L2 cache can vary depend
 
 1. Misalignment read/write occurs when `offset` is not a multiple of the size of granuality.
 
-```cuda=
-__global__ void readOffset(float *A, float *B, float *C, float *D, const int n) {
-    unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
-    int offset, k;
-    
-    offset = 11;
-    k = i + offset;
-    if (k < n) C[i] = A[k] + B[k]; // misalignment read
-    if (k < n) D[k] = A[i] + B[i]; // misalignment write
-    
-    offset = 128;
-    k = i + offset;
-    if (k < n) C[i] = A[k] + B[k]; // alignment read
-    if (k < n) D[k] = A[i] + B[i]; // alignment write
-}
-```
+   ```cuda=
+   __global__ void readOffset(float *A, float *B, float *C, float *D, const int n) {
+       unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
+       int offset, k;
+       
+       offset = 11;
+       k = i + offset;
+       if (k < n) C[i] = A[k] + B[k]; // misalignment read
+       if (k < n) D[k] = A[i] + B[i]; // misalignment write
+       
+       offset = 128;
+       k = i + offset;
+       if (k < n) C[i] = A[k] + B[k]; // alignment read
+       if (k < n) D[k] = A[i] + B[i]; // alignment write
+   }
+   ```
 
 2. Uncoalesce read/write occurs when all 32 threads in a warp do not access a contiguous chunk of memory.
-```cuda=
-__global__ void readOffset(float *A, float *B, float *C, const int n, int offset) {
-    unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
-    unsigned int k = (i%2==0) ? (2*i) : (i);
-    if (k < n) C[i] = A[k] + B[k]; // uncoaleased read
-    if (k < n) C[k] = A[i] + B[i]; // uncoaleased read
-}
-```
+
+   ```cuda=
+   __global__ void readOffset(float *A, float *B, float *C, const int n, int offset) {
+       unsigned int i = blockIdx.x * blockDim.x + threadIdx.x;
+       unsigned int k = (i%2==0) ? (2*i) : (i);
+       if (k < n) C[i] = A[k] + B[k]; // uncoaleased read
+       if (k < n) C[k] = A[i] + B[i]; // uncoaleased read
+   }
+   ```
 
 3. Array copy
-```cuda=
-#include <stdio.h>
 
-// Kernel that processes an array
-__global__ void processArray(float *array, int n) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < n) {
-        // Each thread does some simple operation
-        array[idx] = array[idx] * 2.0f;
-    }
-}
+   ```cuda=
+   #include <stdio.h>
+   
+   // Kernel that processes an array
+   __global__ void processArray(float *array, int n) {
+       int idx = blockIdx.x * blockDim.x + threadIdx.x;
+       if (idx < n) {
+           // Each thread does some simple operation
+           array[idx] = array[idx] * 2.0f;
+       }
+   }
+   
+   int main() {
+       const int numElements = 1024; // Number of elements in the array
+       const int elementSize = sizeof(float); // Size of each element
+       const int blockSize = 128; // Block size, chosen based on memory transaction size
+   
+       // Ensure the array size is a multiple of the memory transaction size for alignment
+       const int arraySize = numElements * elementSize;
+       const int transactionSize = 128; // Transaction size in bytes, could be 32, 64, or 128
+       const int padding = (transactionSize - (arraySize % transactionSize)) % transactionSize;
+       const int totalArraySize = arraySize + padding;
+   
+       float *d_array;
+   
+       // Allocate aligned device memory
+       cudaMalloc(&d_array, totalArraySize);
+   
+       // Initialize array on host
+       float *h_array = new float[numElements + padding / elementSize];
+       for (int i = 0; i < numElements; i++) {
+           h_array[i] = 1.0f; // Example initialization
+       }
+   
+       // Copy data to device
+       cudaMemcpy(d_array, h_array, arraySize, cudaMemcpyHostToDevice);
+   
+       // Configure blocks and grid
+       dim3 blocks(blockSize);
+       dim3 grid((numElements + blocks.x - 1) / blocks.x);
+   
+       // Launch the kernel
+       processArray<<<grid, blocks>>>(d_array, numElements);
+   
+       // Copy back the results to host
+       cudaMemcpy(h_array, d_array, arraySize, cudaMemcpyDeviceToHost);
+   
+       // Free memory
+       cudaFree(d_array);
+       delete[] h_array;
+   
+       return 0;
+   }
+   ```
 
-int main() {
-    const int numElements = 1024; // Number of elements in the array
-    const int elementSize = sizeof(float); // Size of each element
-    const int blockSize = 128; // Block size, chosen based on memory transaction size
-
-    // Ensure the array size is a multiple of the memory transaction size for alignment
-    const int arraySize = numElements * elementSize;
-    const int transactionSize = 128; // Transaction size in bytes, could be 32, 64, or 128
-    const int padding = (transactionSize - (arraySize % transactionSize)) % transactionSize;
-    const int totalArraySize = arraySize + padding;
-
-    float *d_array;
-
-    // Allocate aligned device memory
-    cudaMalloc(&d_array, totalArraySize);
-
-    // Initialize array on host
-    float *h_array = new float[numElements + padding / elementSize];
-    for (int i = 0; i < numElements; i++) {
-        h_array[i] = 1.0f; // Example initialization
-    }
-
-    // Copy data to device
-    cudaMemcpy(d_array, h_array, arraySize, cudaMemcpyHostToDevice);
-
-    // Configure blocks and grid
-    dim3 blocks(blockSize);
-    dim3 grid((numElements + blocks.x - 1) / blocks.x);
-
-    // Launch the kernel
-    processArray<<<grid, blocks>>>(d_array, numElements);
-
-    // Copy back the results to host
-    cudaMemcpy(h_array, d_array, arraySize, cudaMemcpyDeviceToHost);
-
-    // Free memory
-    cudaFree(d_array);
-    delete[] h_array;
-
-    return 0;
-}
-```
 4. The starting address of device memory is neither a multiple of 32, 64, nor 128 bytes.
-```cuda=
-#include <cuda_runtime.h>
-#include <iostream>
 
-__global__ void processMisalignedArray(float *array, int n) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < n) {
-        array[idx] = array[idx] * 2.0f;  // Simple operation to demonstrate access
-    }
-}
-
-int main() {
-    const int numElements = 1024;
-    const int elementSize = sizeof(float);
-    const int misalignmentOffset = 7; // Deliberately misalign by 7 bytes
-
-    char *d_base; // Allocate as char* for byte-wise manipulation
-    float *d_misalignedArray;
-
-    // Allocate more memory than needed to ensure we can misalign manually
-    cudaMalloc((void**)&d_base, numElements * elementSize + misalignmentOffset);
-
-    // Intentionally create a misaligned float pointer
-    d_misalignedArray = reinterpret_cast<float*>(d_base + misalignmentOffset);
-
-    // Initialize array on host
-    float *h_array = new float[numElements];
-    for (int i = 0; i < numElements; i++) {
-        h_array[i] = 1.0f;  // Initialize with some values
-    }
-
-    // Copy data to device (to the misaligned address)
-    cudaMemcpy(d_misalignedArray, h_array, numElements * elementSize, cudaMemcpyHostToDevice);
-
-    // Configure blocks and grid
-    dim3 blocks(256);
-    dim3 grid((numElements + blocks.x - 1) / blocks.x);
-
-    // Launch the kernel
-    processMisalignedArray<<<grid, blocks>>>(d_misalignedArray, numElements);
-
-    // Copy back the results to host
-    cudaMemcpy(h_array, d_misalignedArray, numElements * elementSize, cudaMemcpyDeviceToHost);
-
-    // Output the first few elements for demonstration
-    for (int i = 0; i < 10; i++) {
-        std::cout << "Element " << i << ": " << h_array[i] << std::endl;
-    }
-
-    // Clean up
-    cudaFree(d_base);
-    delete[] h_array;
-
-    return 0;
-}
-```
+   ```cuda=
+   #include <cuda_runtime.h>
+   #include <iostream>
+   
+   __global__ void processMisalignedArray(float *array, int n) {
+       int idx = blockIdx.x * blockDim.x + threadIdx.x;
+       if (idx < n) {
+           array[idx] = array[idx] * 2.0f;  // Simple operation to demonstrate access
+       }
+   }
+   
+   int main() {
+       const int numElements = 1024;
+       const int elementSize = sizeof(float);
+       const int misalignmentOffset = 7; // Deliberately misalign by 7 bytes
+   
+       char *d_base; // Allocate as char* for byte-wise manipulation
+       float *d_misalignedArray;
+   
+       // Allocate more memory than needed to ensure we can misalign manually
+       cudaMalloc((void**)&d_base, numElements * elementSize + misalignmentOffset);
+   
+       // Intentionally create a misaligned float pointer
+       d_misalignedArray = reinterpret_cast<float*>(d_base + misalignmentOffset);
+   
+       // Initialize array on host
+       float *h_array = new float[numElements];
+       for (int i = 0; i < numElements; i++) {
+           h_array[i] = 1.0f;  // Initialize with some values
+       }
+   
+       // Copy data to device (to the misaligned address)
+       cudaMemcpy(d_misalignedArray, h_array, numElements * elementSize, cudaMemcpyHostToDevice);
+   
+       // Configure blocks and grid
+       dim3 blocks(256);
+       dim3 grid((numElements + blocks.x - 1) / blocks.x);
+   
+       // Launch the kernel
+       processMisalignedArray<<<grid, blocks>>>(d_misalignedArray, numElements);
+   
+       // Copy back the results to host
+       cudaMemcpy(h_array, d_misalignedArray, numElements * elementSize, cudaMemcpyDeviceToHost);
+   
+       // Output the first few elements for demonstration
+       for (int i = 0; i < 10; i++) {
+           std::cout << "Element " << i << ": " << h_array[i] << std::endl;
+       }
+   
+       // Clean up
+       cudaFree(d_base);
+       delete[] h_array;
+   
+       return 0;
+   }
+   ```
 
 ### SoA vs. AoS
 #### SoA: structure of array
