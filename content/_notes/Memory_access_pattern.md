@@ -21,11 +21,11 @@ Assuming each thread in a warp read 4-byte element in cache/memory:
 
 |                            |                128-byte granularity    (cached load)                |                 32-byte granularity     (uncached load)                 |
 |:--------------------------:|:-------------------------------------------------------------------:|:-----------------------------------------------------------------------:|
-|   Aligned and coalesced    |                ![](https://i.imgur.com/9AlMfEG.png)                 |                  ![](https://i.imgur.com/CdandUN.png)                   |
-|  Aligned and uncoalesced   |                ![](https://i.imgur.com/HJkNlcg.png)                 |                  ![](https://i.imgur.com/dyzxE9W.png)                   |
-|  Misaligned and coalesced  |  ![](https://i.imgur.com/c7uGy5R.png) Bus utilization: 128/256=50%  | ![](https://i.imgur.com/5g2wVQp.png) Bus utilization: 128/(224-64)=80%  |
-| Misaligned and uncoalesced | ![](https://i.imgur.com/stJMYLh.png) Bus utilization: 128/384=33.3% | ![](https://i.imgur.com/nftNih7.png) Bus utilization: 128/(32\*6)=66.6% |
-|         Broadcast          | ![](https://i.imgur.com/iQBu1VQ.png) Bus utilization: 4/128=3.125%  |     ![](https://i.imgur.com/udQE72y.png) Bus utilization:4/32=12.5%     |
+|   Aligned and coalesced    | <img src="https://i.imgur.com/9AlMfEG.png" width="100%"> | <img src="https://i.imgur.com/CdandUN.png" width="100%"> |
+|  Aligned and uncoalesced   | <img src="https://i.imgur.com/HJkNlcg.png" width="100%"> | <img src="https://i.imgur.com/dyzxE9W.png" width="100%"> |
+|  Misaligned and coalesced  | <img src="https://i.imgur.com/c7uGy5R.png" width="100%"><br>Bus utilization: 128/256=50% | <img src="https://i.imgur.com/5g2wVQp.png" width="100%"><br>Bus utilization: 128/(224-64)=80% |
+| Misaligned and uncoalesced | <img src="https://i.imgur.com/stJMYLh.png" width="100%"><br>Bus utilization: 128/384=33.3% | <img src="https://i.imgur.com/nftNih7.png" width="100%"><br>Bus utilization: 128/(32*6)=66.6% |
+|         Broadcast          | <img src="https://i.imgur.com/iQBu1VQ.png" width="100%"><br>Bus utilization: 4/128=3.125% | <img src="https://i.imgur.com/udQE72y.png" width="100%"><br>Bus utilization: 4/32=12.5% |
 
 Check the size of the granularity on the L1/L1 cache:
 `nvprof --metrics l1_cache_line_size my_gpu_application`
