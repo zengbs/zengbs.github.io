@@ -74,6 +74,8 @@ td:first-child {
   line-height: 1.5;
   margin: 1em 0;
   font-size: 0.9em;
+  width: fit-content;
+  max-width: 100%;
 }
 .highlight pre {
   background: transparent;
@@ -198,7 +200,8 @@ pre:has(code.language-cuda) { background: #272822; }
 /* Make highlight.js output look the same as Rouge blocks */
 .hljs {
   display: block;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   box-sizing: border-box;
   background: #272822 !important;
   color: #f8f8f2 !important;
