@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ---
 
-<img src="https://hackmd.io/_uploads/SysA9iCmee.jpg" width="45%" alt="HkfKu3yayl">
+<img src="https://hackmd.io/_uploads/SysA9iCmee.jpg" width="22%" alt="HkfKu3yayl">
 
 # Public Inheritance
 * A public derivation is referred to as ***type inheritance***. The derived class is a subtype of the base class; it overrides the implementation of all type-specific member functions of the base class while inheriting those that are shared.

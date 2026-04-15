@@ -9,7 +9,7 @@
 a cast operator does not mean ==pretend these bits have a different type, and treat them accordingly==; it is a conversion operator, and by definition it yields an rvalue, which cannot be assigned to, or incremented with ++.
 
 ## Implicit type casting
-<img src="https://hackmd.io/_uploads/HJKCNG0-A.png" width="50%">
+<img src="https://hackmd.io/_uploads/HJKCNG0-A.png" width="25%">
 
 ### Example
 ```c=

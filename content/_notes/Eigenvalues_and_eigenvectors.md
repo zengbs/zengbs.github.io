@@ -42,7 +42,7 @@ $AS=A\begin{bmatrix}
 * $\lambda_{1}+\lambda_{2}+\dots+\lambda_{n}=\text{trace}(A)$.
 * $A$ is invertible $\Longleftrightarrow$ none of its eigenvalue is zero.
 If one of eigenvalue is zero, the linear transformation crushs 2D space to 1D space, leading to the loss of information. Thus, the transformation is not invertible.
-<img src="https://i.imgur.com/vx3P3P9.gif" width="70%">
+<img src="https://i.imgur.com/vx3P3P9.gif" width="35%">
 * $A$ is diagonalizable $\Longleftrightarrow$ $\dim(\text{span}(\text{Eigenvectors}))=n$
 * $A$ is diagonalizable $\Longleftrightarrow$ the two eigenvectors can be rotated to be aligned with vertical/horizontal axes. (that's why original eigenvectors should be independent)
 $A=\begin{bmatrix}
@@ -58,13 +58,13 @@ $A=\begin{bmatrix}
   2 &  -1\\ 
   -1 &  1
 \end{bmatrix}$
-<img src="https://hackmd.io/_uploads/rJfUQ1116.gif" width="70%">
+<img src="https://hackmd.io/_uploads/rJfUQ1116.gif" width="35%">
 * $A$ is diagonalizable $\Longrightarrow$ $A$ is invertible.
 ***False***! For example, $A=\begin{bmatrix}
   1 &  0\\ 
   0 &  0
 \end{bmatrix}$ is diagonalizable (the eigenvector $\begin{bmatrix}1\\0\end{bmatrix}$ and arbitrary eigenvector which is not parallel to the other, both of them span the eigenspace of dimension 2) but it is not invertible (one of eigenvalue is zero).
-<img src="https://i.imgur.com/YQYabW7.gif" width="70%">
+<img src="https://i.imgur.com/YQYabW7.gif" width="35%">
 * $A$ is invertible $\Longrightarrow$ $A$ is diagonalizable.
 ***False***! For example, $A=\begin{bmatrix}
   1 &  1\\ 
@@ -73,7 +73,7 @@ $A=\begin{bmatrix}
   1\\ 
   0
 \end{bmatrix}$.
-<img src="https://i.imgur.com/8KlQrQF.gif" width="70%">
+<img src="https://i.imgur.com/8KlQrQF.gif" width="35%">
 * $A$ is diagonalizable and none of its eigenvalue is zero $\Longrightarrow$ $A$ is invertible.
 * $A$ is invertible and "$\dim(\text{Eigenspace})=n$" $\Longrightarrow$ $A$ is diagonalizable.
 * Eigenvalues are distinct $\Longrightarrow$ eigenvectors are independent.

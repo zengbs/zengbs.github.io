@@ -9,7 +9,7 @@ render_with_liquid: false
 
 ---
 
-<img src="https://hackmd.io/_uploads/SJ-lQ4QWex.jpg" width="60%" alt="Template(3)">
+<img src="https://hackmd.io/_uploads/SJ-lQ4QWex.jpg" width="30%" alt="Template(3)">
 
 
 # Syntax rules

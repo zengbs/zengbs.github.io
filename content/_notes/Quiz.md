@@ -322,6 +322,6 @@ int main(int argc, char const *argv[])
 }
 ```
 
-<img src="https://hackmd.io/_uploads/ByHNsRgu1l.png" width="30%" alt="Ambiguity Inheritance">
+<img src="https://hackmd.io/_uploads/ByHNsRgu1l.png" width="15%" alt="Ambiguity Inheritance">
 
 {% endraw %}

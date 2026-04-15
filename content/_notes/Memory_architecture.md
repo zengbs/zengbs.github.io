@@ -6,8 +6,8 @@
 
 # Memory Architecture
 
-<img src="https://i.imgur.com/jvnHYcB.png" width="50%">
-<img src="https://i.imgur.com/M5hkYLy.png" width="70%">
+<img src="https://i.imgur.com/jvnHYcB.png" width="25%">
+<img src="https://i.imgur.com/M5hkYLy.png" width="35%">
 
 
 |          |   Name   | Access |         Scope         |  Life time   | Cached | Bandwidth (GB/s) |      Name      |   Specifier    |

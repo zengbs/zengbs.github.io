@@ -134,7 +134,7 @@ void func()
 ```
 
 # Flowchart
-<img src="https://hackmd.io/_uploads/rymFKDxDex.jpg" width="70%" alt="The best viable function">
+<img src="https://hackmd.io/_uploads/rymFKDxDex.jpg" width="35%" alt="The best viable function">
 
 # The best viable functions
 ICS = Implicit Conversion Sequence.
@@ -153,7 +153,7 @@ Given these definitions, a viable function F1 is defined to be a better function
 
 # Example
 ## 1st Path
-<img src="https://hackmd.io/_uploads/rkNL-FgDge.jpg" width="50%" alt="The best viable function.-1">
+<img src="https://hackmd.io/_uploads/rkNL-FgDge.jpg" width="25%" alt="The best viable function.-1">
 ```c++
 #include<iostream>
 
@@ -197,7 +197,7 @@ int main() {
 }
 ```
 ## 2nd Path
-<img src="https://hackmd.io/_uploads/SyqdZKgDel.jpg" width="50%" alt="The best viable function.-2">
+<img src="https://hackmd.io/_uploads/SyqdZKgDel.jpg" width="25%" alt="The best viable function.-2">
 ```c++
 #include <iostream>
 
@@ -224,7 +224,7 @@ int main() {
 }
 ```
 ## 3rd Path
-<img src="https://hackmd.io/_uploads/rkgMtWtxPex.jpg" width="50%" alt="The best viable function-3">
+<img src="https://hackmd.io/_uploads/rkgMtWtxPex.jpg" width="25%" alt="The best viable function-3">
 
 ```c++
 #include <iostream>
@@ -268,7 +268,7 @@ int main() {
 ```
 
 ## 4th Path
-<img src="https://hackmd.io/_uploads/rJ5KbKgDgx.jpg" width="50%" alt="The best viable function-4">
+<img src="https://hackmd.io/_uploads/rJ5KbKgDgx.jpg" width="25%" alt="The best viable function-4">
 ```c++
 #include <iostream>
 
@@ -311,7 +311,7 @@ int main() {
 }
 ```
 ## 5th Path
-<img src="https://hackmd.io/_uploads/BJJqZKxPxx.jpg" width="50%" alt="The best viable function-5">
+<img src="https://hackmd.io/_uploads/BJJqZKxPxx.jpg" width="25%" alt="The best viable function-5">
 
 ```c++
 #include <iostream>
@@ -338,7 +338,7 @@ int main() {
 ```
 
 ## 6th Path
-<img src="https://hackmd.io/_uploads/By7cZKlvex.jpg" width="50%" alt="The best viable function-6">
+<img src="https://hackmd.io/_uploads/By7cZKlvex.jpg" width="25%" alt="The best viable function-6">
 
 ```c++
 #include <iostream>

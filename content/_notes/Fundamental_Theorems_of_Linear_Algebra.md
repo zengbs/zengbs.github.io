@@ -35,7 +35,7 @@ i.e, $N(A^{T})=C(A)^{\perp}$.
 
 proof.
 
-<img src="https://hackmd.io/_uploads/B1hxmO3ja.png" width="60%">
+<img src="https://hackmd.io/_uploads/B1hxmO3ja.png" width="30%">
 
 
 # Reference

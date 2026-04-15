@@ -21,7 +21,7 @@ render_with_liquid: false
     ```
     each `PolarBear` class object contains all the nonstatic data members declared within `PolarBear` together with all the nonstatic data members of its `Bear` subobject and all the nonstatic data members of its `ZooAnimal` subobject.
 * Take the diagram below as an example, each `Panda` object contains two `ZooAnimal` subobjects: the instance contained within its `Bear` subobject and the instance contained within its `Racoon` subobject.
-<img src="https://hackmd.io/_uploads/r1DFk8MEex.png" width="50%">
+<img src="https://hackmd.io/_uploads/r1DFk8MEex.png" width="25%">
 It's a bad idea. Because:
   1. Storing two copies of the `ZooAnimal` subobject wastes storage, because `Panda` needs only one instance.
   2. The `ZooAnimal` constructor is invoked twice, once for each subobject.
@@ -270,7 +270,7 @@ It's a bad idea. Because:
 * Each subtree is examined depth first; that is, the search begins with the root class and moves down.
 * Virtual base classes are always constructed prior to nonvirtual base classes regardless of where they appear in the inheritance hierarchy.
 * Once the virtual base class constructors are invoked, the nonvirtual base class constructors are invoked in the order of declaration.
-<img src="https://hackmd.io/_uploads/rkTfdYGExx.png" width="40%">
+<img src="https://hackmd.io/_uploads/rkTfdYGExx.png" width="20%">
    ```c++
    #include <iostream>
    

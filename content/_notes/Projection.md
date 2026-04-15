@@ -30,4 +30,4 @@ $\Longrightarrow \mathbb{P}=A(A^{T}A)^{-1}A^{T}$
 * In the second arrow, we have employed the property: if $A$ is full column rank, then $A^{T}A$ is invertible.
 * $\hat{x}$ always lies in the row space since $\dim N(A)=0$.
 * $\hat{x}=\arg\min||b-Ax||^{2}$
-<img src="https://hackmd.io/_uploads/BkC36ohjp.png" width="50%" alt="BJyweJFsa-1">
+<img src="https://hackmd.io/_uploads/BkC36ohjp.png" width="25%" alt="BJyweJFsa-1">

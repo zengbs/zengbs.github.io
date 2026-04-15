@@ -17,7 +17,7 @@ render_with_liquid: false
 * As usual for overwriting algorithms, the destination container must already have enough elements that are overwritten (otherwise you have undefined behavior).
 * The number of elements does not change (neither in the source nor in the destination range).
 * However, the elements of the source range get a moved-from state. Thus, we do not know the values of the strings in the source range after this call (unless we have specified behavior for moved-from objects such as for move-only types).
-<img src="https://hackmd.io/_uploads/BJaxtYAW-g.jpg" width="50%" alt="2025-12-04_12-06">
+<img src="https://hackmd.io/_uploads/BJaxtYAW-g.jpg" width="25%" alt="2025-12-04_12-06">
 
 
 ```c++

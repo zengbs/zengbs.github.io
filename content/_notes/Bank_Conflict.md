@@ -40,9 +40,9 @@ __global__ void setRowReadRow(int *out) {
 }
 ```
 * Conflict-free:
-<img src="https://hackmd.io/_uploads/S1k6o2TL6.png" width="50%">
+<img src="https://hackmd.io/_uploads/S1k6o2TL6.png" width="25%">
 * Bank conflict:
-<img src="https://hackmd.io/_uploads/H1sen3aUT.png" width="50%">
+<img src="https://hackmd.io/_uploads/H1sen3aUT.png" width="25%">
 * Threads in the same warp can be identified by consecutive values of `threadIdx.x`.
 * Elements in shared memory belonging to different banks are also stored consecutively, by word offset.
 * Therefore, it is best to have threads with consecutive values of `threadIdx.x` accessing consecutive locations in shared memory.
@@ -73,7 +73,7 @@ __global__ void setRowReadColPad(int *out) {
 * The left configuration is the one we imagine.
 * The right configuration is real in hardware.
 
-<img src="https://hackmd.io/_uploads/S1H0uaaIT.png" width="70%">
+<img src="https://hackmd.io/_uploads/S1H0uaaIT.png" width="35%">
 
 
 | Conflict-free                        | Conflict-free                        |            Conflict-free             |       Conflict-free (broadcast)       |            Bank conflict             |

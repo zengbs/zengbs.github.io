@@ -63,11 +63,11 @@ COPY Ludwig van Beethoven
 ```
 The following diagrams demonstrate how does `push_back()` work internally:
 * Step 1:
-<img src="https://hackmd.io/_uploads/S1SHoWLCgl.png" width="50%">
+<img src="https://hackmd.io/_uploads/S1SHoWLCgl.png" width="25%">
 * Step 2:
-<img src="https://hackmd.io/_uploads/SylzLj-IAex.png" width="50%">
+<img src="https://hackmd.io/_uploads/SylzLj-IAex.png" width="25%">
 * Step 3:
-<img src="https://hackmd.io/_uploads/S1SwoWLAgg.png" width="50%">
+<img src="https://hackmd.io/_uploads/S1SwoWLAgg.png" width="25%">
 
 The reason that vector reallocation does not use move semantics is the strong exception handling guarantee we give for `push_back()`: When an exception is thrown in the middle of the reallocation of the vector the C++ standard library guarantees to roll back the vector to its previous state. Please see [STL container with noexcept](/9vytxRpLQGWMiwLdUs0ntA) for more details.
 
@@ -93,11 +93,11 @@ MOVE Johann Sebastian Bach
 MOVE Ludwig van Beethoven
 ```
 * Step 1:
-<img src="https://hackmd.io/_uploads/Hke9bG8Rgg.png" width="50%">
+<img src="https://hackmd.io/_uploads/Hke9bG8Rgg.png" width="25%">
 * Step 2:
-<img src="https://hackmd.io/_uploads/Hyi5WfI0el.png" width="50%">
+<img src="https://hackmd.io/_uploads/Hyi5WfI0el.png" width="25%">
 * Step 3:
-<img src="https://hackmd.io/_uploads/S16ibGLAll.png" width="50%">
+<img src="https://hackmd.io/_uploads/S16ibGLAll.png" width="25%">
 
 Please see [emplace_back vs. push_back](/GRwsNRl_QiS4GoyYEC-TCA) for more details.
 
