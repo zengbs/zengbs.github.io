@@ -94,8 +94,9 @@ layout: default
           I am a contributor to the
           <a href="https://github.com/gamer-project/gamer/graphs/contributors">GAMER</a>,
           a hybrid GPU/OpenMP/MPI parallelization finite-volume program solving hydrodynamic equations.
-          Specifically, I designed a new scheme for conversion between primitive and conserved variables
-          in the special relativistic hydro solver.
+          Specifically, I extended the code from non-relativistic to relativistic regime.
+          The new code achieves a peak performance of 7×10^7 cell updates per second
+          on a single Tesla P100 GPU and scales to 2048 GPUs with parallel efficiency 45%.
         </p>
 
         <p>
@@ -106,17 +107,6 @@ layout: default
           in MNRAS 2021 Vol. 504, pp. 3298-3315.
         </p>
 
-        <p>
-          If that wasn't enough, I have designed another new numerical scheme that adaptively and locally
-          reduces the so-called min-mod coefficient in the finite-volume method to promote numerical stability.
-        </p>
-
-        <p>
-          The new approach was soon
-          <a href="https://github.com/gamer-project/gamer/pull/60">merged</a>
-          by the research teams headed by Prof. Hsi-Yu Schive and Prof. Kuo-Chun Pan,
-          who served at National Taiwan and Tsing-Hua University, respectively.
-        </p>
 
         <h2><b>Read List</b></h2>
 
