@@ -67,7 +67,7 @@
                            <p>Focused on high-performance computing and large-scale C++ system optimization for
                               computational geometry (EDA). Developed a scalable parallel algorithm for polygon
                               operations using a quadtree-based approach combined with graph partitioning,
-                              achieving efficient load balancing (0.2 index) and scaling to 32 compute nodes
+                              achieving efficient load balancing (1.2 imbalance factor) and scaling to 32 compute nodes
                               with 71% parallel efficiency.
                               Previously reduced intra-node wall-time from 4.13 seconds to 0.35 seconds
                               on 32 threads (~11.8× speedup, 36% efficiency).
@@ -89,21 +89,11 @@
 
 
                            <h4>PhD:</h4>
-		 	   <p>I am a contributor to the <a href="https://github.com/gamer-project/gamer/graphs/contributors">GAMER</a>,
-                           a hybrid GPU/OpenMP/MPI parallelization finite-volume program solving hydrodynamic equations.
-                           Specifically, I designed a new scheme for conversion between primitive and conserved variables
-                           in the special relativistic hydro solver.
-
-                           The code adopting this scheme can handle critical problems involving a Lorentz factor
-                           as high as 10^6 and optimally avoid catastrophic cancellation, especially in non- and
-                           ultra-relativistic limits. The results have been <a href="https://academic.oup.com/mnras/article/504/3/3298/6224873">published</a> in MNRAS 2021 Vol. 504, pp. 3298-3315.
-
-                           If that wasn't enough, I have designed another new numerical scheme that adaptively and locally
-                           reduces the so-called min-mod coefficient in the finite-volume method to promote numerical stability.
-
-                           The new approach was soon <a href="https://github.com/gamer-project/gamer/pull/60">merged </a> by the research teams headed by Prof. Hsi-Yu Schive and
-                           Prof. Kuo-Chun Pan, who served at National Taiwan and Tsing-Hua University, respectively.
-
+                           <p> Adapted an existing finite-volume program solving the hydrodynamic equations to relativistic regime and
+                           accelerated it using GPUs. The new code scales to 2048 GPUs with strong-scaling parallel efficiency 45% and
+                           weak-scaling parallel efficiency 78% . (Published in MNRAS 2021 Vol. 504, pp. 3298-3315)</p>
+                           <p> Improved a relativistic hydrodynamics scheme in C++/CUDA, achieving over two orders of magnitude higher
+                           numerical accuracy than conventional methods.</p>
 
                  <h2><b>Read List</b></h2>
                  <h4>2026</h4>
