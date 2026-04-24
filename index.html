@@ -1,7 +1,3 @@
----
-layout: default
----
-
 <!DOCTYPE html>
 <!--
     Plain-Academic by Vasilios Mavroudis
@@ -11,184 +7,166 @@ layout: default
 
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-322YDYC5FZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-322YDYC5FZ');
+  </script>
   <title>Pohsun Tseng (Rocky)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-
-  <!-- jQuery / Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
+
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  <ul class="nav navbar-nav">
+				  <li><a href="index.html">Home</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+
+  <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Entries Column -->
+            <div class="col-md-8" style="height: 100vh;">
+
+                <!-- Main Image -->
+                <img class="img-responsive" src="photo.gif" alt=""><br>
+
+                <div style="margin-top:3%; text-align:justify;">
+                           <h2><b>Summary</b></h2>
+
+                           <h4>BrightEST:</h4>
+
+                           <p>Focused on high-performance computing and large-scale C++ system optimization for
+                              computational geometry (EDA). Developed a scalable parallel algorithm for polygon
+                              operations using a quadtree-based approach combined with graph partitioning,
+                              achieving efficient load balancing (0.2 index) and scaling to 32 compute nodes
+                              with 71% parallel efficiency.
+                              Previously reduced intra-node wall-time from 4.13 seconds to 0.35 seconds
+                              on 32 threads (~11.8× speedup, 36% efficiency).
+                              Additionally implemented the Hopkins method for computational lithography
+                              using OpenMP to leverage multi-core architectures.</p>
+
+                           <h4>KLA:</h4>
+                           <p>I designed a sweep-line–based algorithm combined with a self-balancing interval tree and a Red-Black tree forest
+                           to efficiently count overlapping polygons in design files. The solution achieved an optimal time complexity of
+                           ~ O(N(k+logN)), where N is the total number of rectangles and k is the number of reported polygons,
+                           significantly improving scalability for large layouts.
+
+                           On the image processing side, I implemented a CUDA-based bilateral filter for noise reduction, leveraging shared memory to improve performance.
+                           I also implemented a C++ algorithm for detecting large-scale defects at the micrometer level,
+                           successfully addressing a critical customer escalation from Samsung.
+
+                           Additionally, I enhanced image stacking throughput using CUDA, enabling effective noise reduction.</p>
+
+
+
+                           <h4>PhD:</h4>
+		 	   <p>I am a contributor to the <a href="https://github.com/gamer-project/gamer/graphs/contributors">GAMER</a>,
+                           a hybrid GPU/OpenMP/MPI parallelization finite-volume program solving hydrodynamic equations.
+                           Specifically, I designed a new scheme for conversion between primitive and conserved variables
+                           in the special relativistic hydro solver.
+
+                           The code adopting this scheme can handle critical problems involving a Lorentz factor
+                           as high as 10^6 and optimally avoid catastrophic cancellation, especially in non- and
+                           ultra-relativistic limits. The results have been <a href="https://academic.oup.com/mnras/article/504/3/3298/6224873">published</a> in MNRAS 2021 Vol. 504, pp. 3298-3315.
+
+                           If that wasn't enough, I have designed another new numerical scheme that adaptively and locally
+                           reduces the so-called min-mod coefficient in the finite-volume method to promote numerical stability.
+
+                           The new approach was soon <a href="https://github.com/gamer-project/gamer/pull/60">merged </a> by the research teams headed by Prof. Hsi-Yu Schive and
+                           Prof. Kuo-Chun Pan, who served at National Taiwan and Tsing-Hua University, respectively.
+
+
+                 <h2><b>Read List</b></h2>
+                 <h4>2026</h4>
+                          <ul>
+                          <li>C++17: The Complete Guide, Nicolai M. Josuttis (<a href="https://hackmd.io/@zengbs/By8w0b4zZg">study note</a>)</li>
+                          </ul>
+                 <h4>2025</h4>
+                          <ul>
+                          <li>C++ Move Semantics: The Complete Guide, Nicolai M. Josuttis (<a href="https://hackmd.io/@zengbs/SJCueAXcex">study note</a>)</li>
+                          <li>Inside The C++ Object Model, Stanley B. Lippman</li>
+                          </ul>
+                 <h4>2024</h4>
+                          <ul>
+                          <li>C++ Primer (3rd ed.), Lippman & Lajoie (<a href="https://hackmd.io/@zengbs/HktXuVI8ex">study note</a>)</li>
+                          </ul>
+                 <h2><b>Notes</b></h2>
+                          <ul>
+                           <li><a href="https://hackmd.io/@zengbs/rkHTkzNM-g">Note on C++</a></li>
+                           <li><a href="https://hackmd.io/@zengbs/Sk1jNqC2c/%2FZNbmsnHMQTOjD8PLPQAQng">Note on C language</a></li>
+                           <li><a href="https://hackmd.io/@zengbs/ryS4lUKKs/%2F3xOWlRxkQ8iWea_bqXhHww">Note on CUDA</a></li>
+                           <li><a href="https://hackmd.io/@zengbs/HJeydCcYi/%2FEx5XG5h1RqyLb3Dy6CgZYQ">Note on Linear Algebra</a></li>
+                           <!--  <li><a href="">Note on MPI</a></li> -->
+                           <!--  <li><a href="">Note on OpenMP</a></li> -->
+                          </ul>
+                 <!-- <h2><b>Projects</b></h2> -->
+                           <ul>
+                              <!--  <li><a href="https://academic.oup.com/mnras/article/504/3/3298/6224873">Numerical special relativistic hydrodynamics</a></li> -->
+                              <!--  <li><a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad50c5">Can the symmetric Fermi and eROSITA bubbles be produced by tilted jets?</a></li> -->
+                              <!--  <li><a href="https://github.com/zengbs/exact-solution-to-relativistic-riemann-problem">Exact solution to relativistic Riemann problem</a></li> -->
+                              <!--  <li><a href="https://github.com/zengbs/polygons-counter">Polygon counter</a></li> -->
+                           </ul>
+
+                </div>
+            </div>
+
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-4">
+                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Pohsun Tseng (Rocky)</b></div><br>
+                <p><b>Sr. C++ SW at BrightEST Corp., Taiwan</b><br>
+                <p>Ph.D. in Computational Astrophysics at Taiwan University<br>
+                </p>
+            </div>
+
+
+            <!-- Links on the Sidebar -->
+            <div class="col-md-4" style="margin-top:2%">
+              <dd>E-mail: zengbs [DoT] gmail [DoT] com</dd>
+              <!-- <dd><a href="https://github.com/zengbs">GitHub</a></dd> -->
+              <dd><a href="https://www.linkedin.com/in/po-hsun-tseng/">LinkedIn</a></dd>
+              <dd><a href="https://scholar.google.com.tw/citations?user=HCUrOIoAAAAJ&hl">Google Scholar</a></dd>
+            </div>
+
+
+        </div>
+
+
     </div>
+    <!-- /.container -->
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Page Content -->
-<div class="container">
-  <div class="row">
-
-    <!-- Left content -->
-    <div class="col-md-8">
-      <img class="img-responsive" src="photo.gif" alt=""><br>
-
-      <div style="margin-top:3%; text-align:justify;">
-        <h2><b>Summary</b></h2>
-
-        <h4>BrightEST:</h4>
-        <p>
-          Focused on high-performance computing and large-scale C++ system optimization for
-          computational geometry (EDA). Developed a scalable parallel algorithm for polygon
-          operations using a quadtree-based approach combined with graph partitioning,
-          achieving efficient load balancing (0.2 index) and scaling to 32 compute nodes
-          with 71% parallel efficiency.
-          Previously reduced intra-node wall-time from 4.13 seconds to 0.35 seconds
-          on 32 threads (~11.8× speedup, 36% efficiency).
-          Additionally implemented the Hopkins method for computational lithography
-          using OpenMP to leverage multi-core architectures.
-        </p>
-
-        <h4>KLA:</h4>
-        <p>
-          I designed a sweep-line–based algorithm combined with a self-balancing interval tree
-          and a Red-Black tree forest to efficiently count overlapping polygons in design files.
-          The solution achieved an optimal time complexity of ~ O(N(k+logN)), where N is the
-          total number of rectangles and k is the number of reported polygons,
-          significantly improving scalability for large layouts.
-        </p>
-
-        <p>
-          On the image processing side, I implemented a CUDA-based bilateral filter for noise reduction,
-          leveraging shared memory to improve performance. I also implemented a C++ algorithm for detecting
-          large-scale defects at the micrometer level, successfully addressing a critical customer escalation from Samsung.
-        </p>
-
-        <p>
-          Additionally, I enhanced image stacking throughput using CUDA, enabling effective noise reduction.
-        </p>
-
-        <h4>PhD:</h4>
-        <p>
-          I am a contributor to the
-          <a href="https://github.com/gamer-project/gamer/graphs/contributors">GAMER</a>,
-          a hybrid GPU/OpenMP/MPI parallelization finite-volume program solving hydrodynamic equations.
-          Specifically, I extended the code from non-relativistic to relativistic regime.
-          The new code achieves a peak performance of 7×10^7 cell updates per second
-          on a single Tesla P100 GPU and scales to 2048 GPUs with parallel efficiency 45%.
-        </p>
-
-        <p>
-          The code adopting this scheme can handle critical problems involving a Lorentz factor
-          as high as 10^6 and optimally avoid catastrophic cancellation, especially in non- and
-          ultra-relativistic limits. The results have been
-          <a href="https://academic.oup.com/mnras/article/504/3/3298/6224873">published</a>
-          in MNRAS 2021 Vol. 504, pp. 3298-3315.
-        </p>
-
-
-        <h2><b>Read List</b></h2>
-
-        <h4>2026</h4>
-        <ul>
-          <li>
-            C++17: The Complete Guide, Nicolai M. Josuttis (
-            <a href="{{ '/notes/Note_on_C++17' | relative_url }}">study note</a>
-            )
-          </li>
-        </ul>
-
-        <h4>2025</h4>
-        <ul>
-          <li>
-            C++ Move Semantics: The Complete Guide, Nicolai M. Josuttis (
-            <a href="{{ '/notes/Move_semantics' | relative_url }}">study note</a>
-            )
-          </li>
-          <li>Inside The C++ Object Model, Stanley B. Lippman</li>
-        </ul>
-
-        <h4>2024</h4>
-        <ul>
-          <li>
-            C++ Primer (3rd ed.), Lippman &amp; Lajoie (
-            <a href="{{ '/notes/Note_on_C++98' | relative_url }}">study note</a>
-            )
-          </li>
-        </ul>
-
-        <h2><b>Notes</b></h2>
-
-        {% assign targets = "Note_on_C++,Note_on_CUDA_programming" | split: "," %}
-
-        <ul>
-          {% for page in site.notes %}
-            {% assign name = page.path | split: "/" | last | split: "." | first %}
-            {% if targets contains name %}
-              <li style="margin-bottom: 10px;">
-                <a href="{{ page.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
-                  {{ page.title | default: page.name }}
-                </a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    <!-- Right sidebar -->
-    <div class="col-md-4">
-      <div style="font-family: 'Oswald', sans-serif; font-size: 32px; margin-top: 20px;">
-        <b>Pohsun Tseng (Rocky)</b>
-      </div>
-
-      <p style="margin-top: 20px;">
-        <b>Sr. C++ SW at BrightEST Corp., Taiwan</b>
-      </p>
-
-      <p>
-        Ph.D. in Computational Astrophysics at Taiwan University
-      </p>
-
-      <div style="margin-top: 30px;">
-        <p>E-mail: zengbs [DoT] gmail [DoT] com</p>
-        <p><a href="https://www.linkedin.com/in/po-hsun-tseng/">LinkedIn</a></p>
-        <p><a href="https://scholar.google.com.tw/citations?user=HCUrOIoAAAAJ&hl">Google Scholar</a></p>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="container">
-  <hr>
-  <p style="color:#b5bec9; font-size:0.8em; text-align:right;">
-    Design courtesy of
-    <a href="https://github.com/mavroudisv/plain-academic">Plain Academic</a>
-  </p>
-</div>
+    <!-- Other people may like it too! -->
+    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Design courtesy of Vasilios Mavroudis: Plain Academic  </a>
 
 </body>
+
 </html>
+
